@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Equipment" Relationship="Self.FK__Equipment__Brand__4222D4EF" FromRole="Brand" ToRole="Equipment" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ClientContracts" Relationship="Self.FK__ClientCon__Clien__52593CB8" FromRole="Client" ToRole="ClientContracts" />
+    <NavigationProperty Name="EquipmentWarehouseClient" Relationship="Self.FK__Equipment__Clien__5629CD9C" FromRole="Client" ToRole="EquipmentWarehouseClient" />
+  </EntityType>
+  <EntityType Name="ClientContracts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="Contract" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Client" Relationship="Self.FK__ClientCon__Clien__52593CB8" FromRole="ClientContracts" ToRole="Client" />
+    <NavigationProperty Name="Task" Relationship="Self.FK__Task__Contract__6A30C649" FromRole="ClientContracts" ToRole="Task" />
+  </EntityType>
+  <EntityType Name="Conditions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Equipment" Relationship="Self.FK__Equipment__Condi__412EB0B6" FromRole="Conditions" ToRole="Equipment" />
+    <NavigationProperty Name="EquipmentWarehouse" Relationship="Self.FK__Equipment__Condi__4CA06362" FromRole="Conditions" ToRole="EquipmentWarehouse" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IP" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MAC" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type_Device_id" Type="Int32" />
+    <Property Name="Conditions_id" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ID_in_item" Type="Int32" />
+    <Property Name="Login" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SNMP" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Serial_num" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Num_vlan" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Brand_id" Type="Int32" />
+    <Property Name="Model_id" Type="Int32" />
+    <NavigationProperty Name="Brand" Relationship="Self.FK__Equipment__Brand__4222D4EF" FromRole="Equipment" ToRole="Brand" />
+    <NavigationProperty Name="Conditions" Relationship="Self.FK__Equipment__Condi__412EB0B6" FromRole="Equipment" ToRole="Conditions" />
+    <NavigationProperty Name="Model" Relationship="Self.FK__Equipment__Model__4316F928" FromRole="Equipment" ToRole="Model" />
+    <NavigationProperty Name="Type_Device" Relationship="Self.FK__Equipment__Type___403A8C7D" FromRole="Equipment" ToRole="Type_Device" />
+    <NavigationProperty Name="Task" Relationship="Self.FK__Task__PortID__6E01572D" FromRole="Equipment" ToRole="Task" />
+  </EntityType>
+  <EntityType Name="EquipmentWarehouse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="EquipmentWarehouseTypeID" Type="Int32" />
+    <Property Name="SerialNum" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ConditionsID" Type="Int32" />
+    <Property Name="Model" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="StatusID" Type="Int32" />
+    <NavigationProperty Name="Conditions" Relationship="Self.FK__Equipment__Condi__4CA06362" FromRole="EquipmentWarehouse" ToRole="Conditions" />
+    <NavigationProperty Name="EquipmentWarehouseType" Relationship="Self.FK__Equipment__Equip__4BAC3F29" FromRole="EquipmentWarehouse" ToRole="EquipmentWarehouseType" />
+    <NavigationProperty Name="EquipmentWarehouseClient" Relationship="Self.FK__Equipment__Equip__5535A963" FromRole="EquipmentWarehouse" ToRole="EquipmentWarehouseClient" />
+    <NavigationProperty Name="EquipmentWarehouseMaster" Relationship="Self.FK__Equipment__Equip__59063A47" FromRole="EquipmentWarehouse" ToRole="EquipmentWarehouseMaster" />
+    <NavigationProperty Name="EquipmentWarehouseS" Relationship="Self.FK__Equipment__Equip__5CD6CB2B" FromRole="EquipmentWarehouse" ToRole="EquipmentWarehouseS" />
+    <NavigationProperty Name="EquipmentWarehouseStatus" Relationship="Self.FK__Equipment__Statu__4D94879B" FromRole="EquipmentWarehouse" ToRole="EquipmentWarehouseStatus" />
+    <NavigationProperty Name="TaskEquipment" Relationship="Self.FK__TaskEquip__Equip__75A278F5" FromRole="EquipmentWarehouse" ToRole="TaskEquipment" />
+  </EntityType>
+  <EntityType Name="EquipmentWarehouseClient">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EquipmentWarehouseID" Type="Int32" />
+    <Property Name="ClientID" Type="Int32" />
+    <NavigationProperty Name="Client" Relationship="Self.FK__Equipment__Clien__5629CD9C" FromRole="EquipmentWarehouseClient" ToRole="Client" />
+    <NavigationProperty Name="EquipmentWarehouse" Relationship="Self.FK__Equipment__Equip__5535A963" FromRole="EquipmentWarehouseClient" ToRole="EquipmentWarehouse" />
+  </EntityType>
+  <EntityType Name="EquipmentWarehouseMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EquipmentWarehouseID" Type="Int32" />
+    <Property Name="MasterID" Type="Int32" />
+    <NavigationProperty Name="EquipmentWarehouse" Relationship="Self.FK__Equipment__Equip__59063A47" FromRole="EquipmentWarehouseMaster" ToRole="EquipmentWarehouse" />
+    <NavigationProperty Name="Logins" Relationship="Self.FK__Equipment__Maste__59FA5E80" FromRole="EquipmentWarehouseMaster" ToRole="Logins" />
+  </EntityType>
+  <EntityType Name="EquipmentWarehouseS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EquipmentWarehouseID" Type="Int32" />
+    <Property Name="WarehouseID" Type="Int32" />
+    <NavigationProperty Name="EquipmentWarehouse" Relationship="Self.FK__Equipment__Equip__5CD6CB2B" FromRole="EquipmentWarehouseS" ToRole="EquipmentWarehouse" />
+    <NavigationProperty Name="Warehouse" Relationship="Self.FK__Equipment__Wareh__5DCAEF64" FromRole="EquipmentWarehouseS" ToRole="Warehouse" />
+  </EntityType>
+  <EntityType Name="EquipmentWarehouseStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="EquipmentWarehouse" Relationship="Self.FK__Equipment__Statu__4D94879B" FromRole="EquipmentWarehouseStatus" ToRole="EquipmentWarehouse" />
+  </EntityType>
+  <EntityType Name="EquipmentWarehouseType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="EquipmentWarehouse" Relationship="Self.FK__Equipment__Equip__4BAC3F29" FromRole="EquipmentWarehouseType" ToRole="EquipmentWarehouse" />
+  </EntityType>
+  <EntityType Name="Logins">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Login" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Permission" Type="Int32" />
+    <NavigationProperty Name="EquipmentWarehouseMaster" Relationship="Self.FK__Equipment__Maste__59FA5E80" FromRole="Logins" ToRole="EquipmentWarehouseMaster" />
+    <NavigationProperty Name="Task" Relationship="Self.FK__Task__MasterID__6B24EA82" FromRole="Logins" ToRole="Task" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Equipment" Relationship="Self.FK__Equipment__Model__4316F928" FromRole="Model" ToRole="Equipment" />
+  </EntityType>
+  <EntityType Name="StatusTask">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Task" Relationship="Self.FK__Task__StatusTask__6C190EBB" FromRole="StatusTask" ToRole="Task" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDofType" Type="Int32" Nullable="false" />
+    <Property Name="Contract" Type="Int32" />
+    <Property Name="DateStart" Type="DateTime" Precision="0" />
+    <Property Name="DateEnt" Type="DateTime" Precision="0" />
+    <Property Name="Creator" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MasterID" Type="Int32" />
+    <Property Name="StatusTaskID" Type="Int32" />
+    <Property Name="Addres" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TypeID" Type="Int32" />
+    <Property Name="PortID" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ClientContracts" Relationship="Self.FK__Task__Contract__6A30C649" FromRole="Task" ToRole="ClientContracts" />
+    <NavigationProperty Name="Equipment" Relationship="Self.FK__Task__PortID__6E01572D" FromRole="Task" ToRole="Equipment" />
+    <NavigationProperty Name="Logins" Relationship="Self.FK__Task__MasterID__6B24EA82" FromRole="Task" ToRole="Logins" />
+    <NavigationProperty Name="StatusTask" Relationship="Self.FK__Task__StatusTask__6C190EBB" FromRole="Task" ToRole="StatusTask" />
+    <NavigationProperty Name="TypeTask" Relationship="Self.FK__Task__TypeID__6D0D32F4" FromRole="Task" ToRole="TypeTask" />
+    <NavigationProperty Name="TaskEquipment" Relationship="Self.FK__TaskEquip__TaskI__74AE54BC" FromRole="Task" ToRole="TaskEquipment" />
+    <NavigationProperty Name="TaskTMC" Relationship="Self.FK__TaskTMC__TaskID__70DDC3D8" FromRole="Task" ToRole="TaskTMC" />
+  </EntityType>
+  <EntityType Name="TaskEquipment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaskID" Type="Int32" />
+    <Property Name="EquipmentWarehouse" Type="Int32" />
+    <NavigationProperty Name="EquipmentWarehouse1" Relationship="Self.FK__TaskEquip__Equip__75A278F5" FromRole="TaskEquipment" ToRole="EquipmentWarehouse" />
+    <NavigationProperty Name="Task" Relationship="Self.FK__TaskEquip__TaskI__74AE54BC" FromRole="TaskEquipment" ToRole="Task" />
+  </EntityType>
+  <EntityType Name="TaskTMC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaskID" Type="Int32" />
+    <Property Name="TMCID" Type="Int32" />
+    <Property Name="Size" Type="Int32" />
+    <NavigationProperty Name="Task" Relationship="Self.FK__TaskTMC__TaskID__70DDC3D8" FromRole="TaskTMC" ToRole="Task" />
+    <NavigationProperty Name="TMC" Relationship="Self.FK__TaskTMC__TMCID__71D1E811" FromRole="TaskTMC" ToRole="TMC" />
+  </EntityType>
+  <EntityType Name="TMC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Size" Type="Int32" />
+    <Property Name="UnitID" Type="Int32" />
+    <Property Name="WarehouseID" Type="Int32" />
+    <NavigationProperty Name="TaskTMC" Relationship="Self.FK__TaskTMC__TMCID__71D1E811" FromRole="TMC" ToRole="TaskTMC" />
+    <NavigationProperty Name="Unit" Relationship="Self.FK__TMC__UnitID__628FA481" FromRole="TMC" ToRole="Unit" />
+    <NavigationProperty Name="Warehouse" Relationship="Self.FK__TMC__WarehouseID__6383C8BA" FromRole="TMC" ToRole="Warehouse" />
+  </EntityType>
+  <EntityType Name="Type_Device">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Equipment" Relationship="Self.FK__Equipment__Type___403A8C7D" FromRole="Type_Device" ToRole="Equipment" />
+  </EntityType>
+  <EntityType Name="TypeTask">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Task" Relationship="Self.FK__Task__TypeID__6D0D32F4" FromRole="TypeTask" ToRole="Task" />
+  </EntityType>
+  <EntityType Name="Unit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TMC" Relationship="Self.FK__TMC__UnitID__628FA481" FromRole="Unit" ToRole="TMC" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="EquipmentWarehouseS" Relationship="Self.FK__Equipment__Wareh__5DCAEF64" FromRole="Warehouse" ToRole="EquipmentWarehouseS" />
+    <NavigationProperty Name="TMC" Relationship="Self.FK__TMC__WarehouseID__6383C8BA" FromRole="Warehouse" ToRole="TMC" />
+  </EntityType>
+  <Association Name="FK__Equipment__Brand__4222D4EF">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="Brand_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClientCon__Clien__52593CB8">
+    <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+    <End Role="ClientContracts" Type="Self.ClientContracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ClientContracts">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Clien__5629CD9C">
+    <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+    <End Role="EquipmentWarehouseClient" Type="Self.EquipmentWarehouseClient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EquipmentWarehouseClient">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Task__Contract__6A30C649">
+    <End Role="ClientContracts" Type="Self.ClientContracts" Multiplicity="0..1" />
+    <End Role="Task" Type="Self.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientContracts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="Contract" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Condi__412EB0B6">
+    <End Role="Conditions" Type="Self.Conditions" Multiplicity="0..1" />
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conditions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="Conditions_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Condi__4CA06362">
+    <End Role="Conditions" Type="Self.Conditions" Multiplicity="0..1" />
+    <End Role="EquipmentWarehouse" Type="Self.EquipmentWarehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conditions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EquipmentWarehouse">
+        <PropertyRef Name="ConditionsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Model__4316F928">
+    <End Role="Model" Type="Self.Model" Multiplicity="0..1" />
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="Model_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Type___403A8C7D">
+    <End Role="Type_Device" Type="Self.Type_Device" Multiplicity="0..1" />
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Type_Device">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="Type_Device_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Task__PortID__6E01572D">
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="0..1" />
+    <End Role="Task" Type="Self.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="PortID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Equip__4BAC3F29">
+    <End Role="EquipmentWarehouseType" Type="Self.EquipmentWarehouseType" Multiplicity="0..1" />
+    <End Role="EquipmentWarehouse" Type="Self.EquipmentWarehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EquipmentWarehouseType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EquipmentWarehouse">
+        <PropertyRef Name="EquipmentWarehouseTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Equip__5535A963">
+    <End Role="EquipmentWarehouse" Type="Self.EquipmentWarehouse" Multiplicity="0..1" />
+    <End Role="EquipmentWarehouseClient" Type="Self.EquipmentWarehouseClient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EquipmentWarehouse">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EquipmentWarehouseClient">
+        <PropertyRef Name="EquipmentWarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Equip__59063A47">
+    <End Role="EquipmentWarehouse" Type="Self.EquipmentWarehouse" Multiplicity="0..1" />
+    <End Role="EquipmentWarehouseMaster" Type="Self.EquipmentWarehouseMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EquipmentWarehouse">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EquipmentWarehouseMaster">
+        <PropertyRef Name="EquipmentWarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Equip__5CD6CB2B">
+    <End Role="EquipmentWarehouse" Type="Self.EquipmentWarehouse" Multiplicity="0..1" />
+    <End Role="EquipmentWarehouseS" Type="Self.EquipmentWarehouseS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EquipmentWarehouse">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EquipmentWarehouseS">
+        <PropertyRef Name="EquipmentWarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Statu__4D94879B">
+    <End Role="EquipmentWarehouseStatus" Type="Self.EquipmentWarehouseStatus" Multiplicity="0..1" />
+    <End Role="EquipmentWarehouse" Type="Self.EquipmentWarehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EquipmentWarehouseStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EquipmentWarehouse">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TaskEquip__Equip__75A278F5">
+    <End Role="EquipmentWarehouse" Type="Self.EquipmentWarehouse" Multiplicity="0..1" />
+    <End Role="TaskEquipment" Type="Self.TaskEquipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EquipmentWarehouse">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TaskEquipment">
+        <PropertyRef Name="EquipmentWarehouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Maste__59FA5E80">
+    <End Role="Logins" Type="Self.Logins" Multiplicity="0..1" />
+    <End Role="EquipmentWarehouseMaster" Type="Self.EquipmentWarehouseMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Logins">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EquipmentWarehouseMaster">
+        <PropertyRef Name="MasterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Wareh__5DCAEF64">
+    <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="0..1" />
+    <End Role="EquipmentWarehouseS" Type="Self.EquipmentWarehouseS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EquipmentWarehouseS">
+        <PropertyRef Name="WarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Task__MasterID__6B24EA82">
+    <End Role="Logins" Type="Self.Logins" Multiplicity="0..1" />
+    <End Role="Task" Type="Self.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Logins">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="MasterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Task__StatusTask__6C190EBB">
+    <End Role="StatusTask" Type="Self.StatusTask" Multiplicity="0..1" />
+    <End Role="Task" Type="Self.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusTask">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="StatusTaskID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Task__TypeID__6D0D32F4">
+    <End Role="TypeTask" Type="Self.TypeTask" Multiplicity="0..1" />
+    <End Role="Task" Type="Self.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeTask">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TaskEquip__TaskI__74AE54BC">
+    <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+    <End Role="TaskEquipment" Type="Self.TaskEquipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TaskEquipment">
+        <PropertyRef Name="TaskID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TaskTMC__TaskID__70DDC3D8">
+    <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+    <End Role="TaskTMC" Type="Self.TaskTMC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TaskTMC">
+        <PropertyRef Name="TaskID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TaskTMC__TMCID__71D1E811">
+    <End Role="TMC" Type="Self.TMC" Multiplicity="0..1" />
+    <End Role="TaskTMC" Type="Self.TaskTMC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TMC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TaskTMC">
+        <PropertyRef Name="TMCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMC__UnitID__628FA481">
+    <End Role="Unit" Type="Self.Unit" Multiplicity="0..1" />
+    <End Role="TMC" Type="Self.TMC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TMC">
+        <PropertyRef Name="UnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMC__WarehouseID__6383C8BA">
+    <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="0..1" />
+    <End Role="TMC" Type="Self.TMC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TMC">
+        <PropertyRef Name="WarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brand" EntityType="Self.Brand" />
+    <EntitySet Name="Client" EntityType="Self.Client" />
+    <EntitySet Name="ClientContracts" EntityType="Self.ClientContracts" />
+    <EntitySet Name="Conditions" EntityType="Self.Conditions" />
+    <EntitySet Name="Equipment" EntityType="Self.Equipment" />
+    <EntitySet Name="EquipmentWarehouse" EntityType="Self.EquipmentWarehouse" />
+    <EntitySet Name="EquipmentWarehouseClient" EntityType="Self.EquipmentWarehouseClient" />
+    <EntitySet Name="EquipmentWarehouseMaster" EntityType="Self.EquipmentWarehouseMaster" />
+    <EntitySet Name="EquipmentWarehouseS" EntityType="Self.EquipmentWarehouseS" />
+    <EntitySet Name="EquipmentWarehouseStatus" EntityType="Self.EquipmentWarehouseStatus" />
+    <EntitySet Name="EquipmentWarehouseType" EntityType="Self.EquipmentWarehouseType" />
+    <EntitySet Name="Logins" EntityType="Self.Logins" />
+    <EntitySet Name="Model" EntityType="Self.Model" />
+    <EntitySet Name="StatusTask" EntityType="Self.StatusTask" />
+    <EntitySet Name="Task" EntityType="Self.Task" />
+    <EntitySet Name="TaskEquipment" EntityType="Self.TaskEquipment" />
+    <EntitySet Name="TaskTMC" EntityType="Self.TaskTMC" />
+    <EntitySet Name="TMC" EntityType="Self.TMC" />
+    <EntitySet Name="Type_Device" EntityType="Self.Type_Device" />
+    <EntitySet Name="TypeTask" EntityType="Self.TypeTask" />
+    <EntitySet Name="Unit" EntityType="Self.Unit" />
+    <EntitySet Name="Warehouse" EntityType="Self.Warehouse" />
+    <AssociationSet Name="FK__Equipment__Brand__4222D4EF" Association="Self.FK__Equipment__Brand__4222D4EF">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClientCon__Clien__52593CB8" Association="Self.FK__ClientCon__Clien__52593CB8">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="ClientContracts" EntitySet="ClientContracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Clien__5629CD9C" Association="Self.FK__Equipment__Clien__5629CD9C">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="EquipmentWarehouseClient" EntitySet="EquipmentWarehouseClient" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Task__Contract__6A30C649" Association="Self.FK__Task__Contract__6A30C649">
+      <End Role="ClientContracts" EntitySet="ClientContracts" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Condi__412EB0B6" Association="Self.FK__Equipment__Condi__412EB0B6">
+      <End Role="Conditions" EntitySet="Conditions" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Condi__4CA06362" Association="Self.FK__Equipment__Condi__4CA06362">
+      <End Role="Conditions" EntitySet="Conditions" />
+      <End Role="EquipmentWarehouse" EntitySet="EquipmentWarehouse" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Model__4316F928" Association="Self.FK__Equipment__Model__4316F928">
+      <End Role="Model" EntitySet="Model" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Type___403A8C7D" Association="Self.FK__Equipment__Type___403A8C7D">
+      <End Role="Type_Device" EntitySet="Type_Device" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Task__PortID__6E01572D" Association="Self.FK__Task__PortID__6E01572D">
+      <End Role="Equipment" EntitySet="Equipment" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Equip__4BAC3F29" Association="Self.FK__Equipment__Equip__4BAC3F29">
+      <End Role="EquipmentWarehouseType" EntitySet="EquipmentWarehouseType" />
+      <End Role="EquipmentWarehouse" EntitySet="EquipmentWarehouse" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Equip__5535A963" Association="Self.FK__Equipment__Equip__5535A963">
+      <End Role="EquipmentWarehouse" EntitySet="EquipmentWarehouse" />
+      <End Role="EquipmentWarehouseClient" EntitySet="EquipmentWarehouseClient" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Equip__59063A47" Association="Self.FK__Equipment__Equip__59063A47">
+      <End Role="EquipmentWarehouse" EntitySet="EquipmentWarehouse" />
+      <End Role="EquipmentWarehouseMaster" EntitySet="EquipmentWarehouseMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Equip__5CD6CB2B" Association="Self.FK__Equipment__Equip__5CD6CB2B">
+      <End Role="EquipmentWarehouse" EntitySet="EquipmentWarehouse" />
+      <End Role="EquipmentWarehouseS" EntitySet="EquipmentWarehouseS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Statu__4D94879B" Association="Self.FK__Equipment__Statu__4D94879B">
+      <End Role="EquipmentWarehouseStatus" EntitySet="EquipmentWarehouseStatus" />
+      <End Role="EquipmentWarehouse" EntitySet="EquipmentWarehouse" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TaskEquip__Equip__75A278F5" Association="Self.FK__TaskEquip__Equip__75A278F5">
+      <End Role="EquipmentWarehouse" EntitySet="EquipmentWarehouse" />
+      <End Role="TaskEquipment" EntitySet="TaskEquipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Maste__59FA5E80" Association="Self.FK__Equipment__Maste__59FA5E80">
+      <End Role="Logins" EntitySet="Logins" />
+      <End Role="EquipmentWarehouseMaster" EntitySet="EquipmentWarehouseMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Wareh__5DCAEF64" Association="Self.FK__Equipment__Wareh__5DCAEF64">
+      <End Role="Warehouse" EntitySet="Warehouse" />
+      <End Role="EquipmentWarehouseS" EntitySet="EquipmentWarehouseS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Task__MasterID__6B24EA82" Association="Self.FK__Task__MasterID__6B24EA82">
+      <End Role="Logins" EntitySet="Logins" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Task__StatusTask__6C190EBB" Association="Self.FK__Task__StatusTask__6C190EBB">
+      <End Role="StatusTask" EntitySet="StatusTask" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Task__TypeID__6D0D32F4" Association="Self.FK__Task__TypeID__6D0D32F4">
+      <End Role="TypeTask" EntitySet="TypeTask" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TaskEquip__TaskI__74AE54BC" Association="Self.FK__TaskEquip__TaskI__74AE54BC">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="TaskEquipment" EntitySet="TaskEquipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TaskTMC__TaskID__70DDC3D8" Association="Self.FK__TaskTMC__TaskID__70DDC3D8">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="TaskTMC" EntitySet="TaskTMC" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TaskTMC__TMCID__71D1E811" Association="Self.FK__TaskTMC__TMCID__71D1E811">
+      <End Role="TMC" EntitySet="TMC" />
+      <End Role="TaskTMC" EntitySet="TaskTMC" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMC__UnitID__628FA481" Association="Self.FK__TMC__UnitID__628FA481">
+      <End Role="Unit" EntitySet="Unit" />
+      <End Role="TMC" EntitySet="TMC" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMC__WarehouseID__6383C8BA" Association="Self.FK__TMC__WarehouseID__6383C8BA">
+      <End Role="Warehouse" EntitySet="Warehouse" />
+      <End Role="TMC" EntitySet="TMC" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

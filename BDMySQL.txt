@@ -1,0 +1,265 @@
+CREATE TABLE Logins(
+	ID int primary key AUTO_INCREMENT,
+	Login nvarchar(250),
+	Password nvarchar(250),
+	Permission int) DEFAULT CHARSET=cp1251;
+
+INSERT INTO Logins VALUES(1, N'admin', N'admin', 1);
+
+CREATE TABLE Model(
+	ID int primary key AUTO_INCREMENT,
+	Name nvarchar(250)) DEFAULT CHARSET=cp1251;
+	
+CREATE TABLE Brand(
+	ID int primary key AUTO_INCREMENT,
+	Name nvarchar(250)) DEFAULT CHARSET=cp1251;
+
+CREATE TABLE Conditions(
+	ID int primary key AUTO_INCREMENT,
+	Name nvarchar(250)) DEFAULT CHARSET=cp1251;
+
+CREATE TABLE Type_Device(
+	ID int primary key AUTO_INCREMENT,
+	Name nvarchar(250)) DEFAULT CHARSET=cp1251;
+
+CREATE TABLE Equipment(
+	ID int primary key AUTO_INCREMENT,
+	Name nvarchar(250),
+	IP nvarchar(250),
+	MAC nvarchar(250),
+	Type_Device_id int,
+	Conditions_id int,
+	Address nvarchar(250),
+	Note nvarchar(250),
+	Name_item nvarchar(250),
+	ID_in_item int,
+	Login nvarchar(250),
+	Password nvarchar(250),
+	SNMP nvarchar(250),
+	Serial_num nvarchar(250),
+	Num_vlan nvarchar(250),
+	Brand_id int,
+	Model_id int,
+	FOREIGN KEY (Type_Device_id) REFERENCES Type_Device(ID),
+    	FOREIGN KEY (Conditions_id) REFERENCES Conditions(ID),
+    	FOREIGN KEY (Brand_id) REFERENCES Brand(ID),
+    	FOREIGN KEY (Model_id) REFERENCES Model(ID)) DEFAULT CHARSET=cp1251;
+
+
+/* INSERT QUERY NO: 1 */
+INSERT INTO Model(ID, `Name`)
+VALUES (1, N'RB3011UiAS');
+
+/* INSERT QUERY NO: 2 */
+INSERT INTO Model(`Name`)
+VALUES (N'CCR1036-12G-4S');
+
+/* INSERT QUERY NO: 3 */
+INSERT INTO Model(`Name`)
+VALUES (N'CRS328-4C-20S-4S+');
+
+/* INSERT QUERY NO: 4 */
+INSERT INTO Model(`Name`)
+VALUES (N'RB2011UiAS-2HnD');
+
+/* INSERT QUERY NO: 5 */
+INSERT INTO Model(`Name`)
+VALUES (N'RB2011UiAS');
+
+/* INSERT QUERY NO: 6 */
+INSERT INTO Model(`Name`)
+VALUES (N'RB750UP');
+
+/* INSERT QUERY NO: 7 */
+INSERT INTO Model(`Name`)
+VALUES (N'RBLHGG-60ad');
+
+/* INSERT QUERY NO: 8 */
+INSERT INTO Model(`Name`)
+VALUES (N'DES-1210-28/me');
+
+/* INSERT QUERY NO: 9 */
+INSERT INTO Model(`Name`)
+VALUES (N'DES-1228 ');
+
+/* INSERT QUERY NO: 10 */
+INSERT INTO Model(`Name`)
+VALUES (N'DES-1210-28P');
+
+/* INSERT QUERY NO: 11 */
+INSERT INTO Model(`Name`)
+VALUES (N'DES-3200-28');
+
+/* INSERT QUERY NO: 12 */
+INSERT INTO Model(`Name`)
+VALUES (N'DES-3200-18');
+
+/* INSERT QUERY NO: 13 */
+INSERT INTO Model(`Name`)
+VALUES (N'DES-3526');
+
+/* INSERT QUERY NO: 14 */
+INSERT INTO Model(`Name`)
+VALUES (N'DES-1228/ME');
+
+/* INSERT QUERY NO: 15 */
+INSERT INTO Model(`Name`)
+VALUES (N'DES-1228P');
+
+/* INSERT QUERY NO: 16 */
+INSERT INTO Model(`Name`)
+VALUES (N'DGS-1210-20');
+
+/* INSERT QUERY NO: 17 */
+INSERT INTO Model(`Name`)
+VALUES (N'S2326TP-EI');
+
+/* INSERT QUERY NO: 18 */
+INSERT INTO Model(`Name`)
+VALUES (N'S2309TP-EI');
+
+/* INSERT QUERY NO: 19 */
+INSERT INTO Model(`Name`)
+VALUES (N'NanoStation M2');
+
+/* INSERT QUERY NO: 20 */
+INSERT INTO Model(`Name`)
+VALUES (N'Nanostation M2 loco');
+
+/* INSERT QUERY NO: 21 */
+INSERT INTO Model(`Name`)
+VALUES (N'Nanostation M5');
+
+/* INSERT QUERY NO: 22 */
+INSERT INTO Model(`Name`)
+VALUES (N'Nanostation M5 loco');
+
+/* INSERT QUERY NO: 23 */
+INSERT INTO Model(`Name`)
+VALUES (N'NanoBridge M2');
+
+/* INSERT QUERY NO: 24 */
+INSERT INTO Model(`Name`)
+VALUES (N'Nanobridge M5');
+
+/* INSERT QUERY NO: 25 */
+INSERT INTO Model(`Name`)
+VALUES (N'PowerBeam M2');
+
+/* INSERT QUERY NO: 26 */
+INSERT INTO Model(`Name`)
+VALUES (N'PowerBeam M5');
+
+/* INSERT QUERY NO: 27 */
+INSERT INTO Model(`Name`)
+VALUES (N'NanoBeam M2');
+
+/* INSERT QUERY NO: 28 */
+INSERT INTO Model(`Name`)
+VALUES (N'NanoBeam M5');
+
+/* INSERT QUERY NO: 29 */
+INSERT INTO Model(`Name`)
+VALUES (N'Rocket M2');
+
+/* INSERT QUERY NO: 30 */
+INSERT INTO Model(`Name`)
+VALUES (N'Rocket M5');
+
+/* INSERT QUERY NO: 31 */
+INSERT INTO Model(`Name`)
+VALUES (N'OLT P3310D-2AC');
+
+/* INSERT QUERY NO: 32 */
+INSERT INTO Model(`Name`)
+VALUES (N'DS-I200');
+
+/* INSERT QUERY NO: 33 */
+INSERT INTO Model(`Name`)
+VALUES (N'ES-2108-G');
+
+/* INSERT QUERY NO: 34 */
+INSERT INTO Model(`Name`)
+VALUES (N'RT-N10');
+
+/* INSERT QUERY NO: 35 */
+INSERT INTO Model(`Name`)
+VALUES (N'RT-N11');
+
+/* INSERT QUERY NO: 36 */
+INSERT INTO Model(`Name`)
+VALUES (N'RT-N12');
+
+/* INSERT QUERY NO: 37 */
+INSERT INTO Model(`Name`)
+VALUES (N'RT-N300');
+
+
+/* INSERT QUERY NO: 1 */
+INSERT INTO Brand(ID, `Name`)
+VALUES (1, N'Mikrotik');
+
+/* INSERT QUERY NO: 2 */
+INSERT INTO Brand(`Name`)
+VALUES (N'D-link');
+
+/* INSERT QUERY NO: 3 */
+INSERT INTO Brand(`Name`)
+VALUES (N'Huawei');
+
+/* INSERT QUERY NO: 4 */
+INSERT INTO Brand(`Name`)
+VALUES (N'Cisco');
+
+/* INSERT QUERY NO: 5 */
+INSERT INTO Brand(`Name`)
+VALUES (N'BDCOM');
+
+/* INSERT QUERY NO: 6 */
+INSERT INTO Brand(`Name`)
+VALUES (N'HiWatch');
+
+/* INSERT QUERY NO: 7 */
+INSERT INTO Brand(`Name`)
+VALUES (N'Hikvision');
+
+/* INSERT QUERY NO: 8 */
+INSERT INTO Brand(`Name`)
+VALUES (N'B-Optix');
+
+/* INSERT QUERY NO: 9 */
+INSERT INTO Brand(`Name`)
+VALUES (N'SNR');
+
+/* INSERT QUERY NO: 10 */
+INSERT INTO Brand(`Name`)
+VALUES (N'Zyxel');
+
+/* INSERT QUERY NO: 11 */
+INSERT INTO Brand(`Name`)
+VALUES (N'Asus');
+
+/* INSERT QUERY NO: 12 */
+INSERT INTO Brand(`Name`)
+VALUES (N'TP-link');
+
+/* INSERT QUERY NO: 13 */
+INSERT INTO Brand(`Name`)
+VALUES (N'Inelt');
+
+/* INSERT QUERY NO: 14 */
+INSERT INTO Brand(`Name`)
+VALUES (N'Видеосервер');
+
+/* INSERT QUERY NO: 15 */
+INSERT INTO Brand(`Name`)
+VALUES (N'Сервер');
+		
+INSERT INTO Type_Device (ID, Name) VALUES (1, N'Виртуальное');
+INSERT INTO Type_Device (Name) VALUES (N'Сетевое'), (N'Клиентское');
+
+INSERT INTO Conditions (ID, Name) VALUES (1, N'Новое');
+INSERT INTO Conditions (Name) VALUES (N'Б/У');
+
+
+

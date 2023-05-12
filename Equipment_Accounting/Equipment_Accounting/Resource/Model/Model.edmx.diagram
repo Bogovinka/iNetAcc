@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="56266d6d15ba483dbba0f8581994805c" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseModel.Brand" Width="1.5" PointX="0.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Client" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.ClientContracts" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Conditions" Width="1.5" PointX="1.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Equipment" Width="1.5" PointX="3" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.EquipmentWarehouse" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.EquipmentWarehouseClient" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.EquipmentWarehouseMaster" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.EquipmentWarehouseS" Width="1.5" PointX="5.25" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.EquipmentWarehouseStatus" Width="1.5" PointX="1.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.EquipmentWarehouseType" Width="1.5" PointX="1.5" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Logins" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Model" Width="1.5" PointX="0.75" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.StatusTask" Width="1.5" PointX="3" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Task" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.TaskEquipment" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.TaskTMC" Width="1.5" PointX="7.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.TMC" Width="1.5" PointX="5.25" PointY="33.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Type_Device" Width="1.5" PointX="0.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.TypeTask" Width="1.5" PointX="3" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Unit" Width="1.5" PointX="3" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Warehouse" Width="1.5" PointX="3" PointY="34.625" IsExpanded="true" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Brand__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__ClientCon__Clien__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Clien__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Task__Contract__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Condi__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Condi__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Model__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Type___403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Task__PortID__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Equip__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Equip__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Equip__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Equip__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Statu__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__TaskEquip__Equip__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Maste__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Equipment__Wareh__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Task__MasterID__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Task__StatusTask__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Task__TypeID__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__TaskEquip__TaskI__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__TaskTMC__TaskID__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__TaskTMC__TMCID__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__TMC__UnitID__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__TMC__WarehouseID__6383C8BA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

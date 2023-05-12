@@ -1,0 +1,51 @@
+﻿<Window x:Class="Equipment_Accounting.View.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Equipment_Accounting.View"
+        mc:Ignorable="d"
+        Title="Дерево" WindowStartupLocation="CenterScreen" MinHeight="500" MinWidth="900">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="319*"/>
+            <RowDefinition Height="46*"/>
+        </Grid.RowDefinitions>
+        <Menu Background="#FFB8B8B8" MaxHeight="50" VerticalAlignment="Top">
+            <MenuItem VerticalAlignment="Center" x:Name="warehouse" Header="Склад" Click="warehouse_Click" />
+            <MenuItem VerticalAlignment="Center" x:Name="clients" Header="Клиенты" Click="clients_Click" />
+            <MenuItem VerticalAlignment="Center" x:Name="tree" Header="Древо" Click="tree_Click"/>
+        </Menu>
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" MaxHeight="50" VerticalAlignment="Top">
+            <Label x:Name="loginName" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,0">Логин:</Label>
+            <Button x:Name="exit" HorizontalAlignment="Right" Click="exit_Click" Margin="0,5,10,0" Cursor="Hand">Exit</Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" x:Name="contractsDG" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="{Binding backRow}"></Setter>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="№" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Номер" Binding="{Binding FullID}"/>
+                <DataGridTextColumn Header="Тип" Binding="{Binding TypeTask.Name}"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding StatusTask.Name}"/>
+                <DataGridTextColumn Header="Создана" Binding="{Binding dateS}"/>
+                <DataGridTextColumn Header="Создатель" Binding="{Binding Creator}"/>
+                <DataGridTextColumn Header="Мастер" Binding="{Binding Logins.FullName}"/>
+                <DataGridTextColumn Header="Адрес" Binding="{Binding Addres}"/>
+                <DataGridTextColumn Header="Коментарий" Binding="{Binding Note}"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding ClientContracts.Client.FullName}" />
+                <DataGridTextColumn Header="Срок" Binding="{Binding DaysEnd}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+            <Button x:Name="addContract" Click="addContract_Click">Добавить</Button>
+            <Button Margin="10,0,10,0" x:Name="editContract" Click="editContract_Click">Правка</Button>
+            <Button x:Name="delContract" Click="delContract_Click">Удалить</Button>
+        </StackPanel>
+    </Grid>
+</Window>

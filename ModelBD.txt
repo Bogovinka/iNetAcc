@@ -1,0 +1,32 @@
+public string FullName => $"{Name}|{IP}|{MAC}|{Serial_num}|{Model.Name}|{Type_Device.Name}|{Address}";
+public string FullName => $"{Surname} {Name} {LastName}";
+public DatabaseEntities(string con)
+    : base(con)
+        {
+        }
+public string SizeUnit => $"{Size} {Unit.Name}";
+
+                public int DaysReturn()
+        {
+            if (StatusTaskID == 2) return 0;
+            else return (int)((TimeSpan)(DateEnt - DateTime.Now)).TotalDays;
+        }
+		public int DaysEnd => (int)((TimeSpan)(DateEnt - DateTime.Now)).TotalDays;	
+		public string getID()
+        {
+            if (TypeID == 2) return $"ТТ-{IDofType}";
+            else if (TypeID == 3) return $"ЗМС-{IDofType}";
+            else return $"А-{IDofType}";
+        }
+        public string FullID => getID();
+		
+        public string getBackground()
+        {
+            if (StatusTaskID == 2) return "#696969";
+            else if (DaysEnd < 0) return "#FA8072";
+            else if (DaysEnd >= 0 && DaysEnd <= 3) return "#F0E68C";
+            else return "#FFFFFF";
+        }
+        public string backRow => getBackground();
+		public string dateS => string.Format("{0:dd/MM/yyyy}", DateStart);
+        public string dateE => string.Format("{0:dd/MM/yyyy}", DateEnt);

@@ -1,0 +1,38 @@
+﻿<Window x:Class="Equipment_Accounting.Table"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Equipment_Accounting"
+        mc:Ignorable="d"
+        Title="Таблица" WindowStartupLocation="CenterScreen" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="319*"/>
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False" Grid.Row="1" x:Name="dataGrid" PreviewTextInput="dataGrid_TextInput">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="IP" Binding="{Binding IP}"></DataGridTextColumn>
+                <DataGridTextColumn Header="MAC" Binding="{Binding MAC}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Тип" Binding="{Binding Type_Device.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Состояние" Binding="{Binding Conditions.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Адрес" Binding="{Binding Address}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дополнительно" Binding="{Binding Note}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Логин" Binding="{Binding Login}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Пароль" Binding="{Binding Password}"></DataGridTextColumn>
+                <DataGridTextColumn Header="SNMP" Binding="{Binding SNMP}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Серийный номер" Binding="{Binding Serial_num}"></DataGridTextColumn>
+                <DataGridTextColumn Header="VLAN" Binding="{Binding Num_vlan}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Марка" Binding="{Binding Brand.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Модель" Binding="{Binding Model.Name}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Margin="0,0,20,0" HorizontalAlignment="Right" Grid.Row="0" Orientation="Horizontal">
+            <TextBox x:Name="searchText" MaxWidth="200" Margin="10,0,0,0" KeyDown="searchText_KeyDown" VerticalAlignment="Center" MinWidth="200" Cursor="IBeam"></TextBox>
+            <Button x:Name="search" Margin="10,0,0,0" Click="search_Click">Найти</Button>
+            <Button x:Name="save" Margin="10,0,0,0" Click="save_Click">Выгрузить</Button>
+        </StackPanel>
+    </Grid>
+</Window>

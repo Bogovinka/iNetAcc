@@ -1,0 +1,1 @@
+data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Resource\Database.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework

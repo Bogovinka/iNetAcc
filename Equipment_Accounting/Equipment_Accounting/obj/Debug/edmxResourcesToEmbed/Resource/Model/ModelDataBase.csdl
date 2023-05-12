@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Equipment" Relationship="Self.FK__Equipment__Brand__5BE2A6F2" FromRole="Brand" ToRole="Equipment" />
+  </EntityType>
+  <EntityType Name="Conditions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Equipment" Relationship="Self.FK__Equipment__Condi__5AEE82B9" FromRole="Conditions" ToRole="Equipment" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IP" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MAC" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type_Device_id" Type="Int32" />
+    <Property Name="Conditions_id" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ID_in_item" Type="Int32" />
+    <Property Name="Login" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SNMP" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Serial_num" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Num_vlan" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Brand_id" Type="Int32" />
+    <Property Name="Model_id" Type="Int32" />
+    <NavigationProperty Name="Brand" Relationship="Self.FK__Equipment__Brand__5BE2A6F2" FromRole="Equipment" ToRole="Brand" />
+    <NavigationProperty Name="Conditions" Relationship="Self.FK__Equipment__Condi__5AEE82B9" FromRole="Equipment" ToRole="Conditions" />
+    <NavigationProperty Name="Model" Relationship="Self.FK__Equipment__Model__5CD6CB2B" FromRole="Equipment" ToRole="Model" />
+    <NavigationProperty Name="Type_Device" Relationship="Self.FK__Equipment__Type___59FA5E80" FromRole="Equipment" ToRole="Type_Device" />
+  </EntityType>
+  <EntityType Name="Logins">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Permission" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Equipment" Relationship="Self.FK__Equipment__Model__5CD6CB2B" FromRole="Model" ToRole="Equipment" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Type_Device">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Equipment" Relationship="Self.FK__Equipment__Type___59FA5E80" FromRole="Type_Device" ToRole="Equipment" />
+  </EntityType>
+  <Association Name="FK__Equipment__Brand__5BE2A6F2">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="Brand_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Condi__5AEE82B9">
+    <End Role="Conditions" Type="Self.Conditions" Multiplicity="0..1" />
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conditions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="Conditions_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Model__5CD6CB2B">
+    <End Role="Model" Type="Self.Model" Multiplicity="0..1" />
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="Model_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Equipment__Type___59FA5E80">
+    <End Role="Type_Device" Type="Self.Type_Device" Multiplicity="0..1" />
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Type_Device">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="Type_Device_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brand" EntityType="Self.Brand" />
+    <EntitySet Name="Conditions" EntityType="Self.Conditions" />
+    <EntitySet Name="Equipment" EntityType="Self.Equipment" />
+    <EntitySet Name="Logins" EntityType="Self.Logins" />
+    <EntitySet Name="Model" EntityType="Self.Model" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Type_Device" EntityType="Self.Type_Device" />
+    <AssociationSet Name="FK__Equipment__Brand__5BE2A6F2" Association="Self.FK__Equipment__Brand__5BE2A6F2">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Condi__5AEE82B9" Association="Self.FK__Equipment__Condi__5AEE82B9">
+      <End Role="Conditions" EntitySet="Conditions" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Model__5CD6CB2B" Association="Self.FK__Equipment__Model__5CD6CB2B">
+      <End Role="Model" EntitySet="Model" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Equipment__Type___59FA5E80" Association="Self.FK__Equipment__Type___59FA5E80">
+      <End Role="Type_Device" EntitySet="Type_Device" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

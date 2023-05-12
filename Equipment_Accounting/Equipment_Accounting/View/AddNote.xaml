@@ -1,0 +1,36 @@
+﻿<Window x:Class="Equipment_Accounting.AddNote"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Equipment_Accounting"
+        mc:Ignorable="d"
+        Title="Добавить" WindowStartupLocation="CenterScreen" MaxHeight="700" MaxWidth="450" Height="650" Width="400">
+    <Grid>
+        <ScrollViewer Margin="0,0,0,60">
+            <StackPanel>
+                <TextBox x:Name="nameT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Наименование" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBox x:Name="IPT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" TextInput="IPT_TextInput" Margin="0,10,0,0" materialDesign:HintAssist.Hint="IP-адрес" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="IBeam" />
+                <TextBox x:Name="MACT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="MAC-адрес" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBox x:Name="SerT" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextInput="IPT_TextInput" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Серийный номер" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBox x:Name="VLANT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Номер VLAN" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBox x:Name="LoginT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Логин" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBox x:Name="PasswordT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Пароль" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <ComboBox x:Name="TypeT" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Положение в сети" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayMemberPath="Name" SelectedValuePath="ID">
+                </ComboBox>
+                <TextBox x:Name="SNMPT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="SNMP" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <ComboBox x:Name="StateT" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Состояние" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayMemberPath="Name" SelectedValuePath="ID">
+                </ComboBox>
+                <TextBox x:Name="AdresT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Адрес" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <ComboBox x:Name="MarkT" DisplayMemberPath="Name" SelectedValuePath="ID" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Марка" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <ComboBox x:Name="ModelT" DisplayMemberPath="Name" SelectedValuePath="ID" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Модель" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBox x:Name="NoteT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Дополнительно" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="IBeam" />
+
+            </StackPanel>
+        </ScrollViewer>
+       
+        <Button x:Name="back" VerticalAlignment="Bottom" MinWidth="100" HorizontalAlignment="Left" Margin="20,0,0,10" Click="back_Click">Назад</Button>
+        <Button x:Name="createB" VerticalAlignment="Bottom" MinWidth="100" HorizontalAlignment="Right" Margin="0,0,20,10" Click="createB_Click">Добавить</Button>
+    </Grid>
+</Window>

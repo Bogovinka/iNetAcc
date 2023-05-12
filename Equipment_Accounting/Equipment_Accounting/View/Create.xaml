@@ -1,0 +1,16 @@
+﻿<Window x:Class="Equipment_Accounting.Create"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Equipment_Accounting"
+        mc:Ignorable="d"
+        Title="Создать ветку" WindowStartupLocation="CenterScreen" Height="250" Width="400">
+    <Grid>
+
+        <TextBox x:Name="createText" Style="{StaticResource MaterialDesignOutlinedTextBox}" materialDesign:HintAssist.Hint="Имя новой ветки" FontSize="20" MinWidth="200" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="IBeam" />
+        <Button x:Name="back" VerticalAlignment="Bottom" MinWidth="100" HorizontalAlignment="Left" Margin="20,0,0,10" Click="back_Click">Назад</Button>
+        <Button x:Name="createB" VerticalAlignment="Bottom" MinWidth="100" HorizontalAlignment="Right" Margin="0,0,20,10" Click="createB_Click">Создать</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,831 @@
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.cache
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.lref
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.config
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.pdb
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.dll
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.pdb
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.baml
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.g.cs
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.g.resources
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.Properties.Resources.resources
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CopyComplete
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.pdb
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Create.g.cs
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Create.baml
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database.mdf
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database_log.ldf
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Table.g.cs
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_Content.g.cs
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Table.baml
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\AddNote.g.cs
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\AddNote.baml
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Update.g.cs
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Update.baml
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.manifest
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.application
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe.manifest
+C:\Users\user\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.application
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database.mdf
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database_log.ldf
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.config
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.manifest
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.application
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.pdb
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\ZstdNet.dll
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.pdb
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.xml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.xml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.xml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.xml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.AssemblyReference.cache
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.SuggestedBindingRedirects.cache
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.baml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\AddNote.g.cs
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\MainWindow.g.cs
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Create.g.cs
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Table.g.cs
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Update.g.cs
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.g.cs
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_Content.g.cs
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.cache
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.lref
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\AddNote.baml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\MainWindow.baml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Create.baml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Table.baml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Update.baml
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.g.resources
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.Properties.Resources.resources
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.GenerateResource.cache
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CoreCompileInputs.cache
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe.manifest
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.application
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CopyComplete
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe
+C:\Users\Артур\Desktop\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database.mdf
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database_log.ldf
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.config
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.manifest
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.application
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ZstdNet.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.AssemblyReference.cache
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.SuggestedBindingRedirects.cache
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.baml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\AddNote.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\MainWindow.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Create.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Table.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Update.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_Content.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.cache
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.lref
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\AddNote.baml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\MainWindow.baml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Create.baml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Table.baml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Update.baml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.g.resources
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.Properties.Resources.resources
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.GenerateResource.cache
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CoreCompileInputs.cache
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe.manifest
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.application
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CopyComplete
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.ResolveComReference.cache
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Menu.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Reg.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Menu.baml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Reg.baml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Users.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Users.baml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.dll
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.pdb
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.xml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\DialogWindow.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\DialogWindow.baml
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\EditConection.g.cs
+C:\Users\Артур\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\EditConection.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database.mdf
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database_log.ldf
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.config
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.manifest
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.application
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Ubiety.Dns.Core.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ZstdNet.dll
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.pdb
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.AssemblyReference.cache
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.SuggestedBindingRedirects.cache
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.ResolveComReference.cache
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\AddNote.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\DialogWindow.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\EditConection.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\MainWindow.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Create.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Menu.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Reg.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Table.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Update.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Users.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_Content.g.cs
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.cache
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.lref
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\AddNote.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\DialogWindow.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\EditConection.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\MainWindow.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Create.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Menu.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Reg.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Table.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Update.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Users.baml
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.g.resources
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.Properties.Resources.resources
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.GenerateResource.cache
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CoreCompileInputs.cache
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe.manifest
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.application
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CopyComplete
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe
+D:\Никита - программы\Учет оборудования\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database.mdf
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database_log.ldf
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.config
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.manifest
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.application
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ZstdNet.dll
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.pdb
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.AssemblyReference.cache
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.ResolveComReference.cache
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.baml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\AddNote.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\DialogWindow.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\EditConection.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\MainWindow.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Create.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Menu.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Reg.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Table.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Update.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Users.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_Content.g.cs
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.cache
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.lref
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\AddNote.baml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\DialogWindow.baml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\EditConection.baml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\MainWindow.baml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Create.baml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Menu.baml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Reg.baml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Table.baml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Update.baml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Users.baml
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.g.resources
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.Properties.Resources.resources
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.GenerateResource.cache
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe.manifest
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.application
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CopyComplete
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe
+C:\Users\Администратор\Documents\GitHub\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database.mdf
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Database_log.ldf
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.config
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.manifest
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.application
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ZstdNet.dll
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.AssemblyReference.cache
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.SuggestedBindingRedirects.cache
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.ResolveComReference.cache
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.baml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_Content.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.cache
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.lref
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.g.resources
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.Properties.Resources.resources
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.GenerateResource.cache
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CoreCompileInputs.cache
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe.manifest
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.application
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CopyComplete
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.pdb
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddNote.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\DialogWindow.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\EditConection.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\MainWindow.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Create.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Menu.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Reg.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Table.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Update.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Users.g.cs
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddNote.baml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\DialogWindow.baml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\EditConection.baml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\MainWindow.baml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Create.baml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Menu.baml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Reg.baml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Table.baml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Update.baml
+C:\Users\salavat\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Users.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.AssemblyReference.cache
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.SuggestedBindingRedirects.cache
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe.config
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.ResolveComReference.cache
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddNote.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\DialogWindow.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\EditConection.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\MainWindow.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Create.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Menu.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Reg.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Table.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Update.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Users.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_Content.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.cache
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.lref
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddNote.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\DialogWindow.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\EditConection.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\MainWindow.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Create.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Menu.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Reg.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Table.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Update.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Users.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.g.resources
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.Properties.Resources.resources
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.GenerateResource.cache
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CoreCompileInputs.cache
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Resource\Database.mdf
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Resource\Database_log.ldf
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.config
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.manifest
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.application
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\EntityFramework.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\mysql.data.entity.EF6.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Web.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySqlConnector.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.Helpers.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.Razor.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\WebMatrix.Data.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\WebMatrix.WebData.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\EntityFramework.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Web.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySqlConnector.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.pdb
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.Helpers.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.Razor.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\WebMatrix.Data.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\WebMatrix.WebData.xml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe.manifest
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.application
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CopyComplete
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\MenuTree.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\MenuTree.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddEWarehouse.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Warehouse.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddEWarehouse.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Warehouse.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddTMC.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddTMC.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddClient.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\ClientsWindow.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddClient.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\ClientsWindow.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectContract.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectContract.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddContract.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddContract.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectPort.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectWarehouseEquip.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectWarehouseTMC.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectPort.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectWarehouseEquip.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectWarehouseTMC.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\NewContract.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\NewContract.baml
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddSize.g.cs
+C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddSize.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Resource\Database.mdf
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Resource\Database_log.ldf
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.config
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe.manifest
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.application
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\EntityFramework.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\mysql.data.entity.EF6.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Web.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySqlConnector.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.Helpers.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.Razor.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\WebMatrix.Data.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\WebMatrix.WebData.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ClosedXML.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\EntityFramework.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ExcelNumberFormat.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Google.Protobuf.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignColors.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Web.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySqlConnector.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXml4Net.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OpenXmlFormats.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Prism.Wpf.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Buffers.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Memory.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.Helpers.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.Razor.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\WebMatrix.Data.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\WebMatrix.WebData.xml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.AssemblyReference.cache
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.SuggestedBindingRedirects.cache
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe.config
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.ResolveComReference.cache
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddClient.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddContract.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddEWarehouse.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddNote.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddSize.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddTMC.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\ClientsWindow.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\DialogWindow.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\EditConection.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\MainWindow.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Create.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Menu.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\MenuTree.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\NewContract.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Reg.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectContract.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectPort.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectWarehouseEquip.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectWarehouseTMC.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Table.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Update.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Users.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Warehouse.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_Content.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.cache
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting_MarkupCompile.lref
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddClient.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddContract.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddEWarehouse.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddNote.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddSize.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddTMC.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\ClientsWindow.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\DialogWindow.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\EditConection.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\MainWindow.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Create.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Menu.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\MenuTree.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\NewContract.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Reg.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectContract.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectPort.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectWarehouseEquip.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectWarehouseTMC.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Table.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Update.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Users.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\Warehouse.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.g.resources
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.Properties.Resources.resources
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.GenerateResource.cache
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CoreCompileInputs.cache
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe.manifest
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.application
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CopyComplete
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.pdb
