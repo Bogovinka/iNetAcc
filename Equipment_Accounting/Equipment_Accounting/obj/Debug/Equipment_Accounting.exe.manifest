@@ -573,7 +573,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>kmFo1QqK+zLCumIn6PdD4esDkNf3zHXLp8j8MoLWN/Q=</dsig:DigestValue>
+      <dsig:DigestValue>YodLezP7yQkdBkpVtXqXEvTgVpChG+i/95SVSveVPsM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resource\Database_log.ldf" size="8388608" writeableType="applicationData">
@@ -582,7 +582,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>w4UUsbQnrPSRvaeen/M2O3JRC8sxpAPzZ3Rj2kvIgv0=</dsig:DigestValue>
+      <dsig:DigestValue>Phn55f6ydalqJiIBMKALpgfancUI4HFORy287oZ6FJc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resource\Icons\icon.ico" size="67646">

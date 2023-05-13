@@ -334,6 +334,9 @@ VALUES (N'Hikvision');
 INSERT INTO Brand
 VALUES (N'B-Optix');
 
+INSERT INTO Brand
+VALUES (N'Ubiquiti');
+
 /* INSERT QUERY NO: 9 */
 INSERT INTO Brand
 VALUES (N'SNR');
