@@ -35,10 +35,10 @@ namespace Equipment_Accounting.View
             loginName.Content = "логин: " + log.Login;
             db = con.getDB();
             contractsDG.ItemsSource = db.Task.ToList();
-            if(log.Permission == 0)
+            if (log.Permission == 0)
             {
-                delContract.IsEnabled= false;
-                addContract.IsEnabled= false;
+                delContract.IsEnabled = false;
+                addContract.IsEnabled = false;
             }
         }
 
@@ -81,8 +81,7 @@ namespace Equipment_Accounting.View
                 }
             }
         }
-
-        private void editContract_Click(object sender, RoutedEventArgs e)
+        public void EditClick()
         {
             if (contractsDG.SelectedItem != null)
             {
@@ -97,6 +96,10 @@ namespace Equipment_Accounting.View
                 }
                 else MessageBox.Show("Заявка закрыта");
             }
+        }
+        private void editContract_Click(object sender, RoutedEventArgs e)
+        {
+            EditClick();
         }
 
         private void delContract_Click(object sender, RoutedEventArgs e)
@@ -113,5 +116,11 @@ namespace Equipment_Accounting.View
                 }
             }
         }
+
+        private void contractsDG_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            EditClick();
+        }
+
     }
 }

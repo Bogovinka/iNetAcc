@@ -72,6 +72,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="EquipmentWarehouseID" Type="int" />
     <Property Name="ClientID" Type="int" />
+    <Property Name="Size" Type="int" />
   </EntityType>
   <EntityType Name="EquipmentWarehouseMaster">
     <Key>
@@ -80,6 +81,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="EquipmentWarehouseID" Type="int" />
     <Property Name="MasterID" Type="int" />
+    <Property Name="Size" Type="int" />
   </EntityType>
   <EntityType Name="EquipmentWarehouseS">
     <Key>
@@ -88,6 +90,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="EquipmentWarehouseID" Type="int" />
     <Property Name="WarehouseID" Type="int" />
+    <Property Name="Size" Type="int" />
   </EntityType>
   <EntityType Name="EquipmentWarehouseStatus">
     <Key>
@@ -145,7 +148,7 @@
     <Property Name="Addres" Type="nvarchar" MaxLength="250" />
     <Property Name="TypeID" Type="int" />
     <Property Name="PortID" Type="int" />
-    <Property Name="Note" Type="nvarchar" MaxLength="250" />
+    <Property Name="Note" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="TaskEquipment">
     <Key>

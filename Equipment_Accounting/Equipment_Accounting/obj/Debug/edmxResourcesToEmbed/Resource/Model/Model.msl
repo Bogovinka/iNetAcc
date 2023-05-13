@@ -75,6 +75,7 @@
     <EntitySetMapping Name="EquipmentWarehouseClient">
       <EntityTypeMapping TypeName="DatabaseModel.EquipmentWarehouseClient">
         <MappingFragment StoreEntitySet="EquipmentWarehouseClient">
+          <ScalarProperty Name="Size" ColumnName="Size" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="EquipmentWarehouseID" ColumnName="EquipmentWarehouseID" />
           <ScalarProperty Name="ClientID" ColumnName="ClientID" />
@@ -84,6 +85,7 @@
     <EntitySetMapping Name="EquipmentWarehouseMaster">
       <EntityTypeMapping TypeName="DatabaseModel.EquipmentWarehouseMaster">
         <MappingFragment StoreEntitySet="EquipmentWarehouseMaster">
+          <ScalarProperty Name="Size" ColumnName="Size" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="EquipmentWarehouseID" ColumnName="EquipmentWarehouseID" />
           <ScalarProperty Name="MasterID" ColumnName="MasterID" />
@@ -93,6 +95,7 @@
     <EntitySetMapping Name="EquipmentWarehouseS">
       <EntityTypeMapping TypeName="DatabaseModel.EquipmentWarehouseS">
         <MappingFragment StoreEntitySet="EquipmentWarehouseS">
+          <ScalarProperty Name="Size" ColumnName="Size" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="EquipmentWarehouseID" ColumnName="EquipmentWarehouseID" />
           <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />

@@ -11,7 +11,7 @@ namespace Equipment_Accounting.Resource.Model
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Task
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,7 +25,7 @@ namespace Equipment_Accounting.Resource.Model
             if (StatusTaskID == 2) return 0;
             else return (int)((TimeSpan)(DateEnt - DateTime.Now)).TotalDays;
         }
-        public int DaysEnd => DaysReturn();
+        public int DaysEnd => (int)((TimeSpan)(DateEnt - DateTime.Now)).TotalDays;
         public string getID()
         {
             if (TypeID == 2) return $"ТТ-{IDofType}";
@@ -33,6 +33,7 @@ namespace Equipment_Accounting.Resource.Model
             else return $"А-{IDofType}";
         }
         public string FullID => getID();
+
         public string getBackground()
         {
             if (StatusTaskID == 2) return "#696969";

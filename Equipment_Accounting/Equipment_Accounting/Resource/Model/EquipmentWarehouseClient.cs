@@ -17,6 +17,7 @@ namespace Equipment_Accounting.Resource.Model
         public int ID { get; set; }
         public Nullable<int> EquipmentWarehouseID { get; set; }
         public Nullable<int> ClientID { get; set; }
+        public Nullable<int> Size { get; set; }
     
         public virtual Client Client { get; set; }
         public virtual EquipmentWarehouse EquipmentWarehouse { get; set; }

@@ -49,13 +49,19 @@ namespace Equipment_Accounting.View
             InitializeComponent();
             startForm();
             editForm(s.EquipmentWarehouse);
+            SizeT.Text = s.Size.ToString();
             AffiliationT.SelectedIndex = 0;
+            if(s.Size > 1)
+            {
+                AffiliationT.Visibility = Visibility.Hidden;
+            }
         }
         public AddEWarehouse(EquipmentWarehouseClient s)
         {
             InitializeComponent();
             startForm();
             editForm(s.EquipmentWarehouse);
+            SizeT.Text = s.Size.ToString();
             AffiliationT.SelectedIndex = 2;
             AffiliationPersonT.Text = s.Client.FullName;
         }
@@ -64,6 +70,7 @@ namespace Equipment_Accounting.View
             InitializeComponent();
             startForm();
             editForm(s.EquipmentWarehouse);
+            SizeT.Text = s.Size.ToString();
             AffiliationT.SelectedIndex = 1;
             AffiliationPersonT.Text = s.Logins.FullName;
         }
@@ -93,7 +100,32 @@ namespace Equipment_Accounting.View
 
         private void createB_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            int checkI;
+            if (StatusT.Text != "" && CondT.Text != "" && TypeT.Text != "" && int.TryParse(SizeT.Text, out checkI))
+            {
+                if (Convert.ToInt32(SizeT.Text) > 0)
+                {
+                    if (AffiliationT.SelectedIndex != 0 && AffiliationPersonT.Text == "") MessageBox.Show("Заполните персону");
+                    else DialogResult = true;
+                }
+                else MessageBox.Show("Количество должно быть > 0");
+            }
+        }
+
+        private void SizeT_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(SizeT.Text != "1")
+            {
+                AffiliationT.Visibility = Visibility.Hidden;
+                AffiliationPersonT.Visibility = Visibility.Hidden;
+                AffL.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                AffL.Visibility = Visibility.Visible;
+                AffiliationT.Visibility = Visibility.Visible;
+                if (AffiliationT.SelectedIndex != 0) AffiliationPersonT.Visibility = Visibility.Visible;
+            }
         }
     }
 }

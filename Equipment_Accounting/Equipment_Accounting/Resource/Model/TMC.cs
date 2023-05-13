@@ -20,7 +20,6 @@ namespace Equipment_Accounting.Resource.Model
             this.TaskTMC = new HashSet<TaskTMC>();
         }
         public string SizeUnit => $"{Size} {Unit.Name}";
-
         public int ID { get; set; }
         public string Name { get; set; }
         public Nullable<int> Size { get; set; }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище DatabaseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище DatabaseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Brand">
           <Key>
             <PropertyRef Name="ID" />
@@ -77,6 +77,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EquipmentWarehouseID" Type="int" />
           <Property Name="ClientID" Type="int" />
+          <Property Name="Size" Type="int" />
         </EntityType>
         <EntityType Name="EquipmentWarehouseMaster">
           <Key>
@@ -85,6 +86,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EquipmentWarehouseID" Type="int" />
           <Property Name="MasterID" Type="int" />
+          <Property Name="Size" Type="int" />
         </EntityType>
         <EntityType Name="EquipmentWarehouseS">
           <Key>
@@ -93,6 +95,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EquipmentWarehouseID" Type="int" />
           <Property Name="WarehouseID" Type="int" />
+          <Property Name="Size" Type="int" />
         </EntityType>
         <EntityType Name="EquipmentWarehouseStatus">
           <Key>
@@ -150,7 +153,7 @@
           <Property Name="Addres" Type="nvarchar" MaxLength="250" />
           <Property Name="TypeID" Type="int" />
           <Property Name="PortID" Type="int" />
-          <Property Name="Note" Type="nvarchar" MaxLength="250" />
+          <Property Name="Note" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="TaskEquipment">
           <Key>
@@ -631,8 +634,7 @@
             <End Role="TMC" EntitySet="TMC" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -729,6 +731,7 @@
           <Property Name="ClientID" Type="Int32" />
           <NavigationProperty Name="Client" Relationship="Self.FK__Equipment__Clien__5629CD9C" FromRole="EquipmentWarehouseClient" ToRole="Client" />
           <NavigationProperty Name="EquipmentWarehouse" Relationship="Self.FK__Equipment__Equip__5535A963" FromRole="EquipmentWarehouseClient" ToRole="EquipmentWarehouse" />
+          <Property Name="Size" Type="Int32" />
         </EntityType>
         <EntityType Name="EquipmentWarehouseMaster">
           <Key>
@@ -739,6 +742,7 @@
           <Property Name="MasterID" Type="Int32" />
           <NavigationProperty Name="EquipmentWarehouse" Relationship="Self.FK__Equipment__Equip__59063A47" FromRole="EquipmentWarehouseMaster" ToRole="EquipmentWarehouse" />
           <NavigationProperty Name="Logins" Relationship="Self.FK__Equipment__Maste__59FA5E80" FromRole="EquipmentWarehouseMaster" ToRole="Logins" />
+          <Property Name="Size" Type="Int32" />
         </EntityType>
         <EntityType Name="EquipmentWarehouseS">
           <Key>
@@ -749,6 +753,7 @@
           <Property Name="WarehouseID" Type="Int32" />
           <NavigationProperty Name="EquipmentWarehouse" Relationship="Self.FK__Equipment__Equip__5CD6CB2B" FromRole="EquipmentWarehouseS" ToRole="EquipmentWarehouse" />
           <NavigationProperty Name="Warehouse" Relationship="Self.FK__Equipment__Wareh__5DCAEF64" FromRole="EquipmentWarehouseS" ToRole="Warehouse" />
+          <Property Name="Size" Type="Int32" />
         </EntityType>
         <EntityType Name="EquipmentWarehouseStatus">
           <Key>
@@ -812,7 +817,7 @@
           <Property Name="Addres" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="TypeID" Type="Int32" />
           <Property Name="PortID" Type="Int32" />
-          <Property Name="Note" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ClientContracts" Relationship="Self.FK__Task__Contract__6A30C649" FromRole="Task" ToRole="ClientContracts" />
           <NavigationProperty Name="Equipment" Relationship="Self.FK__Task__PortID__6E01572D" FromRole="Task" ToRole="Equipment" />
           <NavigationProperty Name="Logins" Relationship="Self.FK__Task__MasterID__6B24EA82" FromRole="Task" ToRole="Logins" />
@@ -1392,6 +1397,7 @@
           <EntitySetMapping Name="EquipmentWarehouseClient">
             <EntityTypeMapping TypeName="DatabaseModel.EquipmentWarehouseClient">
               <MappingFragment StoreEntitySet="EquipmentWarehouseClient">
+                <ScalarProperty Name="Size" ColumnName="Size" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="EquipmentWarehouseID" ColumnName="EquipmentWarehouseID" />
                 <ScalarProperty Name="ClientID" ColumnName="ClientID" />
@@ -1401,6 +1407,7 @@
           <EntitySetMapping Name="EquipmentWarehouseMaster">
             <EntityTypeMapping TypeName="DatabaseModel.EquipmentWarehouseMaster">
               <MappingFragment StoreEntitySet="EquipmentWarehouseMaster">
+                <ScalarProperty Name="Size" ColumnName="Size" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="EquipmentWarehouseID" ColumnName="EquipmentWarehouseID" />
                 <ScalarProperty Name="MasterID" ColumnName="MasterID" />
@@ -1410,6 +1417,7 @@
           <EntitySetMapping Name="EquipmentWarehouseS">
             <EntityTypeMapping TypeName="DatabaseModel.EquipmentWarehouseS">
               <MappingFragment StoreEntitySet="EquipmentWarehouseS">
+                <ScalarProperty Name="Size" ColumnName="Size" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="EquipmentWarehouseID" ColumnName="EquipmentWarehouseID" />
                 <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />

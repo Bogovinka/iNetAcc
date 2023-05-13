@@ -88,17 +88,20 @@ CREATE TABLE ClientContracts(
 CREATE TABLE EquipmentWarehouseClient(
 	ID int primary key IDENTITY(1,1),
 	EquipmentWarehouseID int FOREIGN KEY REFERENCES EquipmentWarehouse(ID),
-	ClientID int FOREIGN KEY REFERENCES Client(ID));
+	ClientID int FOREIGN KEY REFERENCES Client(ID),
+	Size int);
 
 CREATE TABLE EquipmentWarehouseMaster(
 	ID int primary key IDENTITY(1,1),
 	EquipmentWarehouseID int FOREIGN KEY REFERENCES EquipmentWarehouse(ID),
-	MasterID int FOREIGN KEY REFERENCES Logins(ID));	
+	MasterID int FOREIGN KEY REFERENCES Logins(ID),
+	Size int);	
 	
 CREATE TABLE EquipmentWarehouseS(
 	ID int primary key IDENTITY(1,1),
 	EquipmentWarehouseID int FOREIGN KEY REFERENCES EquipmentWarehouse(ID),
-	WarehouseID int FOREIGN KEY REFERENCES Warehouse(ID));
+	WarehouseID int FOREIGN KEY REFERENCES Warehouse(ID),
+	Size int);
 
 CREATE TABLE Unit(
 	ID int primary key IDENTITY(1,1),
@@ -131,7 +134,7 @@ CREATE TABLE Task(
 	Addres nvarchar(250),
 	TypeID int FOREIGN KEY REFERENCES TypeTask(ID),
 	PortID int FOREIGN KEY REFERENCES Equipment(ID),
-	Note nvarchar(250));
+	Note nvarchar(max));
 	
 CREATE TABLE TaskTMC(
 	ID int primary key IDENTITY(1,1),

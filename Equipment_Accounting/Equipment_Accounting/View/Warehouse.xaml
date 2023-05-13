@@ -30,6 +30,7 @@
                                     <DataGridTextColumn Header="Состояние" Binding="{Binding EquipmentWarehouse.Conditions.Name}"></DataGridTextColumn>
                                     <DataGridTextColumn Header="Модель" Binding="{Binding EquipmentWarehouse.Model}"></DataGridTextColumn>
                                     <DataGridTextColumn Header="Статус" Binding="{Binding EquipmentWarehouse.EquipmentWarehouseStatus.Name}"></DataGridTextColumn>
+                                    <DataGridTextColumn Header="Количество" Binding="{Binding Size}"></DataGridTextColumn>
                                 </DataGrid.Columns>
                             </DataGrid>
                         </TabItem>

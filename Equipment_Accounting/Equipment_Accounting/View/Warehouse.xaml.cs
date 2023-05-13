@@ -84,7 +84,8 @@ namespace Equipment_Accounting.View
                             EquipmentWarehouseS equipmentWarehouseS = new EquipmentWarehouseS()
                             {
                                 EquipmentWarehouseID = equipment.ID,
-                                WarehouseID = 1
+                                WarehouseID = 1,
+                                Size = Convert.ToInt32(addE.SizeT.Text)
                             };
                             db.EquipmentWarehouseS.Add(equipmentWarehouseS);
                             db.SaveChanges();
@@ -126,10 +127,12 @@ namespace Equipment_Accounting.View
             }
         }
 
-        public void EditE(AddEWarehouse addE, EquipmentWarehouse equip)
+        public bool EditE(AddEWarehouse addE, EquipmentWarehouse equip)
         {
+            bool res = false;
             if(addE.ShowDialog() == true)
             {
+                res = true;
                 equip.Name = addE.nameT.Text;
                 equip.EquipmentWarehouseTypeID = (int)addE.TypeT.SelectedValue;
                 equip.StatusID = (int)addE.StatusT.SelectedValue;
@@ -139,6 +142,9 @@ namespace Equipment_Accounting.View
                 equip.EquipmentWarehouseStatus = db.EquipmentWarehouseStatus.Where(x => x.ID == (int)addE.StatusT.SelectedValue).FirstOrDefault();
                 equip.Conditions = db.Conditions.Where(x => x.ID == (int)addE.CondT.SelectedValue).FirstOrDefault();
                 equip.EquipmentWarehouseType = db.EquipmentWarehouseType.Where(x => x.ID == (int)addE.TypeT.SelectedValue).FirstOrDefault();
+                int addInd;
+                if (Convert.ToInt32(addE.SizeT.Text) > 1) addInd = 0;
+                else addInd = addE.AffiliationT.SelectedIndex;
                 switch (addE.AffiliationT.SelectedIndex)
                 {
                     case 1:
@@ -164,17 +170,27 @@ namespace Equipment_Accounting.View
                         equipC.ItemsSource = db.EquipmentWarehouseClient.ToList();
                         break;
                     default:
-                        EquipmentWarehouseS equipmentWarehouseS = new EquipmentWarehouseS()
+                        if (db.EquipmentWarehouseS.Where(x => x.EquipmentWarehouseID == equip.ID).Count() == 0)
                         {
-                            EquipmentWarehouseID = equip.ID,
-                            WarehouseID = 1
-                        };
-                        db.EquipmentWarehouseS.Add(equipmentWarehouseS);
+                            EquipmentWarehouseS equipmentWarehouseS = new EquipmentWarehouseS()
+                            {
+                                EquipmentWarehouseID = equip.ID,
+                                WarehouseID = 1,
+                                Size = Convert.ToInt32(addE.SizeT.Text)
+                            };
+                            db.EquipmentWarehouseS.Add(equipmentWarehouseS);
+                        }
+                        else
+                        {
+                            EquipmentWarehouseS equipmentWarehouseS = db.EquipmentWarehouseS.Where(x => x.EquipmentWarehouseID == equip.ID).FirstOrDefault();
+                            equipmentWarehouseS.Size += 1;
+                        }
                         db.SaveChanges();
                         equipS.ItemsSource = db.EquipmentWarehouseS.ToList();
                         break;
                 }
             }
+            return res;
         }
         private void EditEquipment_Click(object sender, RoutedEventArgs e)
         {
@@ -187,10 +203,12 @@ namespace Equipment_Accounting.View
                     item = equipC.SelectedItem;
                     EquipmentWarehouse equip = ((EquipmentWarehouseClient)item).EquipmentWarehouse;
                     addE = new AddEWarehouse((EquipmentWarehouseClient)item);
-                    EditE(addE, equip);
-                    db.EquipmentWarehouseClient.Remove((EquipmentWarehouseClient)item);
-                    db.SaveChanges();
-                    equipC.ItemsSource = db.EquipmentWarehouseClient.ToList();
+                    if (EditE(addE, equip))
+                    {
+                        db.EquipmentWarehouseClient.Remove((EquipmentWarehouseClient)item);
+                        db.SaveChanges();
+                        equipC.ItemsSource = db.EquipmentWarehouseClient.ToList();
+                    }
                 }
             }
             else if(equipTabM.IsSelected)
@@ -200,10 +218,12 @@ namespace Equipment_Accounting.View
                     item = equipM.SelectedItem;
                     EquipmentWarehouse equip = ((EquipmentWarehouseMaster)item).EquipmentWarehouse;
                     addE = new AddEWarehouse((EquipmentWarehouseMaster)item);
-                    EditE(addE, equip);
-                    db.EquipmentWarehouseMaster.Remove((EquipmentWarehouseMaster)item);
-                    db.SaveChanges();
-                    equipM.ItemsSource = db.EquipmentWarehouseMaster.ToList();
+                    if (EditE(addE, equip))
+                    {
+                        db.EquipmentWarehouseMaster.Remove((EquipmentWarehouseMaster)item);
+                        db.SaveChanges();
+                        equipM.ItemsSource = db.EquipmentWarehouseMaster.ToList();
+                    }
                 }
             }
             else if (equipTabS.IsSelected)
@@ -213,10 +233,12 @@ namespace Equipment_Accounting.View
                     item = equipS.SelectedItem;
                     EquipmentWarehouse equip = ((EquipmentWarehouseS)item).EquipmentWarehouse;
                     addE = new AddEWarehouse((EquipmentWarehouseS)item);
-                    EditE(addE, equip);
-                    db.EquipmentWarehouseS.Remove((EquipmentWarehouseS)item);
-                    db.SaveChanges();
-                    equipS.ItemsSource = db.EquipmentWarehouseS.ToList();
+                    if (EditE(addE, equip))
+                    {
+                        db.EquipmentWarehouseS.Remove((EquipmentWarehouseS)item);
+                        db.SaveChanges();
+                        equipS.ItemsSource = db.EquipmentWarehouseS.ToList();
+                    }
                 }
             }
             sizeE.Content = "Всего: " + db.EquipmentWarehouseS.Count();

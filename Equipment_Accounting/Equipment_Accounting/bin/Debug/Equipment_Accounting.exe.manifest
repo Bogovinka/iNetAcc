@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Equipment_Accounting.exe" size="695296">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Equipment_Accounting.exe" size="699904">
       <assemblyIdentity name="Equipment_Accounting" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mnoEcqoNFQ/FBjJNA2YY6fxvQwk1W/nvvZ+Ent9nEsw=</dsig:DigestValue>
+        <dsig:DigestValue>SYiICOK2suhZx4NuGxh/B1By9icdogJj7S8Ze73RSoU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -573,7 +573,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>df9GSk+eY1S85f982rOc0I06Crzr2RxmASLeyWQ1big=</dsig:DigestValue>
+      <dsig:DigestValue>rV/xUvQ8L6GXBJTrc1pUNQzv+pHEIUD5V5sEhuffRzI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resource\Database_log.ldf" size="8388608" writeableType="applicationData">
@@ -582,7 +582,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>CSMKm2n8cx2yHVNZPKuqAF7S6RgXSzzYABuFYZiE4E8=</dsig:DigestValue>
+      <dsig:DigestValue>N8G11V4YDUIrhfe3urh9dG25V5ah5OvZ8qQQxEiCUnE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resource\Icons\icon.ico" size="67646">

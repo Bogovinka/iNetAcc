@@ -1,21 +1,21 @@
-; Имя приложения
+п»ї; Г€Г¬Гї ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї
 #define   Name       "iNet"
-; Версия приложения
+; Г‚ГҐГ°Г±ГЁГї ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї
 #define   Version    "0.0.1"
-; Фирма-разработчик
+; Г”ГЁГ°Г¬Г -Г°Г Г§Г°Г ГЎГ®ГІГ·ГЁГЄ
 #define   Publisher  "Bogovinka"
-; Сафт фирмы разработчика
+; Г‘Г ГґГІ ГґГЁГ°Г¬Г» Г°Г Г§Г°Г ГЎГ®ГІГ·ГЁГЄГ 
 #define   URL        "https://inet74.ru"
-; Имя исполняемого модуля
+; Г€Г¬Гї ГЁГ±ГЇГ®Г«Г­ГїГҐГ¬Г®ГЈГ® Г¬Г®Г¤ГіГ«Гї
 #define   ExeName    "Equipment.exe"
 
 [Setup]
 
-; Уникальный идентификатор приложения, 
-;сгенерированный через Tools -> Generate GUID
+; Г“Г­ГЁГЄГ Г«ГјГ­Г»Г© ГЁГ¤ГҐГ­ГІГЁГґГЁГЄГ ГІГ®Г° ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї, 
+;Г±ГЈГҐГ­ГҐГ°ГЁГ°Г®ГўГ Г­Г­Г»Г© Г·ГҐГ°ГҐГ§ Tools -> Generate GUID
 AppId={{F3E2EDB6-78E8-4539-9C8B-A78F059D8647}
 
-; Прочая информация, отображаемая при установке
+; ГЏГ°Г®Г·Г Гї ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГї, Г®ГІГ®ГЎГ°Г Г¦Г ГҐГ¬Г Гї ГЇГ°ГЁ ГіГ±ГІГ Г­Г®ГўГЄГҐ
 AppName={#Name}
 AppVersion={#Version}
 AppPublisher={#Publisher}
@@ -23,33 +23,29 @@ AppPublisherURL={#URL}
 AppSupportURL={#URL}
 AppUpdatesURL={#URL}
 
-; Путь установки по-умолчанию
+; ГЏГіГІГј ГіГ±ГІГ Г­Г®ГўГЄГЁ ГЇГ®-ГіГ¬Г®Г«Г·Г Г­ГЁГѕ
 DefaultDirName={pf}\{#Name}
-; Имя группы в меню "Пуск"
+; Г€Г¬Гї ГЈГ°ГіГЇГЇГ» Гў Г¬ГҐГ­Гѕ "ГЏГіГ±ГЄ"
 DefaultGroupName={#Name}
 
-; Каталог, куда будет записан собранный setup и имя исполняемого файла
-OutputDir=C:\Users\mafak\Desktop\SetupWPFteach\Установщик
+; ГЉГ ГІГ Г«Г®ГЈ, ГЄГіГ¤Г  ГЎГіГ¤ГҐГІ Г§Г ГЇГЁГ±Г Г­ Г±Г®ГЎГ°Г Г­Г­Г»Г© setup ГЁ ГЁГ¬Гї ГЁГ±ГЇГ®Г«Г­ГїГҐГ¬Г®ГЈГ® ГґГ Г©Г«Г 
+OutputDir=C:\Users\mafak\Desktop\iNetAcc\РЈСЃС‚Р°РЅРѕРІС‰РёРє
 OutputBaseFileName=Equipment
 
 
-; Параметры сжатия
+; ГЏГ Г°Г Г¬ГҐГІГ°Г» Г±Г¦Г ГІГЁГї
 Compression=lzma
 SolidCompression=yes
 
-[Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl"; LicenseFile: "License_ENG.txt"
-Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"; LicenseFile: "License_RUS.txt"
-
 [Tasks]
-; Создание иконки на рабочем столе
+; Г‘Г®Г§Г¤Г Г­ГЁГҐ ГЁГЄГ®Г­ГЄГЁ Г­Г  Г°Г ГЎГ®Г·ГҐГ¬ Г±ГІГ®Г«ГҐ
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
 
-; Исполняемый файл
-Source: "C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe"; DestDir: "{app}"; Flags: ignoreversion
+; Г€Г±ГЇГ®Г«Г­ГїГҐГ¬Г»Г© ГґГ Г©Г«
+Source: "C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Equipment_Accounting.exe"; DestDir: "{app}"; Flags: ignoreversion
 
-; Прилагающиеся ресурсы
-Source: "C:\Users\mafak\Desktop\SetupWPFteach\Equipment_Accounting\Equipment_Accounting\bin\Debug\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+; ГЏГ°ГЁГ«Г ГЈГ ГѕГ№ГЁГҐГ±Гї Г°ГҐГ±ГіГ°Г±Г»
+Source: "C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
