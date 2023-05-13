@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\App.xaml
-23817148949
+25-1869371361
 41862745299
-54-17590559
+561524761935
 68515193138
-View\AddClient.xaml;View\AddContract.xaml;View\AddEWarehouse.xaml;View\AddNote.xaml;View\AddSize.xaml;View\AddTMC.xaml;View\ClientsWindow.xaml;View\DialogWindow.xaml;View\EditConection.xaml;View\MainWindow.xaml;View\Create.xaml;View\Menu.xaml;View\MenuTree.xaml;View\NewContract.xaml;View\Reg.xaml;View\SelectContract.xaml;View\SelectPort.xaml;View\SelectWarehouseEquip.xaml;View\SelectWarehouseTMC.xaml;View\Table.xaml;View\Update.xaml;View\Users.xaml;View\Warehouse.xaml;
+View\AddClient.xaml;View\AddContract.xaml;View\AddContractToClient.xaml;View\AddEWarehouse.xaml;View\AddNote.xaml;View\AddSize.xaml;View\AddTMC.xaml;View\ClientsWindow.xaml;View\ContractsToClient.xaml;View\DialogWindow.xaml;View\EditConection.xaml;View\MainWindow.xaml;View\Create.xaml;View\Menu.xaml;View\MenuTree.xaml;View\NewContract.xaml;View\Reg.xaml;View\SelectContract.xaml;View\SelectPort.xaml;View\SelectWarehouseEquip.xaml;View\SelectWarehouseTMC.xaml;View\Table.xaml;View\Update.xaml;View\Users.xaml;View\Warehouse.xaml;
 resource\images\loading.png
 False
 

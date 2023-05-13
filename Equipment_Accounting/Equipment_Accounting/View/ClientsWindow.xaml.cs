@@ -77,10 +77,23 @@ namespace Equipment_Accounting.View
             if (Clientsdg.SelectedItem != null)
             {
                 Client client = Clientsdg.SelectedItem as Client;
-                db.Client.Remove(client);
-                db.SaveChanges();
-                Clientsdg.ItemsSource = db.Client.ToList();
-                
+                if (db.ClientContracts.Where(x => x.ClientID == client.ID).Count() == 0)
+                {
+                    db.Client.Remove(client);
+                    db.SaveChanges();
+                    Clientsdg.ItemsSource = db.Client.ToList();
+                }
+                else MessageBox.Show("У данного клиента есть договора");
+            }
+        }
+
+        private void contractsC_Click(object sender, RoutedEventArgs e)
+        {
+            if (Clientsdg.SelectedItem != null)
+            {
+                Client client = Clientsdg.SelectedItem as Client;
+                ContractsToClient contractsToClient = new ContractsToClient(client, db);
+                contractsToClient.Show();
             }
         }
     }

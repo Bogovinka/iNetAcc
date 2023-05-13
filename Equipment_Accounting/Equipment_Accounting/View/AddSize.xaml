@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Equipment_Accounting.View"
         mc:Ignorable="d"
-        Title="Новый договор" WindowStartupLocation="CenterScreen"  Height="150" Width="400" MaxHeight="150" MaxWidth="400">
+        Title="Количество" WindowStartupLocation="CenterScreen"  Height="150" Width="400" MaxHeight="150" MaxWidth="400">
     <StackPanel>
         <TextBox materialDesign:HintAssist.Hint="Количество" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="10" x:Name="text"></TextBox>
         <Button Margin="10" x:Name="select" Click="select_Click">ОК</Button>

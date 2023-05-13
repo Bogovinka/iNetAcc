@@ -35,7 +35,7 @@ namespace Equipment_Accounting
 
         private void createB_Click(object sender, RoutedEventArgs e)
         {
-            if (MarkT.Text != "" && ModelT.Text != "" && StateT.Text != "" && TypeT.Text != "" && nameT.Text.Length > 0 && IPT.Text.Length > 0 && MACT.Text.Length > 0 && db.Equipment.Where(x => x.IP == IPT.Text).Count() == 0 && db.Equipment.Where(x => x.Serial_num == SerT.Text).Count() == 0 && db.Equipment.Where(x => x.MAC == MACT.Text).Count() == 0 && db.Equipment.Where(x => x.Name == nameT.Text).Count() == 0)
+            if (nameT.Text.Length > 0 && db.Equipment.Where(x => x.IP == IPT.Text && x.IP != "").Count() == 0 && db.Equipment.Where(x => x.Serial_num == SerT.Text && x.Serial_num != "").Count() == 0 && db.Equipment.Where(x => x.MAC == MACT.Text && x.MAC != "").Count() == 0 && db.Equipment.Where(x => x.Name == nameT.Text).Count() == 0)
             {
                 DialogResult = true;
             }

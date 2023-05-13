@@ -39,6 +39,7 @@ namespace Equipment_Accounting.View
             {
                 delContract.IsEnabled = false;
                 addContract.IsEnabled = false;
+                users.Visibility = Visibility.Hidden;
             }
         }
 
@@ -122,5 +123,10 @@ namespace Equipment_Accounting.View
             EditClick();
         }
 
+        private void users_Click(object sender, RoutedEventArgs e)
+        {
+            Users users = new Users();
+            users.Show();
+        }
     }
 }

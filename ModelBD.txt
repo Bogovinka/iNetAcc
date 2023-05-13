@@ -1,4 +1,16 @@
-public string FullName => $"{Name}|{IP}|{MAC}|{Serial_num}|{Model.Name}|{Type_Device.Name}|{Address}";
+        public string getFullName()
+        {
+            string modelName;
+            if (Model != null)
+                modelName = Model.Name;
+            else modelName = "";
+            string typeDevice;
+            if (Type_Device != null)
+                typeDevice = Type_Device.Name;
+            else typeDevice = "";
+            return $"{Name}|{IP}|{MAC}|{Serial_num}|{modelName}|{typeDevice}|{Address}";
+        }
+        public string FullName => getFullName();
 public string FullName => $"{Surname} {Name} {LastName}";
 public DatabaseEntities(string con)
     : base(con)

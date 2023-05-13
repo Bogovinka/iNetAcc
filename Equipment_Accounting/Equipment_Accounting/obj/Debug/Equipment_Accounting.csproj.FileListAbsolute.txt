@@ -829,3 +829,7 @@ C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Deb
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.CopyComplete
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.pdb
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddContractToClient.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\ContractsToClient.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddContractToClient.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\ContractsToClient.baml

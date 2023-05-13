@@ -19,14 +19,24 @@ namespace Equipment_Accounting.View
     /// </summary>
     public partial class NewContract : Window
     {
+        Resource.Model.DatabaseEntities db;
+        Classes.ConnectBD con = new Classes.ConnectBD();
         public NewContract()
         {
             InitializeComponent();
+            db = con.getDB();
         }
 
         private void select_Click(object sender, RoutedEventArgs e)
         {
-            if (text.Text != "") DialogResult = true;
+            if (text.Text != "") {
+
+                if (db.ClientContracts.Where(x => x.Contract == text.Text).Count() == 0)
+                {
+                    DialogResult = true;
+                }
+                else MessageBox.Show("Такой договор уже есть");
+            }
         }
     }
 }

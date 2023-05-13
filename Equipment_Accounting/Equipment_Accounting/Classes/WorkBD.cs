@@ -17,15 +17,13 @@ namespace Equipment_Accounting
     {
         Resource.Model.DatabaseEntities databaseEntities = new Resource.Model.DatabaseEntities();     
 
-        public void insertDB(string name, string ip, string mac, int typeID, int stateID, string adres, string note, string login, string pass, string SNMP, string vlan, string ser, int brandID, int modelID, int id_in_item)
+        public void insertDB(string name, string ip, string mac, object typeID, object stateID, string adres, string note, string login, string pass, string SNMP, string vlan, string ser, object brandID, object modelID, int id_in_item)
         {
             Equipment equip = new Equipment()
             {
                 Name = name,
                 IP = ip,
                 MAC = mac,
-                Type_Device_id = typeID,
-                Conditions_id = stateID,
                 Address = adres,
                 Note = note,
                 Login = login,
@@ -33,10 +31,16 @@ namespace Equipment_Accounting
                 SNMP = SNMP,
                 Num_vlan = vlan,
                 Serial_num = ser,
-                Model_id = modelID,
-                Brand_id = brandID,
                 ID_in_item = id_in_item
             };
+            if(typeID != null)
+                equip.Type_Device_id = (int)typeID;
+            if(stateID != null)
+                equip.Conditions_id = (int)stateID;
+            if(modelID!= null) 
+                equip.Model_id = (int)modelID;
+            if(brandID != null) 
+                equip.Brand_id = (int)brandID;
             databaseEntities.Equipment.Add(equip);
             databaseEntities.SaveChanges();
         }

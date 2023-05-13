@@ -17,6 +17,7 @@
             <MenuItem VerticalAlignment="Center" x:Name="warehouse" Header="Склад" Click="warehouse_Click" />
             <MenuItem VerticalAlignment="Center" x:Name="clients" Header="Клиенты" Click="clients_Click" />
             <MenuItem VerticalAlignment="Center" x:Name="tree" Header="Древо" Click="tree_Click"/>
+            <MenuItem VerticalAlignment="Center" x:Name="users" Visibility="Visible" Header="Просмотр пользователей" Click="users_Click" />
         </Menu>
         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" MaxHeight="50" VerticalAlignment="Top">
             <Label x:Name="loginName" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,0">Логин:</Label>

@@ -99,7 +99,6 @@ namespace Equipment_Accounting
                 add2.Visibility = Visibility.Visible;
                 edit2.Visibility = Visibility.Visible;
                 delete.Visibility = Visibility.Visible;
-                users.Visibility = Visibility.Visible;
 
             }
             updateTree();
@@ -138,9 +137,9 @@ namespace Equipment_Accounting
                         TreeViewItem newT = new TreeViewItem();
                         TreeViewItem t = (TreeViewItem)treeView.SelectedItem;
                         int IDin = (int)t.Tag;
-                        workBD.insertDB(add.nameT.Text, add.IPT.Text, add.MACT.Text, (int)add.TypeT.SelectedValue, (int)add.StateT.SelectedValue,
-                        add.AdresT.Text, add.NoteT.Text, add.LoginT.Text, add.PasswordT.Text, add.SNMPT.Text, add.VLANT.Text, add.SerT.Text, (int)add.MarkT.SelectedValue,
-                        (int)add.ModelT.SelectedValue, IDin);
+                        workBD.insertDB(add.nameT.Text, add.IPT.Text, add.MACT.Text, add.TypeT.SelectedValue, add.StateT.SelectedValue,
+                        add.AdresT.Text, add.NoteT.Text, add.LoginT.Text, add.PasswordT.Text, add.SNMPT.Text, add.VLANT.Text, add.SerT.Text, add.MarkT.SelectedValue,
+                        add.ModelT.SelectedValue, IDin);
                         Equipment newEquip = database.Equipment.Where(x => x.IP == add.IPT.Text).FirstOrDefault();
                         newT.Header = newEquip.FullName;
                         newT.Tag = newEquip.ID;
@@ -400,11 +399,7 @@ namespace Equipment_Accounting
             this.Close();
         }
 
-        private void users_Click(object sender, RoutedEventArgs e)
-        {
-            Users u = new Users();
-            u.Show();
-        }
+
 
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {

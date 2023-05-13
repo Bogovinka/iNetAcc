@@ -19,7 +19,6 @@
             <MenuItem VerticalAlignment="Center" x:Name="add" Visibility="Hidden" Header="Добавить" Click="add_Click"/>
             <MenuItem VerticalAlignment="Center" x:Name="edit" Visibility="Hidden" Header="Изменить" Click="edit_Click"/>
             <MenuItem VerticalAlignment="Center" x:Name="delete" Visibility="Hidden" Header="Удалить" Click="delete_Click" />
-            <MenuItem VerticalAlignment="Center" x:Name="users" Visibility="Hidden" Header="Просмотр пользователей" Click="users_Click" />
         </Menu>
         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" MaxHeight="50" VerticalAlignment="Top">
             <Label x:Name="loginName" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,0">Логин:</Label>

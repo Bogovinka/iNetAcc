@@ -21,6 +21,7 @@
             <Button x:Name="AddC"  Grid.Row="1" Click="AddC_Click">Добавить</Button>
             <Button x:Name="EditC" Margin="10,0,10,0" Grid.Row="1" Click="EditC_Click">Изменить</Button>
             <Button x:Name="DelC"  Grid.Row="1" Click="DelC_Click">Удалить</Button>
+            <Button x:Name="contractsC"  Grid.Row="1" Click="contractsC_Click">Договора</Button>
         </StackPanel>
     </Grid>
 </Window>

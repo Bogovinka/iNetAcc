@@ -1,0 +1,27 @@
+﻿<Window x:Class="Equipment_Accounting.View.ContractsToClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Equipment_Accounting.View"
+        mc:Ignorable="d"
+        Title="Договора" Height="450" Width="800" WindowStartupLocation="CenterScreen" MinHeight="450" MinWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="194*"/>
+            <RowDefinition Height="23*"/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="contractLv">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding Contract}"></Label>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="1">
+            <Button x:Name="addC" Click="addC_Click">Добавить</Button>
+            <Button x:Name="editC" Margin="10,0,10,0" Click="editC_Click">Изменить</Button>
+            <Button x:Name="DelC" Click="DelC_Click">Удалить</Button>
+        </StackPanel>
+    </Grid>
+</Window>
