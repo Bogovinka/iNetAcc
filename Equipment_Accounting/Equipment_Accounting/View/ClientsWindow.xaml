@@ -5,13 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Equipment_Accounting.View"
         mc:Ignorable="d"
-        Title="ClientsWindow" WindowStartupLocation="CenterScreen" Height="450" Width="800" MinHeight="450" MinWidth="800">
+        Title="Клиенты" WindowStartupLocation="CenterScreen" Height="450" Width="800" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="365*"/>
             <RowDefinition Height="45*"/>
         </Grid.RowDefinitions>
         <DataGrid x:Name="Clientsdg" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="{Binding backRow}"></Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#4169E1" />
+                            <Setter Property="Foreground" Value="White"></Setter>
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell" BasedOn="{StaticResource MaterialDesignDataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{x:Null}" />
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Номер телефона" Binding="{Binding Phone}"></DataGridTextColumn>
@@ -21,7 +43,7 @@
             <Button x:Name="AddC"  Grid.Row="1" Click="AddC_Click">Добавить</Button>
             <Button x:Name="EditC" Margin="10,0,10,0" Grid.Row="1" Click="EditC_Click">Изменить</Button>
             <Button x:Name="DelC"  Grid.Row="1" Click="DelC_Click">Удалить</Button>
-            <Button x:Name="contractsC"  Grid.Row="1" Click="contractsC_Click">Договора</Button>
+            <Button x:Name="contractsC" Margin="10,0,0,0"  Grid.Row="1" Click="contractsC_Click">Договора</Button>
         </StackPanel>
     </Grid>
 </Window>

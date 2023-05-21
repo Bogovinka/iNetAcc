@@ -22,11 +22,10 @@ namespace Equipment_Accounting.View
     public partial class ClientsWindow : Window
     {
         DatabaseEntities db;
-        ConnectBD c = new ConnectBD();
-        public ClientsWindow(Logins log)
+        public ClientsWindow(Logins log, DatabaseEntities db_)
         {
             InitializeComponent();
-            db = c.getDB();
+            db = db_;
             Clientsdg.ItemsSource = db.Client.ToList();
             if(log.Permission == 0)
             {

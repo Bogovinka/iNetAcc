@@ -22,7 +22,6 @@
         </Menu>
         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" MaxHeight="50" VerticalAlignment="Top">
             <Label x:Name="loginName" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,0">Логин:</Label>
-            <Button x:Name="exit" HorizontalAlignment="Right" Click="exit_Click" Margin="0,5,10,0" Cursor="Hand">Назад</Button>
         </StackPanel>
 
 
@@ -30,8 +29,6 @@
             <TreeView x:Name="treeView" FontSize="14" FontWeight="Bold" Foreground="Black" MouseRightButtonDown="treeView_MouseRightButtonDown">
                 <TreeView.ContextMenu>
                     <ContextMenu x:Name="cM">
-                        <MenuItem x:Name="Copy" Header="Вырезать" Click="Copy_Click"></MenuItem>
-                        <MenuItem x:Name="Paste" Header="Вставить" Click="Paste_Click"></MenuItem>
                         <MenuItem Header="Консоль">
                             <MenuItem x:Name="ping" Header="Ping" Click="ping_Click"></MenuItem>
                             <MenuItem x:Name="tracert" Header="Tracert" Click="tracert_Click"></MenuItem>
@@ -44,6 +41,8 @@
                         <MenuItem x:Name="maps" Header="Показать на карте" Click="maps_Click"></MenuItem>
                         <MenuItem x:Name="add2" Visibility="Hidden" Header="Добавить" Click="add_Click"/>
                         <MenuItem x:Name="edit2" Visibility="Hidden" Header="Изменить" Click="edit_Click"/>
+                        <MenuItem x:Name="Copy" Visibility="Hidden" Header="Вырезать" Click="Copy_Click"></MenuItem>
+                        <MenuItem x:Name="Paste" Visibility="Hidden" Header="Вставить" Click="Paste_Click"></MenuItem>
                     </ContextMenu>
                 </TreeView.ContextMenu>
             </TreeView>

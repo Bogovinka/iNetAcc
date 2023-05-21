@@ -12,6 +12,28 @@
             <RowDefinition Height="319*"/>
         </Grid.RowDefinitions>
         <DataGrid  Grid.Row="1" x:Name="dataGrid" PreviewTextInput="dataGrid_TextInput" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="{Binding backRow}"></Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#4169E1" />
+                            <Setter Property="Foreground" Value="White"></Setter>
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell" BasedOn="{StaticResource MaterialDesignDataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{x:Null}" />
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Login" Binding="{Binding Login}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Password" Binding="{Binding Password}"></DataGridTextColumn>

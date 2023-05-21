@@ -5,13 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Equipment_Accounting"
         mc:Ignorable="d"
-        Title="Таблица" WindowStartupLocation="CenterScreen" Height="450" Width="800">
+        Title="Таблица оборудования" WindowStartupLocation="CenterScreen" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="46*"/>
             <RowDefinition Height="319*"/>
         </Grid.RowDefinitions>
         <DataGrid AutoGenerateColumns="False" Grid.Row="1" x:Name="dataGrid" PreviewTextInput="dataGrid_TextInput">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="{Binding backRow}"></Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#4169E1" />
+                            <Setter Property="Foreground" Value="White"></Setter>
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell" BasedOn="{StaticResource MaterialDesignDataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{x:Null}" />
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Binding="{Binding Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="IP" Binding="{Binding IP}"></DataGridTextColumn>

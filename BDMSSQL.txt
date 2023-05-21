@@ -146,6 +146,11 @@ CREATE TABLE TaskEquipment(
 	ID int primary key IDENTITY(1,1),
 	TaskID int FOREIGN KEY REFERENCES Task(ID),
 	EquipmentWarehouse int FOREIGN KEY REFERENCES EquipmentWarehouse(ID));
+	
+CREATE TABLE TaskEquipmentC(
+	ID int primary key IDENTITY(1,1),
+	TaskID int FOREIGN KEY REFERENCES Task(ID),
+	EquipmentWarehouse int FOREIGN KEY REFERENCES EquipmentWarehouse(ID));
 
 INSERT INTO Warehouse VALUES (N'Ишалино');
 INSERT INTO EquipmentWarehouseType VALUES (N'роутер');

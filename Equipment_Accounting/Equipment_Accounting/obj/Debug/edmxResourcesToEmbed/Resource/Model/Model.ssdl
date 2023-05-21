@@ -158,6 +158,14 @@
     <Property Name="TaskID" Type="int" />
     <Property Name="EquipmentWarehouse" Type="int" />
   </EntityType>
+  <EntityType Name="TaskEquipmentC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TaskID" Type="int" />
+    <Property Name="EquipmentWarehouse" Type="int" />
+  </EntityType>
   <EntityType Name="TaskTMC">
     <Key>
       <PropertyRef Name="ID" />
@@ -433,6 +441,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__TaskEquip__Equip__03F0984C">
+    <End Role="EquipmentWarehouse" Type="Self.EquipmentWarehouse" Multiplicity="0..1" />
+    <End Role="TaskEquipmentC" Type="Self.TaskEquipmentC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EquipmentWarehouse">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TaskEquipmentC">
+        <PropertyRef Name="EquipmentWarehouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__TaskEquip__Equip__75A278F5">
     <End Role="EquipmentWarehouse" Type="Self.EquipmentWarehouse" Multiplicity="0..1" />
     <End Role="TaskEquipment" Type="Self.TaskEquipment" Multiplicity="*" />
@@ -442,6 +462,18 @@
       </Principal>
       <Dependent Role="TaskEquipment">
         <PropertyRef Name="EquipmentWarehouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TaskEquip__TaskI__02FC7413">
+    <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+    <End Role="TaskEquipmentC" Type="Self.TaskEquipmentC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TaskEquipmentC">
+        <PropertyRef Name="TaskID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -522,6 +554,7 @@
     <EntitySet Name="StatusTask" EntityType="Self.StatusTask" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Task" EntityType="Self.Task" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaskEquipment" EntityType="Self.TaskEquipment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaskEquipmentC" EntityType="Self.TaskEquipmentC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaskTMC" EntityType="Self.TaskTMC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TMC" EntityType="Self.TMC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Type_Device" EntityType="Self.Type_Device" Schema="dbo" store:Type="Tables" />
@@ -604,9 +637,17 @@
       <End Role="TypeTask" EntitySet="TypeTask" />
       <End Role="Task" EntitySet="Task" />
     </AssociationSet>
+    <AssociationSet Name="FK__TaskEquip__Equip__03F0984C" Association="Self.FK__TaskEquip__Equip__03F0984C">
+      <End Role="EquipmentWarehouse" EntitySet="EquipmentWarehouse" />
+      <End Role="TaskEquipmentC" EntitySet="TaskEquipmentC" />
+    </AssociationSet>
     <AssociationSet Name="FK__TaskEquip__Equip__75A278F5" Association="Self.FK__TaskEquip__Equip__75A278F5">
       <End Role="EquipmentWarehouse" EntitySet="EquipmentWarehouse" />
       <End Role="TaskEquipment" EntitySet="TaskEquipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TaskEquip__TaskI__02FC7413" Association="Self.FK__TaskEquip__TaskI__02FC7413">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="TaskEquipmentC" EntitySet="TaskEquipmentC" />
     </AssociationSet>
     <AssociationSet Name="FK__TaskEquip__TaskI__74AE54BC" Association="Self.FK__TaskEquip__TaskI__74AE54BC">
       <End Role="Task" EntitySet="Task" />

@@ -117,6 +117,7 @@ namespace Equipment_Accounting.View
             if(SizeT.Text != "1")
             {
                 AffiliationT.Visibility = Visibility.Hidden;
+                AffiliationT.SelectedIndex = 0;
                 AffiliationPersonT.Visibility = Visibility.Hidden;
                 AffL.Visibility = Visibility.Hidden;
             }

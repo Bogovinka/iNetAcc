@@ -9,7 +9,7 @@
         Title="Создать ветку" WindowStartupLocation="CenterScreen" Height="250" Width="400">
     <Grid>
 
-        <TextBox x:Name="createText" Style="{StaticResource MaterialDesignOutlinedTextBox}" materialDesign:HintAssist.Hint="Имя новой ветки" FontSize="20" MinWidth="200" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="IBeam" />
+        <TextBox MaxLength="100" x:Name="createText" Style="{StaticResource MaterialDesignOutlinedTextBox}" materialDesign:HintAssist.Hint="Имя новой ветки" FontSize="20" MinWidth="200" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="IBeam" />
         <Button x:Name="back" VerticalAlignment="Bottom" MinWidth="100" HorizontalAlignment="Left" Margin="20,0,0,10" Click="back_Click">Назад</Button>
         <Button x:Name="createB" VerticalAlignment="Bottom" MinWidth="100" HorizontalAlignment="Right" Margin="0,0,20,10" Click="createB_Click">Создать</Button>
     </Grid>

@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Количество" WindowStartupLocation="CenterScreen"  Height="150" Width="400" MaxHeight="150" MaxWidth="400">
     <StackPanel>
-        <TextBox materialDesign:HintAssist.Hint="Количество" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="10" x:Name="text"></TextBox>
+        <TextBox MaxLength="6" materialDesign:HintAssist.Hint="Количество" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="10" x:Name="text"></TextBox>
         <Button Margin="10" x:Name="select" Click="select_Click">ОК</Button>
     </StackPanel>
 </Window>

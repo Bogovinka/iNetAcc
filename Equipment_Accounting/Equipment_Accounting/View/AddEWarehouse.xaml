@@ -6,21 +6,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Equipment_Accounting.View"
         mc:Ignorable="d"
-        Title="Добавить" WindowStartupLocation="CenterScreen" MaxHeight="700" MaxWidth="450" Height="650" Width="400">
+        Title="Оборудование" WindowStartupLocation="CenterScreen" MaxHeight="700" MaxWidth="450" Height="650" Width="400">
     <Grid>
         <ScrollViewer Margin="0,0,0,60">
             <StackPanel>
-                <TextBox x:Name="nameT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Наименование" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <TextBox x:Name="SerT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Серийный номер" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <ComboBox x:Name="TypeT" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Тип" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayMemberPath="Name" SelectedValuePath="ID">
+                <TextBox MaxLength="100" x:Name="nameT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Наименование" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBox x:Name="SerT" MaxLength="100" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,15,0,0" materialDesign:HintAssist.Hint="Серийный номер" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <ComboBox x:Name="TypeT" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" Margin="0,15,0,0" materialDesign:HintAssist.Hint="Тип" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayMemberPath="Name" SelectedValuePath="ID">
                 </ComboBox>
-                <TextBox x:Name="ModelT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Модель" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <ComboBox x:Name="CondT" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Состояние" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayMemberPath="Name" SelectedValuePath="ID">
+                <TextBox x:Name="ModelT" MaxLength="100" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,15,0,0" materialDesign:HintAssist.Hint="Модель" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <ComboBox x:Name="CondT" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" Margin="0,15,0,0" materialDesign:HintAssist.Hint="Состояние" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayMemberPath="Name" SelectedValuePath="ID">
                 </ComboBox>
-                <ComboBox x:Name="StatusT" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Статус" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayMemberPath="Name" SelectedValuePath="ID">
+                <ComboBox x:Name="StatusT" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" Margin="0,15,0,0" materialDesign:HintAssist.Hint="Статус" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayMemberPath="Name" SelectedValuePath="ID">
                 </ComboBox>
-                <TextBox x:Name="SizeT" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Количество" TextChanged="SizeT_TextChanged" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <Label x:Name="AffL" FontSize="20" Width="240" Margin="0,10,0,0">Принадлежность:</Label>
+                <TextBox x:Name="SizeT" MaxLength="6" Style="{StaticResource MaterialDesignOutlinedTextBox}" MaxWidth="300" Margin="0,15,0,0" materialDesign:HintAssist.Hint="Количество" TextChanged="SizeT_TextChanged" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label x:Name="AffL" FontSize="20" Width="240" Margin="0,15,0,0">Принадлежность:</Label>
                 <ComboBox x:Name="AffiliationT" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" Margin="0,10,0,0" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" SelectionChanged="AffiliationT_SelectionChanged">
                     <Label>Склад</Label>
                     <Label>Мастер</Label>

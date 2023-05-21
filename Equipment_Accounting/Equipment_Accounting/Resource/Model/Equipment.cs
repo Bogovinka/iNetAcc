@@ -32,7 +32,6 @@ namespace Equipment_Accounting.Resource.Model
             return $"{Name}|{IP}|{MAC}|{Serial_num}|{modelName}|{typeDevice}|{Address}";
         }
         public string FullName => getFullName();
-
         public int ID { get; set; }
         public string Name { get; set; }
         public string IP { get; set; }

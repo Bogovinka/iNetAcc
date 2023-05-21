@@ -40,7 +40,11 @@ namespace Equipment_Accounting.View
 
         private void createB_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            if (PhoneT.IsMaskFull)
+            {
+                DialogResult = true;
+            }
+            else MessageBox.Show("Заполни полностью номер телефона");
         }
     }
 }

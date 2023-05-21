@@ -5,14 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Equipment_Accounting.View"
         mc:Ignorable="d"
-        Title="Warehouse" WindowStartupLocation="CenterScreen" Height="450" Width="800" MinHeight="450" MinWidth="800">
+        Title="Склад" WindowStartupLocation="CenterScreen" Height="450" Width="800" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="45*"/>
             <RowDefinition Height="365*"/>
         </Grid.RowDefinitions>
-        <Label x:Name="sizeE">Всего:</Label>
-        <Button x:Name="Back" HorizontalAlignment="Right" Click="Back_Click">Назад</Button>
+        <Label Visibility="Hidden" x:Name="sizeE">Всего:</Label>
         <TabControl Grid.Row="1">
             <TabItem Header="Оборудование">
                 <Grid>
@@ -23,6 +22,28 @@
                     <TabControl>
                         <TabItem x:Name="equipTabS" Header="Складское">
                             <DataGrid x:Name="equipS" IsReadOnly="True" AutoGenerateColumns="False">
+                                <DataGrid.RowStyle>
+                                    <Style TargetType="DataGridRow">
+                                        <Setter Property="Background" Value="{Binding backRow}"></Setter>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter Property="Background" Value="#4169E1" />
+                                                <Setter Property="Foreground" Value="White"></Setter>
+                                                <Setter Property="BorderBrush" Value="{x:Null}" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DataGrid.RowStyle>
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell" BasedOn="{StaticResource MaterialDesignDataGridCell}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter Property="Background" Value="{x:Null}" />
+                                                <Setter Property="BorderBrush" Value="{x:Null}" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DataGrid.CellStyle>
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="Название" Binding="{Binding EquipmentWarehouse.Name}"></DataGridTextColumn>
                                     <DataGridTextColumn Header="Тип" Binding="{Binding EquipmentWarehouse.EquipmentWarehouseType.Name}"></DataGridTextColumn>
@@ -36,6 +57,28 @@
                         </TabItem>
                         <TabItem x:Name="equipTabC" Header="Клиентское">
                             <DataGrid x:Name="equipC" IsReadOnly="True" AutoGenerateColumns="False">
+                                <DataGrid.RowStyle>
+                                    <Style TargetType="DataGridRow">
+                                        <Setter Property="Background" Value="{Binding backRow}"></Setter>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter Property="Background" Value="#4169E1" />
+                                                <Setter Property="Foreground" Value="White"></Setter>
+                                                <Setter Property="BorderBrush" Value="{x:Null}" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DataGrid.RowStyle>
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell" BasedOn="{StaticResource MaterialDesignDataGridCell}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter Property="Background" Value="{x:Null}" />
+                                                <Setter Property="BorderBrush" Value="{x:Null}" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DataGrid.CellStyle>
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="Название" Binding="{Binding EquipmentWarehouse.Name}"></DataGridTextColumn>
                                     <DataGridTextColumn Header="Тип" Binding="{Binding EquipmentWarehouse.EquipmentWarehouseType.Name}"></DataGridTextColumn>
@@ -49,6 +92,28 @@
                         </TabItem>
                         <TabItem x:Name="equipTabM" Header="Мастерское">
                             <DataGrid x:Name="equipM" IsReadOnly="True" AutoGenerateColumns="False">
+                                <DataGrid.RowStyle>
+                                    <Style TargetType="DataGridRow">
+                                        <Setter Property="Background" Value="{Binding backRow}"></Setter>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter Property="Background" Value="#4169E1" />
+                                                <Setter Property="Foreground" Value="White"></Setter>
+                                                <Setter Property="BorderBrush" Value="{x:Null}" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DataGrid.RowStyle>
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell" BasedOn="{StaticResource MaterialDesignDataGridCell}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter Property="Background" Value="{x:Null}" />
+                                                <Setter Property="BorderBrush" Value="{x:Null}" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DataGrid.CellStyle>
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="Название" Binding="{Binding EquipmentWarehouse.Name}"></DataGridTextColumn>
                                     <DataGridTextColumn Header="Тип" Binding="{Binding EquipmentWarehouse.EquipmentWarehouseType.Name}"></DataGridTextColumn>
@@ -79,6 +144,28 @@
                         <RowDefinition Height="45*"/>
                     </Grid.RowDefinitions>
                     <DataGrid x:Name="TMCdg" IsReadOnly="True" AutoGenerateColumns="False">
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Setter Property="Background" Value="{Binding backRow}"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#4169E1" />
+                                        <Setter Property="Foreground" Value="White"></Setter>
+                                        <Setter Property="BorderBrush" Value="{x:Null}" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell" BasedOn="{StaticResource MaterialDesignDataGridCell}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="{x:Null}" />
+                                        <Setter Property="BorderBrush" Value="{x:Null}" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Название" Binding="{Binding Name}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Кол-во" Binding="{Binding SizeUnit}"></DataGridTextColumn>

@@ -50,5 +50,6 @@ namespace Equipment_Accounting.Resource.Model
         public virtual DbSet<TypeTask> TypeTask { get; set; }
         public virtual DbSet<Unit> Unit { get; set; }
         public virtual DbSet<Warehouse> Warehouse { get; set; }
+        public virtual DbSet<TaskEquipmentC> TaskEquipmentC { get; set; }
     }
 }

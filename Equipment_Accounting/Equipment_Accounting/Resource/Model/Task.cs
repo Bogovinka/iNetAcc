@@ -19,7 +19,9 @@ namespace Equipment_Accounting.Resource.Model
         {
             this.TaskEquipment = new HashSet<TaskEquipment>();
             this.TaskTMC = new HashSet<TaskTMC>();
+            this.TaskEquipmentC = new HashSet<TaskEquipmentC>();
         }
+
         public int DaysReturn()
         {
             if (StatusTaskID == 2) return 0;
@@ -66,5 +68,7 @@ namespace Equipment_Accounting.Resource.Model
         public virtual ICollection<TaskEquipment> TaskEquipment { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TaskTMC> TaskTMC { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TaskEquipmentC> TaskEquipmentC { get; set; }
     }
 }

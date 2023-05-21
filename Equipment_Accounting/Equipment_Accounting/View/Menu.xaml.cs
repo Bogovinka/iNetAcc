@@ -45,9 +45,8 @@ namespace Equipment_Accounting.View
 
         private void tree_Click(object sender, RoutedEventArgs e)
         {
-            MenuTree mT = new MenuTree(log);
+            MenuTree mT = new MenuTree(log, db);
             mT.Show();
-            Close();
         }
 
         private void exit_Click(object sender, RoutedEventArgs e)
@@ -59,14 +58,13 @@ namespace Equipment_Accounting.View
 
         private void warehouse_Click(object sender, RoutedEventArgs e)
         {
-            Warehouse w = new Warehouse(log);
+            Warehouse w = new Warehouse(log, db);
             w.Show();
-            Close();
         }
 
         private void clients_Click(object sender, RoutedEventArgs e)
         {
-            ClientsWindow cw = new ClientsWindow(log);
+            ClientsWindow cw = new ClientsWindow(log, db);
             cw.Show();
         }
 
@@ -86,16 +84,11 @@ namespace Equipment_Accounting.View
         {
             if (contractsDG.SelectedItem != null)
             {
-                Resource.Model.Task taskCheck = (Resource.Model.Task)contractsDG.SelectedItem;
-                if (taskCheck.StatusTaskID != 2)
+                AddContract addContract = new AddContract((Resource.Model.Task)contractsDG.SelectedItem, log, db);
+                if (addContract.ShowDialog() == true)
                 {
-                    AddContract addContract = new AddContract((Resource.Model.Task)contractsDG.SelectedItem, log, db);
-                    if (addContract.ShowDialog() == true)
-                    {
-                        contractsDG.ItemsSource = db.Task.ToList();
-                    }
+                    contractsDG.ItemsSource = db.Task.ToList();
                 }
-                else MessageBox.Show("Заявка закрыта");
             }
         }
         private void editContract_Click(object sender, RoutedEventArgs e)
@@ -107,14 +100,24 @@ namespace Equipment_Accounting.View
         {
             if (contractsDG.SelectedItem != null)
             {
-                DialogWindow dw = new DialogWindow();
-                if (dw.ShowDialog() == true)
+                Resource.Model.Task taskCheck = (Resource.Model.Task)contractsDG.SelectedItem;
+                if (taskCheck.StatusTaskID == 2)
                 {
-                    Resource.Model.Task taskCheck = (Resource.Model.Task)contractsDG.SelectedItem;
-                    db.Task.Remove(taskCheck);
-                    db.SaveChanges();
-                    contractsDG.ItemsSource = db.Task.ToList();
+                    DialogWindow dw = new DialogWindow();
+                    if (dw.ShowDialog() == true)
+                    {
+                        foreach (TaskEquipment t in db.TaskEquipment.Where(x => x.TaskID == taskCheck.ID).ToList())
+                            db.TaskEquipment.Remove(t);
+                        foreach (TaskTMC t in db.TaskTMC.Where(x => x.TaskID == taskCheck.ID).ToList())
+                            db.TaskTMC.Remove(t);
+                        foreach (TaskEquipmentC t in db.TaskEquipmentC.Where(x => x.TaskID == taskCheck.ID).ToList())
+                            db.TaskEquipmentC.Remove(t);
+                        db.Task.Remove(taskCheck);
+                        db.SaveChanges();
+                        contractsDG.ItemsSource = db.Task.ToList();
+                    }
                 }
+                else MessageBox.Show("Можно удалить только завершенную заявку");
             }
         }
 

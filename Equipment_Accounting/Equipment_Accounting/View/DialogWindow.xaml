@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Equipment_Accounting"
         mc:Ignorable="d"
-        Title="DialogWindow" MaxHeight="200" MaxWidth="300" MinHeight="200" MinWidth="300" WindowStartupLocation="CenterScreen">
+        Title="Подтверждение" MaxHeight="200" MaxWidth="300" MinHeight="200" MinWidth="300" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label x:Name="txt" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12">Вы уверенны что хотите</Label>
         <Button x:Name="no" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="no_Click">Нет</Button>

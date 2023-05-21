@@ -35,5 +35,16 @@ namespace Equipment_Accounting
             DialogResult = false;
             this.Close();
         }
+
+        private void localB_Click(object sender, RoutedEventArgs e)
+        {
+            using (FileStream fs = File.Create("connect.txt"))
+            {
+                byte[] info = new UTF8Encoding(true).GetBytes(@"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Resource\Database.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework".ToString());
+                // Add some information to the file.
+                fs.Write(info, 0, info.Length);
+            }
+            Close();
+        }
     }
 }

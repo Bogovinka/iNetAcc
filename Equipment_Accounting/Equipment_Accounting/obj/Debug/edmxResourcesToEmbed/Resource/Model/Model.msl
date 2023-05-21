@@ -228,5 +228,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TaskEquipmentC">
+      <EntityTypeMapping TypeName="DatabaseModel.TaskEquipmentC">
+        <MappingFragment StoreEntitySet="TaskEquipmentC">
+          <ScalarProperty Name="EquipmentWarehouse" ColumnName="EquipmentWarehouse" />
+          <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

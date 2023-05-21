@@ -34,6 +34,8 @@ namespace Equipment_Accounting.View
         List<TaskEquipment> Equipments = new List<TaskEquipment>();
         List<TaskTMC> TMCsDel = new List<TaskTMC>();
         List<TaskEquipment> EquipmentsDel = new List<TaskEquipment>();
+        List<TaskEquipmentC> EquipmentsCDel = new List<TaskEquipmentC>();
+        List<TaskEquipmentC> EquipmentsC = new List<TaskEquipmentC>();
         public Resource.Model.Task task;
         Logins creator;
 
@@ -41,6 +43,7 @@ namespace Equipment_Accounting.View
         {
             InitializeComponent();
             WareHouse.Visibility = Visibility.Hidden;
+            WareHouseC.Visibility = Visibility.Hidden;
             EditB.IsEnabled = false;
             CloseB.IsEnabled = false;
             task = new Resource.Model.Task();
@@ -65,36 +68,56 @@ namespace Equipment_Accounting.View
             task = task_;
             TMCsDel = db.TaskTMC.Where(x => x.TaskID == task.ID).ToList();
             EquipmentsDel = db.TaskEquipment.Where(x => x.TaskID == task.ID).ToList();
+            EquipmentsCDel = db.TaskEquipmentC.Where(x => x.TaskID == task.ID).ToList();
             TMCs = TMCsDel.ToList();
             Equipments = EquipmentsDel.ToList();
+            EquipmentsC = EquipmentsCDel.ToList();
             Elv.ItemsSource = Equipments.ToList();
             TMClv.ItemsSource = TMCs.ToList();
+            EClv.ItemsSource = EquipmentsC.ToList();
             ClientT.Text = task.ClientContracts.Client.FullName;
             ContractT.Text = task.ClientContracts.Contract;
-            MasterT.Text = task.Logins.FullName;
+            if(task.MasterID != null)
+                MasterT.Text = task.Logins.FullName;
             PortT.Text = $"{task.Equipment.Name}|{task.Equipment.IP}";
             PortT.Tag = task.PortID;
             ComentT.Text = task.Note;
             DateEndT.SelectedDate = task.DateEnt;
             AddresT.Text = task.Addres;
             contractNum.Content = $"Заявка №{task.FullID} от {task.DateStart}";
-            if(task.StatusTaskID == 3)
+            if (task.StatusTaskID == 3)
             {
                 CloseB.IsEnabled = false;
             }
             if (creator_.Permission == 0)
             {
                 CloseB.IsEnabled = false;
-                ClientT.IsEnabled = false;
-                ContractT.IsEnabled = false;
                 MasterT.IsEnabled = false;
                 PortT.IsEnabled = false;
                 DateEndT.IsEnabled = false;
-                ComentT.IsEnabled = false;
                 AddresT.IsEnabled = false;
+                selectPort.IsEnabled = false;
+                ClientT.IsEnabled = false;
+                ContractT.IsEnabled = false;
                 createClient.IsEnabled = false;
                 createContract.IsEnabled = false;
+            }
+            if(task.StatusTaskID == 2) {
+                CloseB.IsEnabled = false;
+                EditB.IsEnabled = false;
+                MasterT.IsEnabled = false;
+                PortT.IsEnabled = false;
+                DateEndT.IsEnabled = false;
+                AddresT.IsEnabled = false;
                 selectPort.IsEnabled = false;
+                ClientT.IsEnabled = false;
+                ContractT.IsEnabled = false;
+                createClient.IsEnabled = false;
+                createContract.IsEnabled = false;
+                ComentT.IsEnabled = false;
+                addE.IsEnabled = false;
+                addEC.IsEnabled = false;
+                addTMC.IsEnabled = false;
             }
         }
 
@@ -114,14 +137,17 @@ namespace Equipment_Accounting.View
             task.DateEnt = DateEndT.SelectedDate;
             task.Note = ComentT.Text;
             task.Addres = AddresT.Text;
-            task.MasterID = (int)MasterT.SelectedValue;
-            task.Logins = (Logins)MasterT.SelectedItem;
+            if (MasterT.Text != "")
+            {
+                task.MasterID = (int)MasterT.SelectedValue;
+                task.Logins = (Logins)MasterT.SelectedItem;
+            }
             task.PortID = (int)PortT.Tag;
             task.Equipment = db.Equipment.Where(x => x.ID == task.PortID).FirstOrDefault();  
         }
         private void CreateB_Click(object sender, RoutedEventArgs e)
         {
-            if (ClientT.Text != "" && ContractT.Text != "" && AddresT.Text != "" && PortT.Text != "" && MasterT.Text != "" && DateEndT.Text != "" && ComentT.Text != "")
+            if (ClientT.Text != "" && ContractT.Text != "" && AddresT.Text != "" && PortT.Text != ""  && DateEndT.Text != "")
             {
                 setTask();
                 task.Creator = creator.FullName;
@@ -192,6 +218,28 @@ namespace Equipment_Accounting.View
                     db.TaskEquipment.Remove(t);
                 }
             }
+            EquipmentWarehouseClient equipmentWarehouseClient;
+            foreach (TaskEquipmentC t in EquipmentsCDel.ToList())
+            {
+                if (!EquipmentsC.Contains(t))
+                {
+                    if (db.EquipmentWarehouseMaster.Where(x => x.EquipmentWarehouseID == t.EquipmentWarehouse).Count() > 0)
+                        db.EquipmentWarehouseMaster.Remove(db.EquipmentWarehouseMaster.Where(x => x.EquipmentWarehouseID == t.EquipmentWarehouse).FirstOrDefault());
+                    if (db.EquipmentWarehouseClient.Where(x => x.EquipmentWarehouseID == t.EquipmentWarehouse).Count() == 0)
+                    {
+                        equipmentWarehouseClient = new EquipmentWarehouseClient()
+                        {
+                            ClientID = (int)ClientT.SelectedValue,
+                            Client = db.Client.Where(x => x.ID == (int)ClientT.SelectedValue).FirstOrDefault(),
+                            Size = 1,
+                            EquipmentWarehouseID = t.EquipmentWarehouse,
+                            EquipmentWarehouse = db.EquipmentWarehouse.Where(x => x.ID == t.EquipmentWarehouse).FirstOrDefault()
+                        };
+                        db.EquipmentWarehouseClient.Add(equipmentWarehouseClient);
+                    }
+                    db.TaskEquipmentC.Remove(t);
+                }
+            }
         }
         public void AddtoEdit()
         {
@@ -232,8 +280,27 @@ namespace Equipment_Accounting.View
                     db.TaskEquipment.Add(t);
                 }
             }
-            
-        
+            foreach (TaskEquipmentC t in EquipmentsC.ToList())
+            {
+                if (db.EquipmentWarehouseClient.Where(x => x.EquipmentWarehouseID == t.EquipmentWarehouse).Count() > 0)
+                    db.EquipmentWarehouseClient.Remove(db.EquipmentWarehouseClient.Where(x => x.EquipmentWarehouseID == t.EquipmentWarehouse).FirstOrDefault());
+                if (db.EquipmentWarehouseMaster.Where(x => x.EquipmentWarehouseID == t.EquipmentWarehouse).Count() == 0)
+                {
+                    equipmentWarehouseMaster = new EquipmentWarehouseMaster()
+                    {
+                        MasterID = task.MasterID,
+                        Logins = db.Logins.Where(x => x.ID == task.MasterID).FirstOrDefault(),
+                        Size = 1,
+                        EquipmentWarehouseID = t.EquipmentWarehouse,
+                        EquipmentWarehouse = db.EquipmentWarehouse.Where(x => x.ID == t.EquipmentWarehouse).FirstOrDefault()
+                    };
+                    db.EquipmentWarehouseMaster.Add(equipmentWarehouseMaster);
+                }
+                if (!EquipmentsCDel.Contains(t))
+                {
+                    db.TaskEquipmentC.Add(t);
+                }
+            }
         }
         public void AddtoClose()
         {
@@ -268,12 +335,38 @@ namespace Equipment_Accounting.View
                     db.TaskEquipment.Add(t);
                 }
             }
-            
+            EquipmentWarehouseS equipmentWarehouseS;
+            foreach (TaskEquipmentC t in EquipmentsC.ToList())
+            {
+                if (db.EquipmentWarehouseMaster.Where(x => x.EquipmentWarehouseID == t.EquipmentWarehouse).Count() > 0)
+                    db.EquipmentWarehouseMaster.Remove(db.EquipmentWarehouseMaster.Where(x => x.EquipmentWarehouseID == t.EquipmentWarehouse).FirstOrDefault());
+                if (db.EquipmentWarehouseS.Where(x => x.EquipmentWarehouseID == t.EquipmentWarehouse).Count() == 0)
+                {
+                    equipmentWarehouseS = new EquipmentWarehouseS()
+                    {
+                        EquipmentWarehouseID = t.EquipmentWarehouse,
+                        WarehouseID = 1,
+                        Size = 1,
+                        EquipmentWarehouse = db.EquipmentWarehouse.Where(x => x.ID == t.EquipmentWarehouse).FirstOrDefault()
+                    };
+                    db.EquipmentWarehouseS.Add(equipmentWarehouseS);
+                }
+                else
+                {
+                    equipmentWarehouseS = db.EquipmentWarehouseS.Where(x => x.EquipmentWarehouseID == t.EquipmentWarehouse).FirstOrDefault();
+                    equipmentWarehouseS.Size += 1;
+                }
+                if (!EquipmentsCDel.Contains(t))
+                {
+                    db.TaskEquipmentC.Add(t);
+                }
+            }
+
 
         }
         private void EditB_Click(object sender, RoutedEventArgs e)
         {
-            if (ClientT.Text != "" && ContractT.Text != "" && AddresT.Text != "" && PortT.Text != "" && MasterT.Text != "" && DateEndT.Text != "" && ComentT.Text != "")
+            if (ClientT.Text != "" && ContractT.Text != "" && AddresT.Text != "" && PortT.Text != "" && MasterT.Text != "" && DateEndT.Text != "")
             {
                 if (CheckTMC())
                 {
@@ -287,7 +380,7 @@ namespace Equipment_Accounting.View
                         db.SaveChanges();
                         DialogResult = true;
                     }
-                    else MessageBox.Show("Не всё оборудование есть на складе(оборудование очищено)");
+                    else MessageBox.Show("Не всё оборудование есть на складе");
                 }
                 else MessageBox.Show("Не всё указанное TMC есть на складе");
             }
@@ -295,7 +388,7 @@ namespace Equipment_Accounting.View
 
         private void CloseB_Click(object sender, RoutedEventArgs e)
         {
-            if (ClientT.Text != "" && ContractT.Text != "" && AddresT.Text != "" && PortT.Text != "" && MasterT.Text != "" && DateEndT.Text != "" && ComentT.Text != "")
+            if (ClientT.Text != "" && ContractT.Text != "" && AddresT.Text != "" && PortT.Text != "" && MasterT.Text != "" && DateEndT.Text != "")
             {
                 if (CheckTMC())
                 {
@@ -396,15 +489,21 @@ namespace Equipment_Accounting.View
 
         private void EButton_Click(object sender, RoutedEventArgs e)
         {
-            int id = (int)((Button)sender).Tag;
-            Equipments.Remove(Equipments.Where(x => x.ID == id).FirstOrDefault());
-            Elv.ItemsSource = Equipments.ToList();
+            if (task.StatusTaskID != 2)
+            {
+                int id = (int)((Button)sender).Tag;
+                Equipments.Remove(Equipments.Where(x => x.ID == id).FirstOrDefault());
+                Elv.ItemsSource = Equipments.ToList();
+            }
         }
         private void TButton_Click(object sender, RoutedEventArgs e)
         {
-            int id = (int)((Button)sender).Tag;
-            TMCs.Remove(TMCs.Where(x => x.ID == id).FirstOrDefault());
-            TMClv.ItemsSource = TMCs.ToList();
+            if (task.StatusTaskID != 2)
+            {
+                int id = (int)((Button)sender).Tag;
+                TMCs.Remove(TMCs.Where(x => x.ID == id).FirstOrDefault());
+                TMClv.ItemsSource = TMCs.ToList();
+            }
         }
 
         private void createContract_Click(object sender, RoutedEventArgs e)
@@ -430,6 +529,36 @@ namespace Equipment_Accounting.View
             ContractT.IsEnabled = true;
             createContract.IsEnabled = true;
             ContractT.ItemsSource = db.ClientContracts.Where(x => x.ClientID == (int)ClientT.SelectedValue).ToList();
+        }
+
+        private void ECButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (task.StatusTaskID != 2)
+            {
+                int id = (int)((Button)sender).Tag;
+                EquipmentsC.Remove(EquipmentsC.Where(x => x.ID == id).FirstOrDefault());
+                EClv.ItemsSource = EquipmentsC.ToList();
+            }
+        }
+
+        private void addEC_Click(object sender, RoutedEventArgs e)
+        {
+            SelectWarehouseEquipC sel = new SelectWarehouseEquipC((int)ClientT.SelectedValue);
+            if (sel.ShowDialog() == true)
+            {
+                if (EquipmentsC.Where(x => x.EquipmentWarehouse == ((EquipmentWarehouseClient)sel.equipS.SelectedItem).EquipmentWarehouse.ID).Count() == 0)
+                {
+                    TaskEquipmentC tE = new TaskEquipmentC()
+                    {
+                        EquipmentWarehouse = ((EquipmentWarehouseClient)sel.equipS.SelectedItem).EquipmentWarehouse.ID,
+                        EquipmentWarehouse1 = db.EquipmentWarehouse.Where(x => x.ID == ((EquipmentWarehouseClient)sel.equipS.SelectedItem).EquipmentWarehouse.ID).FirstOrDefault(),
+                        TaskID = task.ID
+                    };
+                    EquipmentsC.Add(tE);
+                    EClv.ItemsSource = EquipmentsC.ToList();
+                }
+                else MessageBox.Show("Этот объект уже есть в списке");
+            }
         }
     }
 }

@@ -33,19 +33,18 @@ namespace Equipment_Accounting
     /// </summary>
     public partial class MenuTree : Window
     {
-        Resource.Model.DatabaseEntities databaseEntities = new DatabaseEntities();
+        Resource.Model.DatabaseEntities db;
         Logins log;
         TreeViewItem copyItem = null;
         WorkBD workBD = new WorkBD();
-        DatabaseEntities database = new DatabaseEntities();
         void addItems(TreeViewItem selectT, Equipment equipSelect)
         {
-            if (database.Equipment.Where(x => x.ID_in_item == equipSelect.ID).Count() > 0)
+            if (db.Equipment.Where(x => x.ID_in_item == equipSelect.ID).Count() > 0)
             {
                 try
                 {
                     TreeViewItem treeViewItem;
-                    List<Equipment> equipments = database.Equipment.Where(x => x.ID_in_item == equipSelect.ID).ToList();
+                    List<Equipment> equipments = db.Equipment.Where(x => x.ID_in_item == equipSelect.ID).ToList();
                     foreach (Equipment equip in equipments)
                     {
                         treeViewItem = new TreeViewItem();
@@ -64,12 +63,12 @@ namespace Equipment_Accounting
         }
         void updateTree()
         {
-            if (database.Equipment.Where(x => x.ID_in_item == 0).Count() > 0)
+            if (db.Equipment.Where(x => x.ID_in_item == 0).Count() > 0)
             {
                 try
                 {
                     TreeViewItem treeViewItem;
-                    List<Equipment> equipments = database.Equipment.Where(x => x.ID_in_item == 0).ToList();
+                    List<Equipment> equipments = db.Equipment.Where(x => x.ID_in_item == 0).ToList();
                     foreach (Equipment equip in equipments)
                     {
                         treeViewItem = new TreeViewItem();
@@ -86,9 +85,10 @@ namespace Equipment_Accounting
             }
         }
 
-        public MenuTree(Logins login)
+        public MenuTree(Logins login, DatabaseEntities db_)
         {
-            InitializeComponent();   
+            InitializeComponent();
+            db = db_;
             log = login;
             loginName.Content = $"Логин: {log.Login}";
             if (log.Permission == 1)
@@ -99,7 +99,8 @@ namespace Equipment_Accounting
                 add2.Visibility = Visibility.Visible;
                 edit2.Visibility = Visibility.Visible;
                 delete.Visibility = Visibility.Visible;
-
+                Copy.Visibility = Visibility.Visible;
+                Paste.Visibility = Visibility.Visible;
             }
             updateTree();
         }
@@ -117,8 +118,8 @@ namespace Equipment_Accounting
                     Name = name,
                     ID_in_item = 0,
                 };
-                databaseEntities.Equipment.Add(equip);
-                databaseEntities.SaveChanges();
+                db.Equipment.Add(equip);
+                db.SaveChanges();
                 newT.Tag = equip.ID;
                 treeView.Items.Add(newT);
                 
@@ -129,25 +130,34 @@ namespace Equipment_Accounting
         {
             if (treeView.SelectedItem != null)
             {
-                AddNote add = new AddNote();
-                if (add.ShowDialog() == true)
+                TreeViewItem t = (TreeViewItem)treeView.SelectedItem;
+                if (db.Equipment.Where(x => x.ID == (int)t.Tag).Count() > 0)
                 {
-                    try
+                    AddNote add = new AddNote(db);
+                    if (add.ShowDialog() == true)
                     {
-                        TreeViewItem newT = new TreeViewItem();
-                        TreeViewItem t = (TreeViewItem)treeView.SelectedItem;
-                        int IDin = (int)t.Tag;
-                        workBD.insertDB(add.nameT.Text, add.IPT.Text, add.MACT.Text, add.TypeT.SelectedValue, add.StateT.SelectedValue,
-                        add.AdresT.Text, add.NoteT.Text, add.LoginT.Text, add.PasswordT.Text, add.SNMPT.Text, add.VLANT.Text, add.SerT.Text, add.MarkT.SelectedValue,
-                        add.ModelT.SelectedValue, IDin);
-                        Equipment newEquip = database.Equipment.Where(x => x.IP == add.IPT.Text).FirstOrDefault();
-                        newT.Header = newEquip.FullName;
-                        newT.Tag = newEquip.ID;
-                        t.Items.Add(newT);
-                    }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
+                        try
+                        {
+                            TreeViewItem newT = new TreeViewItem();
+                            int IDin = (int)t.Tag;
+                            string IPtext;
+                            if (add.IPT.Text == "___.___.___.___") IPtext = "";
+                            else IPtext = add.IPT.Text;
+                            string MACtext;
+                            if (add.MACT.Text == "__:__:__:__:__:__") MACtext = "";
+                            else MACtext = add.MACT.Text;
+                            workBD.insertDB(add.nameT.Text, IPtext, MACtext, add.TypeT.SelectedValue, add.StateT.SelectedValue,
+                            add.AdresT.Text, add.NoteT.Text, add.LoginT.Text, add.PasswordT.Text, add.SNMPT.Text, add.VLANT.Text, add.SerT.Text, add.MarkT.SelectedValue,
+                            add.ModelT.SelectedValue, IDin);
+                            Equipment newEquip = db.Equipment.Where(x => x.Name == add.nameT.Text).FirstOrDefault();
+                            newT.Header = newEquip.FullName;
+                            newT.Tag = newEquip.ID;
+                            t.Items.Add(newT);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
                 }
             }
@@ -158,22 +168,31 @@ namespace Equipment_Accounting
             if (treeView.SelectedItem != null)
             {
                 TreeViewItem t = (TreeViewItem)treeView.SelectedItem;
-                Equipment equip = database.Equipment.Where(x => x.ID == (int)t.Tag).FirstOrDefault();
-                if (equip.ID != 0)
+                if (db.Equipment.Where(x => x.ID == (int)t.Tag).Count() > 0)
                 {
-                    Update c = new Update(equip);
-                    if (c.ShowDialog() == true)
+                    Equipment equip = db.Equipment.Where(x => x.ID == (int)t.Tag).FirstOrDefault();
+                    if (equip.ID != 0)
                     {
-                        try
+                        Update c = new Update(equip);
+                        if (c.ShowDialog() == true)
                         {
-                            workBD.updateDB(c.nameT.Text, c.IPT.Text, c.MACT.Text, (int)c.TypeT.SelectedValue, (int)c.StateT.SelectedValue,
-                            c.AdresT.Text, c.NoteT.Text, c.LoginT.Text, c.PasswordT.Text, c.SNMPT.Text, c.VLANT.Text, c.SerT.Text, (int)c.MarkT.SelectedValue,
-                            (int)c.ModelT.SelectedValue, equip, databaseEntities, t);
-                            t.Header = equip.FullName;
-                        }
-                        catch(Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
+                            try
+                            {
+                                string IPtext;
+                                if (c.IPT.Text == "___.___.___.___") IPtext = "";
+                                else IPtext = c.IPT.Text;
+                                string MACtext;
+                                if (c.MACT.Text == "__:__:__:__:__:__") MACtext = "";
+                                else MACtext = c.MACT.Text;
+                                workBD.updateDB(c.nameT.Text, IPtext, MACtext, c.TypeT.SelectedValue, c.StateT.SelectedValue,
+                                c.AdresT.Text, c.NoteT.Text, c.LoginT.Text, c.PasswordT.Text, c.SNMPT.Text, c.VLANT.Text, c.SerT.Text, c.MarkT.SelectedValue,
+                                c.ModelT.SelectedValue, equip, db, t);
+                                t.Header = equip.FullName;
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
                         }
                     }
                 }
@@ -191,13 +210,20 @@ namespace Equipment_Accounting
             if (treeView.SelectedItem != null)
             {
                 TreeViewItem t = (TreeViewItem)treeView.SelectedItem;
-                if (t.HasItems) MessageBox.Show("Этот элемент не пустой", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
-                else
+                if (db.Task.Where(x => x.PortID == (int)t.Tag).Count() == 0)
                 {
-                    workBD.delete(t);
-                    t.Background = Brushes.IndianRed;
-                    t.Header += "  (удален)";
+                    if (db.Equipment.Where(x => x.ID == (int)t.Tag).Count() > 0)
+                    {
+                        if (db.Equipment.Where(x => x.ID_in_item == (int)t.Tag).Count() > 0) MessageBox.Show("Этот элемент не пустой", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
+                        else
+                        {
+                            workBD.delete(t);
+                            t.Background = Brushes.IndianRed;
+                            t.Header += "  (удален)";
+                        }
+                    }
                 }
+                else MessageBox.Show("Данное оборудование нельзя удалить, оно используется в заявке");
             }
         }
 
@@ -262,7 +288,7 @@ namespace Equipment_Accounting
             if (treeView.SelectedItem != null)
             {
                 TreeViewItem selectT = (TreeViewItem)treeView.SelectedItem;
-                Equipment selectEquip = database.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
+                Equipment selectEquip = db.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
                 if (selectEquip.ID != 0)
                 {
                     Process.Start("cmd.exe", "/C" + $" ping -t {selectEquip.IP}");
@@ -275,7 +301,7 @@ namespace Equipment_Accounting
             if (treeView.SelectedItem != null)
             {
                 TreeViewItem selectT = (TreeViewItem)treeView.SelectedItem;
-                Equipment selectEquip = database.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
+                Equipment selectEquip = db.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
                 new Thread(() =>
                 {
                     Tracert(selectT, selectEquip.IP, selectEquip.ID);
@@ -302,7 +328,7 @@ namespace Equipment_Accounting
             if (treeView.SelectedItem != null)
             {
                 TreeViewItem selectT = (TreeViewItem)treeView.SelectedItem;
-                Equipment selectEquip = database.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
+                Equipment selectEquip = db.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
                 if (selectEquip.ID != 0)
                 {
                     if (File.Exists(@"C:\winbox.exe"))
@@ -320,7 +346,7 @@ namespace Equipment_Accounting
             if (treeView.SelectedItem != null)
             {
                 TreeViewItem selectT = (TreeViewItem)treeView.SelectedItem;
-                Equipment selectEquip = database.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
+                Equipment selectEquip = db.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
                 if (selectEquip.ID != 0)
                 {
                     Process.Start($"http://{selectEquip.IP}");
@@ -333,7 +359,7 @@ namespace Equipment_Accounting
             if (treeView.SelectedItem != null)
             {
                 TreeViewItem selectT = (TreeViewItem)treeView.SelectedItem;
-                Equipment selectEquip = database.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
+                Equipment selectEquip = db.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
                 if (selectEquip.ID != 0)
                 {
                     if (File.Exists(@"C:\putty.exe"))
@@ -349,7 +375,6 @@ namespace Equipment_Accounting
         private void treeView_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
             TreeViewItem treeViewItem = VisualUpwardSearch(e.OriginalSource as DependencyObject);
-
             if (treeViewItem != null)
             {
                 treeViewItem.Focus();
@@ -377,7 +402,7 @@ namespace Equipment_Accounting
             if (treeView.SelectedItem != null)
             {
                 TreeViewItem selectT = (TreeViewItem)treeView.SelectedItem;
-                Equipment selectEquip = database.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
+                Equipment selectEquip = db.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
                 if (selectEquip.ID != 0)
                 {
                     Process.Start($"https://yandex.ru/maps/?text={selectEquip.Address}");
@@ -392,15 +417,6 @@ namespace Equipment_Accounting
             r.Show();
         }
 
-        private void exit_Click(object sender, RoutedEventArgs e)
-        {
-            View.Menu m = new View.Menu(log);
-            m.Show();
-            this.Close();
-        }
-
-
-
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             ScrollViewer scv = (ScrollViewer)sender;
@@ -413,14 +429,16 @@ namespace Equipment_Accounting
             if (treeView.SelectedItem != null)
             {
                 TreeViewItem selectT = (TreeViewItem)treeView.SelectedItem;
-                copyItem = selectT;
+                if (db.Equipment.Where(x => x.ID == (int)selectT.Tag).Count() > 0)
+                    copyItem = selectT;
+
             }
         }
         public bool checkIdElements(TreeViewItem iCopy, TreeViewItem iPaste)
         {
             bool res = true;
-            Equipment copy = database.Equipment.Where(x => x.ID == (int)iCopy.Tag).FirstOrDefault();
-            Equipment paste = database.Equipment.Where(x => x.ID == (int)iPaste.Tag).FirstOrDefault();
+            Equipment copy = db.Equipment.Where(x => x.ID == (int)iCopy.Tag).FirstOrDefault();
+            Equipment paste = db.Equipment.Where(x => x.ID == (int)iPaste.Tag).FirstOrDefault();
             int id = (int)paste.ID_in_item;
             if (copy.ID_in_item != 0)
             {
@@ -431,7 +449,7 @@ namespace Equipment_Accounting
                         res = false;
                         break;
                     }
-                    paste = database.Equipment.Where(x => x.ID == id).FirstOrDefault();
+                    paste = db.Equipment.Where(x => x.ID == id).FirstOrDefault();
                     id = (int)paste.ID_in_item;
                 }
                 return res;
@@ -447,15 +465,15 @@ namespace Equipment_Accounting
                     TreeViewItem selectT = (TreeViewItem)treeView.SelectedItem;
                     if (checkIdElements(copyItem, selectT))
                     {
-                        Equipment copy = database.Equipment.Where(x => x.ID == (int)copyItem.Tag).FirstOrDefault();
-                        Equipment paste = database.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
+                        Equipment copy = db.Equipment.Where(x => x.ID == (int)copyItem.Tag).FirstOrDefault();
+                        Equipment paste = db.Equipment.Where(x => x.ID == (int)selectT.Tag).FirstOrDefault();
                         copy.ID_in_item = paste.ID;
-                        database.SaveChanges();
+                        db.SaveChanges();
                         copyItem = null;
                         treeView.Items.Clear();
                         updateTree();
                     }
-                    else MessageBox.Show("НИХУЯ, так не работает, переделавай", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    else MessageBox.Show("Так не работает, переделавай", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else MessageBox.Show("Не вырезан элемент", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 

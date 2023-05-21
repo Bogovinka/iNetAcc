@@ -695,7 +695,6 @@ C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Deb
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\mysql.data.entity.EF6.dll
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.EntityFramework.dll
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Web.dll
-C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySqlConnector.dll
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.dll
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.dll
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.OOXML.dll
@@ -738,7 +737,6 @@ C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Deb
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.xml
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Data.EntityFramework.xml
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySql.Web.xml
-C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\MySqlConnector.xml
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Newtonsoft.Json.xml
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.pdb
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\NPOI.xml
@@ -767,7 +765,6 @@ C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Deb
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.AssemblyReference.cache
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.SuggestedBindingRedirects.cache
-C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.exe.config
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\Equipment_Accounting.csproj.ResolveComReference.cache
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\App.baml
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddClient.g.cs
@@ -833,3 +830,23 @@ C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Deb
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\ContractsToClient.g.cs
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\AddContractToClient.baml
 C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\ContractsToClient.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectWarehouseEquipC.g.cs
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\obj\Debug\View\SelectWarehouseEquipC.baml
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\nl-BE\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mafak\Desktop\iNetAcc\Equipment_Accounting\Equipment_Accounting\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll

@@ -44,15 +44,13 @@ namespace Equipment_Accounting
             databaseEntities.Equipment.Add(equip);
             databaseEntities.SaveChanges();
         }
-        public void updateDB(string name, string ip, string mac, int typeID, int stateID, string adres, string note, string login, string pass, string SNMP, string vlan, string ser, int markID, int modelID, Equipment equip, DatabaseEntities db, TreeViewItem t)
+        public void updateDB(string name, string ip, string mac, object typeID, object stateID, string adres, string note, string login, string pass, string SNMP, string vlan, string ser, object markID, object modelID, Equipment equip, DatabaseEntities db, TreeViewItem t)
         {
             try
             {
                 equip.Name = name;
                 equip.IP = ip;
                 equip.MAC = mac;
-                equip.Type_Device_id = typeID;
-                equip.Conditions_id = stateID;
                 equip.Address = adres;
                 equip.Note = note; 
                 equip.Login = login;
@@ -60,20 +58,49 @@ namespace Equipment_Accounting
                 equip.SNMP = SNMP; 
                 equip.Num_vlan = vlan;
                 equip.Serial_num = ser;
-                equip.Model_id = modelID;
-                equip.Brand_id = markID;
-                Brand b = db.Brand.Where(x => x.ID == equip.Brand_id).FirstOrDefault();
-                equip.Brand = b;
-                Conditions c = db.Conditions.Where(x => x.ID == equip.Conditions_id).FirstOrDefault();
-                equip.Conditions = c;
-                Model m = db.Model.Where(x => x.ID == equip.Model_id).FirstOrDefault();
-                equip.Model = m;
-                Type_Device type_d = db.Type_Device.Where(x => x.ID == equip.Type_Device_id).FirstOrDefault();
-                equip.Type_Device = type_d;
+                if (typeID != null)
+                {
+                    equip.Type_Device_id = (int)typeID;
+                    equip.Type_Device = db.Type_Device.Where(x => x.ID == equip.Type_Device_id).FirstOrDefault();
+                }
+                else
+                {
+                    equip.Type_Device_id = null;
+                    equip.Type_Device = null;
+                }
+                if (stateID != null)
+                {
+                    equip.Conditions_id = (int)stateID;
+                    equip.Conditions = db.Conditions.Where(x => x.ID == equip.Conditions_id).FirstOrDefault();
+                }
+                else
+                {
+                    equip.Conditions_id = null;
+                    equip.Conditions = null;
+                }
+                if (modelID != null)
+                {
+                    equip.Model_id = (int)modelID;
+                    equip.Model = db.Model.Where(x => x.ID == equip.Model_id).FirstOrDefault();
+                }
+                else
+                {
+                    equip.Model_id = null;
+                    equip.Model = null;
+                }
+                if (markID != null)
+                {
+                    equip.Brand_id = (int)markID;
+                    equip.Brand = db.Brand.Where(x => x.ID == equip.Brand_id).FirstOrDefault();
+                }
+                else
+                {
+                    equip.Brand_id = null;
+                    equip.Brand = null;
+                }
                 db.Equipment.AddOrUpdate(equip);
                 db.SaveChanges();
-                
-                t.Header = $"{equip.Name}|{equip.IP}|{equip.MAC}|{equip.Serial_num}|{equip.Model.Name}|{equip.Type_Device.Name}|{equip.Address}";
+                t.Header = equip.FullName;
             }
             catch (Exception ex)
             {

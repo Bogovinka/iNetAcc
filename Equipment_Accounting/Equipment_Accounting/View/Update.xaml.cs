@@ -24,13 +24,15 @@ namespace Equipment_Accounting
     /// </summary>
     public partial class Update : Window
     {
-        Resource.Model.DatabaseEntities db = new Resource.Model.DatabaseEntities();
+        Resource.Model.DatabaseEntities db;
+        Classes.ConnectBD ConnectBD = new Classes.ConnectBD();
         public int IDW = 0;
         public string name_i = "";
         Equipment equipment;
         public Update(Equipment equip)
         {
             InitializeComponent();
+            db = ConnectBD.getDB();
             StateT.ItemsSource = db.Conditions.ToList();
             MarkT.ItemsSource = db.Brand.ToList();
             ModelT.ItemsSource = db.Model.ToList();
@@ -56,17 +58,20 @@ namespace Equipment_Accounting
         {
             List<Equipment> equipList = new List<Equipment>();
             equipList.Remove(equipment);
-            if (nameT.Text.Length > 0 && IPT.Text.Length > 0 && MACT.Text.Length > 0 && equipList.Where(x => x.IP == IPT.Text).Count() == 0 && equipList.Where(x => x.Serial_num == SerT.Text).Count() == 0 && equipList.Where(x => x.MAC == MACT.Text).Count() == 0 && equipList.Where(x => x.Name == nameT.Text).Count() == 0)
+            if (nameT.Text.Length > 0 && equipList.Where(x => x.IP == IPT.Text && x.IP != "").Count() == 0 && equipList.Where(x => x.Serial_num == SerT.Text && x.Serial_num != "").Count() == 0 && equipList.Where(x => x.MAC == MACT.Text && x.MAC != "").Count() == 0 && equipList.Where(x => x.Name == nameT.Text && x.Name != "").Count() == 0)
             {
-                DialogResult = true;
+                if ((IPT.IsMaskFull | IPT.Text == "___.___.___.___") && (MACT.IsMaskFull | MACT.Text == "__:__:__:__:__:__"))
+                    DialogResult = true;
+                else MessageBox.Show("Заполни IP и MAC до конца или оставь пустыми");
             }
             else
             {
-                string error = "";
+                string error = "Ошибка:\n";
+                if (nameT.Text == "") error += "Заполни название оборудования\n";
                 if (equipList.Where(x => x.IP == IPT.Text).Count() > 0) error += "Такой IP-адрес уже есть в базе данных\n";
                 if (equipList.Where(x => x.MAC == MACT.Text).Count() > 0) error += "Такой MAC-адрес уже есть в базе данных\n";
                 if (equipList.Where(x => x.Name == nameT.Text).Count() > 0) error += "Такой наименование уже есть в базе данных\n";
-                if (equipList.Where(x => x.Serial_num == SerT.Text).Count() > 0) error += "Такой серийный номер уже есть в базе данных\n";
+                if (equipList.Where(x => x.Serial_num == SerT.Text && x.Serial_num != "").Count() > 0) error += "Такой серийный номер уже есть в базе данных\n";
                 MessageBox.Show(error, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

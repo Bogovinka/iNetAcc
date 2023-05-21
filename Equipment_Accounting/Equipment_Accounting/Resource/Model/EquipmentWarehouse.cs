@@ -21,6 +21,7 @@ namespace Equipment_Accounting.Resource.Model
             this.EquipmentWarehouseMaster = new HashSet<EquipmentWarehouseMaster>();
             this.EquipmentWarehouseS = new HashSet<EquipmentWarehouseS>();
             this.TaskEquipment = new HashSet<TaskEquipment>();
+            this.TaskEquipmentC = new HashSet<TaskEquipmentC>();
         }
     
         public int ID { get; set; }
@@ -42,5 +43,7 @@ namespace Equipment_Accounting.Resource.Model
         public virtual EquipmentWarehouseStatus EquipmentWarehouseStatus { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TaskEquipment> TaskEquipment { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TaskEquipmentC> TaskEquipmentC { get; set; }
     }
 }

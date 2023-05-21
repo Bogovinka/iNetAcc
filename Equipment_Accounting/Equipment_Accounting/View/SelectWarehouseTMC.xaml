@@ -5,13 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Equipment_Accounting.View"
         mc:Ignorable="d"
-        Title="SelectWarehouseTMC" Height="450" Width="800" WindowStartupLocation="CenterScreen" MinHeight="450" MinWidth="800">
+        Title="TMC склада" Height="450" Width="800" WindowStartupLocation="CenterScreen" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="194*"/>
             <RowDefinition Height="23*"/>
         </Grid.RowDefinitions>
         <DataGrid x:Name="TMCdg" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="{Binding backRow}"></Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#4169E1" />
+                            <Setter Property="Foreground" Value="White"></Setter>
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell" BasedOn="{StaticResource MaterialDesignDataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{x:Null}" />
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Binding="{Binding Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Кол-во" Binding="{Binding SizeUnit}"></DataGridTextColumn>

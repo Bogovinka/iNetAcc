@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Equipment_Accounting.View"
         mc:Ignorable="d"
-        Title="SelectContract" WindowStartupLocation="CenterScreen"  Height="150" Width="400" MaxHeight="150" MaxWidth="400">
+        Title="Тип заявки" WindowStartupLocation="CenterScreen"  Height="150" Width="400" MaxHeight="150" MaxWidth="400">
     <StackPanel>
         <ComboBox materialDesign:HintAssist.Hint="Тип" Style="{StaticResource MaterialDesignOutlinedComboBox}" Margin="10" DisplayMemberPath="Name" SelectedValuePath="ID" x:Name="typeC"></ComboBox>
         <Button Margin="10" x:Name="select" Click="select_Click">Выбрать</Button>

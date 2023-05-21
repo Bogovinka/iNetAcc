@@ -43,23 +43,30 @@ namespace Equipment_Accounting
 
         private void loginB_Click(object sender, RoutedEventArgs e)
         {
-            if (db.Logins.Where(x => x.Login == loginText.Text && x.Password == passwordText.Password).Count() > 0)
+            try
             {
-                Logins log = db.Logins.Where(x => x.Login == loginText.Text && x.Password == passwordText.Password).FirstOrDefault();
-                using (FileStream fs = File.Create(pathAuto))
+                if (db.Logins.Where(x => x.Login == loginText.Text && x.Password == passwordText.Password).Count() > 0)
                 {
-                    byte[] info = new UTF8Encoding(true).GetBytes($"{loginText.Text}\n{passwordText.Password}");
-                    // Add some information to the file.
-                    fs.Write(info, 0, info.Length);
-                }
-                View.Menu m = new View.Menu(log);
-                m.Show();
-                this.Close();
+                    Logins log = db.Logins.Where(x => x.Login == loginText.Text && x.Password == passwordText.Password).FirstOrDefault();
+                    using (FileStream fs = File.Create(pathAuto))
+                    {
+                        byte[] info = new UTF8Encoding(true).GetBytes($"{loginText.Text}\n{passwordText.Password}");
+                        // Add some information to the file.
+                        fs.Write(info, 0, info.Length);
+                    }
+                    View.Menu m = new View.Menu(log);
+                    m.Show();
+                    this.Close();
 
+                }
+                else
+                {
+                    MessageBox.Show("Такого пользователя не существует или такого пароля");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Такого пользователя не существует или такого пароля");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -89,13 +96,14 @@ namespace Equipment_Accounting
             eC.ShowDialog();
             if (eC.DialogResult == true)
             {
-                using (FileStream fs = File.Create("database.txt"))
+                using (FileStream fs = File.Create("connect.txt"))
                 {
-                    byte[] info = new UTF8Encoding(true).GetBytes($"server={eC.serverT.Text};user={eC.userT.Text};database={eC.dbT.Text};password={eC.passT.Text};character set=utf8;");
+                    byte[] info = new UTF8Encoding(true).GetBytes($"Data Source={eC.serverT.Text};Initial Catalog={eC.dbT.Text};Integrated Security=True".ToString());
                     // Add some information to the file.
                     fs.Write(info, 0, info.Length);
                 }
             }
+            db = con.getDB();
         }
     }
 }

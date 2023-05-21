@@ -23,10 +23,11 @@ namespace Equipment_Accounting
     public partial class AddNote : Window
     {
         WorkBD workBD = new WorkBD();
-        Resource.Model.DatabaseEntities db = new Resource.Model.DatabaseEntities();
-        public AddNote()
+        Resource.Model.DatabaseEntities db;
+        public AddNote(DatabaseEntities db_)
         {
             InitializeComponent();
+            db = db_;
             StateT.ItemsSource = db.Conditions.ToList();
             MarkT.ItemsSource = db.Brand.ToList();
             ModelT.ItemsSource = db.Model.ToList();
@@ -37,13 +38,16 @@ namespace Equipment_Accounting
         {
             if (nameT.Text.Length > 0 && db.Equipment.Where(x => x.IP == IPT.Text && x.IP != "").Count() == 0 && db.Equipment.Where(x => x.Serial_num == SerT.Text && x.Serial_num != "").Count() == 0 && db.Equipment.Where(x => x.MAC == MACT.Text && x.MAC != "").Count() == 0 && db.Equipment.Where(x => x.Name == nameT.Text).Count() == 0)
             {
-                DialogResult = true;
+                if ((IPT.IsMaskFull | IPT.Text == "___.___.___.___") && (MACT.IsMaskFull | MACT.Text == "__:__:__:__:__:__"))
+                    DialogResult = true;
+                else MessageBox.Show("Заполни IP и MAC до конца или оставь пустыми");
             }
             else
             {
-                string error = "Заполни все поля\n";
+                string error = "Ошибка:\n";
+                if (nameT.Text == "") error += "Заполни название оборудования\n";
                 if (db.Equipment.Where(x => x.IP == IPT.Text).Count() > 0) error += "Такой IP-адрес уже есть в базе данных\n";
-                if (db.Equipment.Where(x => x.Serial_num == SerT.Text).Count() > 0) error += "Такой серийный номер уже есть в базе данных\n";
+                if (db.Equipment.Where(x => x.Serial_num == SerT.Text && x.Serial_num != "").Count() > 0) error += "Такой серийный номер уже есть в базе данных\n";
                 if (db.Equipment.Where(x => x.MAC == MACT.Text).Count() > 0) error += "Такой MAC-адрес уже есть в базе данных\n";
                 if (db.Equipment.Where(x => x.Name == nameT.Text).Count() > 0) error += "Такое наименование уже есть в базе данных\n";
                 MessageBox.Show(error, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);

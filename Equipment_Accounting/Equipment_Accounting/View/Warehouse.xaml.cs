@@ -22,13 +22,12 @@ namespace Equipment_Accounting.View
     public partial class Warehouse : Window
     {
         Resource.Model.DatabaseEntities db;
-        Classes.ConnectBD con = new Classes.ConnectBD();
         Logins log;
-        public Warehouse(Logins log_)
+        public Warehouse(Logins log_, DatabaseEntities db_)
         {
             InitializeComponent();
             log = log_;
-            db = con.getDB();
+            db = db_;
             equipC.ItemsSource = db.EquipmentWarehouseClient.ToList();
             equipM.ItemsSource = db.EquipmentWarehouseMaster.ToList();
             equipS.ItemsSource = db.EquipmentWarehouseS.ToList();
@@ -253,6 +252,10 @@ namespace Equipment_Accounting.View
                     EquipmentWarehouseClient equip = (EquipmentWarehouseClient)equipC.SelectedItem;
                     db.EquipmentWarehouseClient.Remove(equip);
                     EquipmentWarehouse equipment = db.EquipmentWarehouse.Where(x => x.ID == equip.ID).FirstOrDefault();
+                    if (db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
+                        db.TaskEquipment.Remove(db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).FirstOrDefault());
+                    if (db.TaskEquipmentC.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
+                        db.TaskEquipmentC.Remove(db.TaskEquipmentC.Where(x => x.EquipmentWarehouse == equipment.ID).FirstOrDefault());
                     db.EquipmentWarehouse.Remove(equipment);
                     db.SaveChanges();
                     equipC.ItemsSource = db.EquipmentWarehouseClient.ToList();
@@ -265,6 +268,10 @@ namespace Equipment_Accounting.View
                     EquipmentWarehouseMaster equip = (EquipmentWarehouseMaster)equipM.SelectedItem;
                     db.EquipmentWarehouseMaster.Remove(equip);
                     EquipmentWarehouse equipment = db.EquipmentWarehouse.Where(x => x.ID == equip.ID).FirstOrDefault();
+                    if(db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
+                        db.TaskEquipment.Remove(db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).FirstOrDefault());
+                    if (db.TaskEquipmentC.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
+                        db.TaskEquipmentC.Remove(db.TaskEquipmentC.Where(x => x.EquipmentWarehouse == equipment.ID).FirstOrDefault());
                     db.EquipmentWarehouse.Remove(equipment);
                     db.SaveChanges();
                     equipM.ItemsSource = db.EquipmentWarehouseMaster.ToList();
@@ -277,6 +284,10 @@ namespace Equipment_Accounting.View
                     EquipmentWarehouseS equip = (EquipmentWarehouseS)equipS.SelectedItem;
                     db.EquipmentWarehouseS.Remove(equip);
                     EquipmentWarehouse equipment = db.EquipmentWarehouse.Where(x => x.ID == equip.ID).FirstOrDefault();
+                    if (db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
+                        db.TaskEquipment.Remove(db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).FirstOrDefault());
+                    if (db.TaskEquipmentC.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
+                        db.TaskEquipmentC.Remove(db.TaskEquipmentC.Where(x => x.EquipmentWarehouse == equipment.ID).FirstOrDefault());
                     db.EquipmentWarehouse.Remove(equipment);
                     db.SaveChanges();
                     equipS.ItemsSource = db.EquipmentWarehouseS.ToList();
@@ -307,6 +318,8 @@ namespace Equipment_Accounting.View
             if (TMCdg.SelectedItem != null)
             {
                 TMC tmc = (TMC)TMCdg.SelectedItem;
+                if (db.TaskTMC.Where(x => x.TMCID == tmc.ID).Count() > 0)
+                    db.TaskTMC.Remove(db.TaskTMC.Where(x => x.TMCID == tmc.ID).FirstOrDefault());
                 db.TMC.Remove(tmc);
                 db.SaveChanges();
                 TMCdg.ItemsSource = db.TMC.ToList();
@@ -314,11 +327,5 @@ namespace Equipment_Accounting.View
             }
         }
 
-        private void Back_Click(object sender, RoutedEventArgs e)
-        {
-            Menu m = new Menu(log);
-            m.Show();
-            Close();
-        }
     }
 }
