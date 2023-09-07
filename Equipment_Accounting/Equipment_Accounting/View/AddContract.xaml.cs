@@ -47,7 +47,7 @@ namespace Equipment_Accounting.View
             EditB.IsEnabled = false;
             CloseB.IsEnabled = false;
             task = new Resource.Model.Task();
-            db = db_;
+            db = con.getDB();
             creator = creator_;
             task.TypeID = typeT.ID;
             typeTask = typeT;
@@ -62,7 +62,7 @@ namespace Equipment_Accounting.View
             InitializeComponent();
             CreateB.IsEnabled = false;
             typeTask = task_.TypeTask;
-            db = db_;
+            db = con.getDB();
             ClientT.ItemsSource = db.Client.ToList();
             MasterT.ItemsSource = db.Logins.ToList();
             task = task_;

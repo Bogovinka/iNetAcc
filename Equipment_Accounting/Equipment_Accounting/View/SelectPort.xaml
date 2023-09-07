@@ -19,6 +19,8 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <TextBox x:Name="searchText" MaxWidth="200" KeyDown="searchText_KeyDown"  Margin="10,0,0,0" VerticalAlignment="Center" MinWidth="200" FontSize="18" Cursor="IBeam"></TextBox>
             <Button x:Name="search" Margin="10,0,0,0" Click="search_Click" FontSize="18" Cursor="Hand">Выделить</Button>
+            <Button x:Name="add" Margin="10,0,0,0" Content="Добавить" Click="add_Click"/>
+            <Button x:Name="edit" Margin="10,0,0,0" Content="Изменить" Click="edit_Click"/>
         </StackPanel>
         <Button Grid.Row="1" HorizontalAlignment="Right" Margin="0,0,10,0" Click="Button_Click">Выбрать</Button>
     </Grid>

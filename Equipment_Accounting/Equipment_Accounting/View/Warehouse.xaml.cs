@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -23,6 +24,22 @@ namespace Equipment_Accounting.View
     {
         Resource.Model.DatabaseEntities db;
         Logins log;
+        public void relDT(string selectText)
+        {
+            if (equipTabC.IsSelected)
+            {
+                equipC.ItemsSource = db.EquipmentWarehouseClient.Where(x => x.EquipmentWarehouse.SerialNum.Contains(selectText) || x.EquipmentWarehouse.Name.Contains(selectText)).ToList();
+            }
+            else if (equipTabM.IsSelected)
+            {
+                equipM.ItemsSource = db.EquipmentWarehouseMaster.Where(x => x.EquipmentWarehouse.SerialNum.Contains(selectText) || x.EquipmentWarehouse.Name.Contains(selectText)).ToList();
+            }
+            else if (equipTabS.IsSelected)
+            {
+                equipS.ItemsSource = db.EquipmentWarehouseS.Where(x => x.EquipmentWarehouse.SerialNum.Contains(selectText) || x.EquipmentWarehouse.Name.Contains(selectText)).ToList();
+            }
+
+        }
         public Warehouse(Logins log_, DatabaseEntities db_)
         {
             InitializeComponent();
@@ -61,6 +78,7 @@ namespace Equipment_Accounting.View
                             EquipmentWarehouseMaster equipmentWarehouseMaster = new EquipmentWarehouseMaster()
                             {
                                 EquipmentWarehouseID = equipment.ID,
+                                EquipmentWarehouse = db.EquipmentWarehouse.Where(x => x.ID == equipment.ID).FirstOrDefault(),
                                 MasterID = (int)addE.AffiliationPersonT.SelectedValue,
                                 Logins = db.Logins.Where(x => x.ID == (int)addE.AffiliationPersonT.SelectedValue).FirstOrDefault()
                             };
@@ -72,6 +90,7 @@ namespace Equipment_Accounting.View
                             EquipmentWarehouseClient equipmentWarehouseClient = new EquipmentWarehouseClient()
                             {
                                 EquipmentWarehouseID = equipment.ID,
+                                EquipmentWarehouse = db.EquipmentWarehouse.Where(x => x.ID == equipment.ID).FirstOrDefault(),
                                 ClientID = (int)addE.AffiliationPersonT.SelectedValue,
                                 Client = db.Client.Where(x => x.ID == (int)addE.AffiliationPersonT.SelectedValue).FirstOrDefault()
                             };
@@ -83,6 +102,7 @@ namespace Equipment_Accounting.View
                             EquipmentWarehouseS equipmentWarehouseS = new EquipmentWarehouseS()
                             {
                                 EquipmentWarehouseID = equipment.ID,
+                                EquipmentWarehouse = db.EquipmentWarehouse.Where(x => x.ID == equipment.ID).FirstOrDefault(),
                                 WarehouseID = 1,
                                 Size = Convert.ToInt32(addE.SizeT.Text)
                             };
@@ -150,6 +170,7 @@ namespace Equipment_Accounting.View
                         EquipmentWarehouseMaster equipmentWarehouseMaster = new EquipmentWarehouseMaster()
                         {
                             EquipmentWarehouseID = equip.ID,
+                            EquipmentWarehouse = db.EquipmentWarehouse.Where(x => x.ID == equip.ID).FirstOrDefault(),
                             MasterID = (int)addE.AffiliationPersonT.SelectedValue,
                             Logins = db.Logins.Where(x => x.ID == (int)addE.AffiliationPersonT.SelectedValue).FirstOrDefault()
                         };
@@ -161,6 +182,7 @@ namespace Equipment_Accounting.View
                         EquipmentWarehouseClient equipmentWarehouseClient = new EquipmentWarehouseClient()
                         {
                             EquipmentWarehouseID = equip.ID,
+                            EquipmentWarehouse = db.EquipmentWarehouse.Where(x => x.ID == equip.ID).FirstOrDefault(),
                             ClientID = (int)addE.AffiliationPersonT.SelectedValue,
                             Client = db.Client.Where(x => x.ID == (int)addE.AffiliationPersonT.SelectedValue).FirstOrDefault()
                         };
@@ -169,21 +191,14 @@ namespace Equipment_Accounting.View
                         equipC.ItemsSource = db.EquipmentWarehouseClient.ToList();
                         break;
                     default:
-                        if (db.EquipmentWarehouseS.Where(x => x.EquipmentWarehouseID == equip.ID).Count() == 0)
+                        EquipmentWarehouseS equipmentWarehouseS = new EquipmentWarehouseS()
                         {
-                            EquipmentWarehouseS equipmentWarehouseS = new EquipmentWarehouseS()
-                            {
-                                EquipmentWarehouseID = equip.ID,
-                                WarehouseID = 1,
-                                Size = Convert.ToInt32(addE.SizeT.Text)
-                            };
-                            db.EquipmentWarehouseS.Add(equipmentWarehouseS);
-                        }
-                        else
-                        {
-                            EquipmentWarehouseS equipmentWarehouseS = db.EquipmentWarehouseS.Where(x => x.EquipmentWarehouseID == equip.ID).FirstOrDefault();
-                            equipmentWarehouseS.Size += 1;
-                        }
+                            EquipmentWarehouseID = equip.ID,
+                            EquipmentWarehouse = db.EquipmentWarehouse.Where(x => x.ID == equip.ID).FirstOrDefault(),
+                            WarehouseID = 1,
+                            Size = Convert.ToInt32(addE.SizeT.Text)
+                        };
+                        db.EquipmentWarehouseS.Add(equipmentWarehouseS);
                         db.SaveChanges();
                         equipS.ItemsSource = db.EquipmentWarehouseS.ToList();
                         break;
@@ -243,15 +258,15 @@ namespace Equipment_Accounting.View
             sizeE.Content = "Всего: " + db.EquipmentWarehouseS.Count();
         }
 
-        private void DelEquipment_Click(object sender, RoutedEventArgs e)
+        /*private void DelEquipment_Click(object sender, RoutedEventArgs e)
         {
             if (equipTabC.IsSelected)
             {
                 if (equipC.SelectedItem != null)
                 {
                     EquipmentWarehouseClient equip = (EquipmentWarehouseClient)equipC.SelectedItem;
+                    EquipmentWarehouse equipment = db.EquipmentWarehouse.Where(x => x.ID == equip.EquipmentWarehouseID).FirstOrDefault();
                     db.EquipmentWarehouseClient.Remove(equip);
-                    EquipmentWarehouse equipment = db.EquipmentWarehouse.Where(x => x.ID == equip.ID).FirstOrDefault();
                     if (db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
                         db.TaskEquipment.Remove(db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).FirstOrDefault());
                     if (db.TaskEquipmentC.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
@@ -267,7 +282,7 @@ namespace Equipment_Accounting.View
                 {
                     EquipmentWarehouseMaster equip = (EquipmentWarehouseMaster)equipM.SelectedItem;
                     db.EquipmentWarehouseMaster.Remove(equip);
-                    EquipmentWarehouse equipment = db.EquipmentWarehouse.Where(x => x.ID == equip.ID).FirstOrDefault();
+                    EquipmentWarehouse equipment = db.EquipmentWarehouse.Where(x => x.ID == equip.EquipmentWarehouseID).FirstOrDefault();
                     if(db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
                         db.TaskEquipment.Remove(db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).FirstOrDefault());
                     if (db.TaskEquipmentC.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
@@ -283,7 +298,7 @@ namespace Equipment_Accounting.View
                 {
                     EquipmentWarehouseS equip = (EquipmentWarehouseS)equipS.SelectedItem;
                     db.EquipmentWarehouseS.Remove(equip);
-                    EquipmentWarehouse equipment = db.EquipmentWarehouse.Where(x => x.ID == equip.ID).FirstOrDefault();
+                    EquipmentWarehouse equipment = db.EquipmentWarehouse.Where(x => x.ID == equip.EquipmentWarehouseID).FirstOrDefault();
                     if (db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
                         db.TaskEquipment.Remove(db.TaskEquipment.Where(x => x.EquipmentWarehouse == equipment.ID).FirstOrDefault());
                     if (db.TaskEquipmentC.Where(x => x.EquipmentWarehouse == equipment.ID).Count() > 0)
@@ -293,7 +308,7 @@ namespace Equipment_Accounting.View
                     equipS.ItemsSource = db.EquipmentWarehouseS.ToList();
                 }
             }
-        }
+        }*/
 
         private void EditTMC_Click(object sender, RoutedEventArgs e)
         {
@@ -327,5 +342,17 @@ namespace Equipment_Accounting.View
             }
         }
 
+        private void search_Click(object sender, RoutedEventArgs e)
+        {
+            relDT(searchText.Text);
+        }
+
+        private void searchText_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                relDT(searchText.Text);
+            }
+        }
     }
 }

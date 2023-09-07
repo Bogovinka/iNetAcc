@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -56,13 +57,14 @@ namespace Equipment_Accounting
         }
         private void createB_Click(object sender, RoutedEventArgs e)
         {
+            string pattern = @"\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b";
             List<Equipment> equipList = new List<Equipment>();
             equipList.Remove(equipment);
             if (nameT.Text.Length > 0 && equipList.Where(x => x.IP == IPT.Text && x.IP != "").Count() == 0 && equipList.Where(x => x.Serial_num == SerT.Text && x.Serial_num != "").Count() == 0 && equipList.Where(x => x.MAC == MACT.Text && x.MAC != "").Count() == 0 && equipList.Where(x => x.Name == nameT.Text && x.Name != "").Count() == 0)
             {
-                if ((IPT.IsMaskFull | IPT.Text == "___.___.___.___") && (MACT.IsMaskFull | MACT.Text == "__:__:__:__:__:__"))
+                if (Regex.IsMatch(IPT.Text, pattern) && (MACT.IsMaskFull | MACT.Text == "__:__:__:__:__:__"))
                     DialogResult = true;
-                else MessageBox.Show("Заполни IP и MAC до конца или оставь пустыми");
+                else MessageBox.Show("Заполни IP и MAC до конца или оставь пустыми, проверь правильность заполнения");
             }
             else
             {

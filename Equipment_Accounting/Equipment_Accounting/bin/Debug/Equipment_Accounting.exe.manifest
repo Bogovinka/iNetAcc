@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Equipment_Accounting.exe" size="736768">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Equipment_Accounting.exe" size="738816">
       <assemblyIdentity name="Equipment_Accounting" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>l5Nk5h81/42ojArGMvn79CH4nTyu25ae4AmrR9UUFc0=</dsig:DigestValue>
+        <dsig:DigestValue>xOgjtJjpKVsHe2In03YLl7VGD++jT0MwiwbQ4ClW1O4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -759,6 +759,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>Xdaqv/kcsKuex+RMGIU2lP3Xg8PdMIEp9ealv5WtE7Q=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ZstdNet.dll" size="28672">
+      <assemblyIdentity name="ZstdNet" version="1.4.5.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>5rrHKgOqMPqN1beBJzpCDZqXH9jaD2Uf7MolVellyt4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -34,6 +34,7 @@ namespace Equipment_Accounting
     public partial class MenuTree : Window
     {
         Resource.Model.DatabaseEntities db;
+        Classes.ConnectBD con = new Classes.ConnectBD();
         Logins log;
         TreeViewItem copyItem = null;
         WorkBD workBD = new WorkBD();
@@ -88,7 +89,7 @@ namespace Equipment_Accounting
         public MenuTree(Logins login, DatabaseEntities db_)
         {
             InitializeComponent();
-            db = db_;
+            db = con.getDB();
             log = login;
             loginName.Content = $"Логин: {log.Login}";
             if (log.Permission == 1)
@@ -140,9 +141,7 @@ namespace Equipment_Accounting
                         {
                             TreeViewItem newT = new TreeViewItem();
                             int IDin = (int)t.Tag;
-                            string IPtext;
-                            if (add.IPT.Text == "___.___.___.___") IPtext = "";
-                            else IPtext = add.IPT.Text;
+                            string IPtext = add.IPT.Text;
                             string MACtext;
                             if (add.MACT.Text == "__:__:__:__:__:__") MACtext = "";
                             else MACtext = add.MACT.Text;
@@ -178,9 +177,7 @@ namespace Equipment_Accounting
                         {
                             try
                             {
-                                string IPtext;
-                                if (c.IPT.Text == "___.___.___.___") IPtext = "";
-                                else IPtext = c.IPT.Text;
+                                string IPtext = c.IPT.Text;
                                 string MACtext;
                                 if (c.MACT.Text == "__:__:__:__:__:__") MACtext = "";
                                 else MACtext = c.MACT.Text;

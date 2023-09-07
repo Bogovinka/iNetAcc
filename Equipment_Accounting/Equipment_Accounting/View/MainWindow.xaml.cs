@@ -98,7 +98,7 @@ namespace Equipment_Accounting
             {
                 using (FileStream fs = File.Create("connect.txt"))
                 {
-                    byte[] info = new UTF8Encoding(true).GetBytes($"Data Source={eC.serverT.Text};Initial Catalog={eC.dbT.Text};Integrated Security=True".ToString());
+                    byte[] info = new UTF8Encoding(true).GetBytes($"Data Source={eC.serverT.Text};Initial Catalog={eC.dbT.Text};User Id={eC.loginT.Text};Password={eC.passwordT.Text}".ToString());
                     // Add some information to the file.
                     fs.Write(info, 0, info.Length);
                 }

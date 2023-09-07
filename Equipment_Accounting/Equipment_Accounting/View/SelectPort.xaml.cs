@@ -22,6 +22,7 @@ namespace Equipment_Accounting.View
     {
         Classes.ConnectBD con = new Classes.ConnectBD();
         DatabaseEntities database;
+        WorkBD workBD = new WorkBD();
         void addItems(TreeViewItem selectT, Equipment equipSelect)
         {
             if (database.Equipment.Where(x => x.ID_in_item == equipSelect.ID).Count() > 0)
@@ -143,6 +144,74 @@ namespace Equipment_Accounting.View
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (treeView.SelectedItem != null) DialogResult = true;
+        }
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            if (treeView.SelectedItem != null)
+            {
+                TreeViewItem t = (TreeViewItem)treeView.SelectedItem;
+                if (database.Equipment.Where(x => x.ID == (int)t.Tag).Count() > 0)
+                {
+                    AddNote add = new AddNote(database);
+                    if (add.ShowDialog() == true)
+                    {
+                        try
+                        {
+                            TreeViewItem newT = new TreeViewItem();
+                            int IDin = (int)t.Tag;
+                            string IPtext = add.IPT.Text;
+                            string MACtext;
+                            if (add.MACT.Text == "__:__:__:__:__:__") MACtext = "";
+                            else MACtext = add.MACT.Text;
+                            workBD.insertDB(add.nameT.Text, IPtext, MACtext, add.TypeT.SelectedValue, add.StateT.SelectedValue,
+                            add.AdresT.Text, add.NoteT.Text, add.LoginT.Text, add.PasswordT.Text, add.SNMPT.Text, add.VLANT.Text, add.SerT.Text, add.MarkT.SelectedValue,
+                            add.ModelT.SelectedValue, IDin);
+                            Equipment newEquip = database.Equipment.Where(x => x.Name == add.nameT.Text).FirstOrDefault();
+                            newT.Header = newEquip.FullName;
+                            newT.Tag = newEquip.ID;
+                            t.Items.Add(newT);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void edit_Click(object sender, RoutedEventArgs e)
+        {
+            if (treeView.SelectedItem != null)
+            {
+                TreeViewItem t = (TreeViewItem)treeView.SelectedItem;
+                if (database.Equipment.Where(x => x.ID == (int)t.Tag).Count() > 0)
+                {
+                    Equipment equip = database.Equipment.Where(x => x.ID == (int)t.Tag).FirstOrDefault();
+                    if (equip.ID != 0)
+                    {
+                        Update c = new Update(equip);
+                        if (c.ShowDialog() == true)
+                        {
+                            try
+                            {
+                                string IPtext = c.IPT.Text;
+                                string MACtext;
+                                if (c.MACT.Text == "__:__:__:__:__:__") MACtext = "";
+                                else MACtext = c.MACT.Text;
+                                workBD.updateDB(c.nameT.Text, IPtext, MACtext, c.TypeT.SelectedValue, c.StateT.SelectedValue,
+                                c.AdresT.Text, c.NoteT.Text, c.LoginT.Text, c.PasswordT.Text, c.SNMPT.Text, c.VLANT.Text, c.SerT.Text, c.MarkT.SelectedValue,
+                                c.ModelT.SelectedValue, equip, database, t);
+                                t.Header = equip.FullName;
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
