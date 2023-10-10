@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Nikita\Documents\GitHub\iNetAcc\Equipment_Accounting\Equipment_Accounting\App.xaml
-26-1348207128
+30544841381
 41862745299
-58-1449507143
-72-203389090
-View\AddClient.xaml;View\AddContract.xaml;View\AddContractToClient.xaml;View\AddEWarehouse.xaml;View\AddNote.xaml;View\AddSize.xaml;View\AddTMC.xaml;View\ClientsWindow.xaml;View\ContractsToClient.xaml;View\DialogWindow.xaml;View\EditConection.xaml;View\MainWindow.xaml;View\Create.xaml;View\Menu.xaml;View\MenuTree.xaml;View\NewContract.xaml;View\Reg.xaml;View\SelectContract.xaml;View\SelectPort.xaml;View\SelectWarehouseEquip.xaml;View\SelectWarehouseEquipC.xaml;View\SelectWarehouseTMC.xaml;View\Table.xaml;View\Update.xaml;View\Users.xaml;View\Warehouse.xaml;
+622091340628
+72-180040803
+View\AddTypeName.xaml;View\Client\AddClient.xaml;View\Contract\AddContract.xaml;View\Client\AddContractToClient.xaml;View\Tree\MarksWin.xaml;View\Tree\ModelsWin.xaml;View\WarehouseView\AddEWarehouse.xaml;View\Tree\AddNote.xaml;View\Contract\AddSize.xaml;View\WarehouseView\AddTMC.xaml;View\Client\ClientsWindow.xaml;View\Client\ContractsToClient.xaml;View\DialogWindow.xaml;View\EditConection.xaml;View\MainWindow.xaml;View\Tree\Create.xaml;View\Menu.xaml;View\Tree\MenuTree.xaml;View\Contract\NewContract.xaml;View\Tree\Reg.xaml;View\Contract\SelectContract.xaml;View\Contract\SelectPort.xaml;View\Contract\SelectWarehouseEquip.xaml;View\Contract\SelectWarehouseEquipC.xaml;View\Contract\SelectWarehouseTMC.xaml;View\Tree\Table.xaml;View\Tree\Update.xaml;View\Tree\Users.xaml;View\WarehouseView\TypeEquipment.xaml;View\WarehouseView\WarehouseM.xaml;
 resource\images\loading.png
 False
 

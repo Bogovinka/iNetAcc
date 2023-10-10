@@ -1,4 +1,5 @@
 ﻿using Equipment_Accounting.Resource.Model;
+using Equipment_Accounting.View.WarehouseView;
 using Microsoft.Office.Interop.Excel;
 using MySqlX.XDevAPI;
 using NPOI.HSSF.Record.Chart;
@@ -56,11 +57,6 @@ namespace Equipment_Accounting.View
             Close();
         }
 
-        private void warehouse_Click(object sender, RoutedEventArgs e)
-        {
-            Warehouse w = new Warehouse(log, db);
-            w.Show();
-        }
 
         private void clients_Click(object sender, RoutedEventArgs e)
         {
@@ -130,6 +126,13 @@ namespace Equipment_Accounting.View
         {
             Users users = new Users();
             users.Show();
+        }
+
+
+        private void warehouse_Click(object sender, RoutedEventArgs e)
+        {
+            WarehouseM w = new WarehouseM(log, db);
+            w.Show();
         }
     }
 }

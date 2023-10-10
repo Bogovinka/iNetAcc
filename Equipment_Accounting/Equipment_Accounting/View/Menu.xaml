@@ -21,7 +21,7 @@
         </Menu>
         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" MaxHeight="50" VerticalAlignment="Top">
             <Label x:Name="loginName" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,0">Логин:</Label>
-            <Button x:Name="exit" HorizontalAlignment="Right" Click="exit_Click" Margin="0,5,10,0" Cursor="Hand">Exit</Button>
+            <Button x:Name="exit" HorizontalAlignment="Right" Click="exit_Click" Margin="0,5,10,0" Cursor="Hand">Выход</Button>
         </StackPanel>
         <DataGrid Grid.Row="1" x:Name="contractsDG" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.RowStyle>

@@ -1,0 +1,57 @@
+﻿<Window x:Class="Equipment_Accounting.MenuTree"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Equipment_Accounting"
+        mc:Ignorable="d"
+        Title="Дерево" WindowStartupLocation="CenterScreen" MinHeight="500" MinWidth="900">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="319*"/>
+            <RowDefinition Height="46*"/>
+        </Grid.RowDefinitions>
+        <Menu Background="#FFB8B8B8" MaxHeight="50" VerticalAlignment="Top">
+            <MenuItem VerticalAlignment="Center" x:Name="table" Header="Таблица" Click="table_Click"/>
+            <MenuItem VerticalAlignment="Center" x:Name="create" Visibility="Hidden" Header="Создать" Click="create_Click"/>
+            <MenuItem VerticalAlignment="Center" x:Name="add" Visibility="Hidden" Header="Добавить" Click="add_Click"/>
+            <MenuItem VerticalAlignment="Center" x:Name="edit" Visibility="Hidden" Header="Изменить" Click="edit_Click"/>
+            <MenuItem VerticalAlignment="Center" x:Name="delete" Visibility="Hidden" Header="Удалить" Click="delete_Click" />
+            <MenuItem VerticalAlignment="Center" x:Name="marks" Visibility="Hidden" Header="Марки" Click="marks_Click" />
+            <MenuItem VerticalAlignment="Center" x:Name="models" Visibility="Hidden" Header="Модели" Click="models_Click" />
+        </Menu>
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" MaxHeight="50" VerticalAlignment="Top">
+            <Label x:Name="loginName" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,0">Логин:</Label>
+        </StackPanel>
+
+
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" >
+            <TreeView x:Name="treeView" FontSize="14" FontWeight="Bold" Foreground="Black" MouseRightButtonDown="treeView_MouseRightButtonDown">
+                <TreeView.ContextMenu>
+                    <ContextMenu x:Name="cM">
+                        <MenuItem Header="Консоль">
+                            <MenuItem x:Name="ping" Header="Ping" Click="ping_Click"></MenuItem>
+                            <MenuItem x:Name="tracert" Header="Tracert" Click="tracert_Click"></MenuItem>
+                        </MenuItem>
+                        <MenuItem Header="Приложения">
+                            <MenuItem x:Name="putty" Header="Putty" Click="putty_Click"></MenuItem>
+                            <MenuItem x:Name="winBox" Header="WinBox" Click="winBox_Click"></MenuItem>
+                            <MenuItem x:Name="web" Header="WEB" Click="web_Click"></MenuItem>
+                        </MenuItem>
+                        <MenuItem x:Name="maps" Header="Показать на карте" Click="maps_Click"></MenuItem>
+                        <MenuItem x:Name="add2" Visibility="Hidden" Header="Добавить" Click="add_Click"/>
+                        <MenuItem x:Name="edit2" Visibility="Hidden" Header="Изменить" Click="edit_Click"/>
+                        <MenuItem x:Name="Copy" Visibility="Hidden" Header="Вырезать" Click="Copy_Click"></MenuItem>
+                        <MenuItem x:Name="Paste" Visibility="Hidden" Header="Вставить" Click="Paste_Click"></MenuItem>
+                    </ContextMenu>
+                </TreeView.ContextMenu>
+            </TreeView>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <TextBox x:Name="searchText" MaxWidth="200" KeyDown="searchText_KeyDown" Margin="10,0,0,0" VerticalAlignment="Center" MinWidth="200" FontSize="18" Cursor="IBeam"></TextBox>
+            <Button x:Name="search" Margin="10,0,0,0" Click="search_Click" FontSize="18" Cursor="Hand">Выделить</Button>
+        </StackPanel>
+    </Grid>
+</Window>

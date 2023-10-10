@@ -1,4 +1,5 @@
-﻿using Equipment_Accounting.Resource.Model;
+﻿using Equipment_Accounting.Classes;
+using Equipment_Accounting.Resource.Model;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -15,10 +16,12 @@ namespace Equipment_Accounting
     
     class WorkBD
     {
-        Resource.Model.DatabaseEntities databaseEntities = new Resource.Model.DatabaseEntities();     
+        Resource.Model.DatabaseEntities databaseEntities = new Resource.Model.DatabaseEntities();
+        ConnectBD cBD = new ConnectBD();
 
         public void insertDB(string name, string ip, string mac, object typeID, object stateID, string adres, string note, string login, string pass, string SNMP, string vlan, string ser, object brandID, object modelID, int id_in_item)
         {
+            databaseEntities = cBD.getDB();
             Equipment equip = new Equipment()
             {
                 Name = name,
@@ -46,6 +49,7 @@ namespace Equipment_Accounting
         }
         public void updateDB(string name, string ip, string mac, object typeID, object stateID, string adres, string note, string login, string pass, string SNMP, string vlan, string ser, object markID, object modelID, Equipment equip, DatabaseEntities db, TreeViewItem t)
         {
+            databaseEntities = cBD.getDB();
             try
             {
                 equip.Name = name;
@@ -112,6 +116,7 @@ namespace Equipment_Accounting
 
         public void delete(TreeViewItem t)
         {
+            databaseEntities = cBD.getDB();
             try
             {
                 int ID = Convert.ToInt32(t.Tag);

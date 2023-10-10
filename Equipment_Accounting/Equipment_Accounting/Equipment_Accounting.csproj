@@ -101,17 +101,17 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
-    <Reference Include="MaterialDesignColors, Version=2.0.4.3, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialDesignColors.2.0.4\lib\net452\MaterialDesignColors.dll</HintPath>
+    <Reference Include="MaterialDesignColors, Version=2.1.4.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.1.4\lib\net462\MaterialDesignColors.dll</HintPath>
     </Reference>
-    <Reference Include="MaterialDesignThemes.Wpf, Version=4.3.0.3, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialDesignThemes.4.3.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.9.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.9.0\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.31\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.32.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.32.1\lib\net452\MySql.Data.dll</HintPath>
@@ -319,34 +319,43 @@
     <Compile Include="Resource\Model\Warehouse.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="View\AddClient.xaml.cs">
+    <Compile Include="View\AddTypeName.xaml.cs">
+      <DependentUpon>AddTypeName.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Client\AddClient.xaml.cs">
       <DependentUpon>AddClient.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\AddContract.xaml.cs">
+    <Compile Include="View\Contract\AddContract.xaml.cs">
       <DependentUpon>AddContract.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\AddContractToClient.xaml.cs">
+    <Compile Include="View\Client\AddContractToClient.xaml.cs">
       <DependentUpon>AddContractToClient.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\AddEWarehouse.xaml.cs">
+    <Compile Include="View\Tree\MarksWin.xaml.cs">
+      <DependentUpon>MarksWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tree\ModelsWin.xaml.cs">
+      <DependentUpon>ModelsWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WarehouseView\AddEWarehouse.xaml.cs">
       <DependentUpon>AddEWarehouse.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\AddNote.xaml.cs">
+    <Compile Include="View\Tree\AddNote.xaml.cs">
       <DependentUpon>AddNote.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\AddSize.xaml.cs">
+    <Compile Include="View\Contract\AddSize.xaml.cs">
       <DependentUpon>AddSize.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\AddTMC.xaml.cs">
+    <Compile Include="View\WarehouseView\AddTMC.xaml.cs">
       <DependentUpon>AddTMC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ClientsWindow.xaml.cs">
+    <Compile Include="View\Client\ClientsWindow.xaml.cs">
       <DependentUpon>ClientsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ContractsToClient.xaml.cs">
+    <Compile Include="View\Client\ContractsToClient.xaml.cs">
       <DependentUpon>ContractsToClient.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Create.xaml.cs">
+    <Compile Include="View\Tree\Create.xaml.cs">
       <DependentUpon>Create.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\DialogWindow.xaml.cs">
@@ -358,76 +367,91 @@
     <Compile Include="View\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\MenuTree.xaml.cs">
+    <Compile Include="View\Tree\MenuTree.xaml.cs">
       <DependentUpon>MenuTree.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\NewContract.xaml.cs">
+    <Compile Include="View\Contract\NewContract.xaml.cs">
       <DependentUpon>NewContract.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Reg.xaml.cs">
+    <Compile Include="View\Tree\Reg.xaml.cs">
       <DependentUpon>Reg.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SelectContract.xaml.cs">
+    <Compile Include="View\Contract\SelectContract.xaml.cs">
       <DependentUpon>SelectContract.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SelectPort.xaml.cs">
+    <Compile Include="View\Contract\SelectPort.xaml.cs">
       <DependentUpon>SelectPort.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SelectWarehouseEquip.xaml.cs">
+    <Compile Include="View\Contract\SelectWarehouseEquip.xaml.cs">
       <DependentUpon>SelectWarehouseEquip.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SelectWarehouseEquipC.xaml.cs">
+    <Compile Include="View\Contract\SelectWarehouseEquipC.xaml.cs">
       <DependentUpon>SelectWarehouseEquipC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SelectWarehouseTMC.xaml.cs">
+    <Compile Include="View\Contract\SelectWarehouseTMC.xaml.cs">
       <DependentUpon>SelectWarehouseTMC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Table.xaml.cs">
+    <Compile Include="View\Tree\Table.xaml.cs">
       <DependentUpon>Table.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Update.xaml.cs">
+    <Compile Include="View\Tree\Update.xaml.cs">
       <DependentUpon>Update.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Users.xaml.cs">
+    <Compile Include="View\Tree\Users.xaml.cs">
       <DependentUpon>Users.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\WorkBD.cs" />
-    <Compile Include="View\Warehouse.xaml.cs">
-      <DependentUpon>Warehouse.xaml</DependentUpon>
+    <Compile Include="View\WarehouseView\TypeEquipment.xaml.cs">
+      <DependentUpon>TypeEquipment.xaml</DependentUpon>
     </Compile>
-    <Page Include="View\AddClient.xaml">
+    <Compile Include="View\WarehouseView\WarehouseM.xaml.cs">
+      <DependentUpon>WarehouseM.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\AddTypeName.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\AddContract.xaml">
+    <Page Include="View\Client\AddClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\AddContractToClient.xaml">
+    <Page Include="View\Contract\AddContract.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\AddEWarehouse.xaml">
+    <Page Include="View\Client\AddContractToClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\AddNote.xaml">
+    <Page Include="View\Tree\MarksWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\AddSize.xaml">
+    <Page Include="View\Tree\ModelsWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\AddTMC.xaml">
+    <Page Include="View\WarehouseView\AddEWarehouse.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ClientsWindow.xaml">
+    <Page Include="View\Tree\AddNote.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ContractsToClient.xaml">
+    <Page Include="View\Contract\AddSize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WarehouseView\AddTMC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Client\ClientsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Client\ContractsToClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -451,7 +475,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\Create.xaml">
+    <Page Include="View\Tree\Create.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -459,51 +483,55 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\MenuTree.xaml">
+    <Page Include="View\Tree\MenuTree.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\NewContract.xaml">
+    <Page Include="View\Contract\NewContract.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Reg.xaml">
+    <Page Include="View\Tree\Reg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SelectContract.xaml">
+    <Page Include="View\Contract\SelectContract.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SelectPort.xaml">
+    <Page Include="View\Contract\SelectPort.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SelectWarehouseEquip.xaml">
+    <Page Include="View\Contract\SelectWarehouseEquip.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SelectWarehouseEquipC.xaml">
+    <Page Include="View\Contract\SelectWarehouseEquipC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SelectWarehouseTMC.xaml">
+    <Page Include="View\Contract\SelectWarehouseTMC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Table.xaml">
+    <Page Include="View\Tree\Table.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Update.xaml">
+    <Page Include="View\Tree\Update.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Users.xaml">
+    <Page Include="View\Tree\Users.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Warehouse.xaml">
+    <Page Include="View\WarehouseView\TypeEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WarehouseView\WarehouseM.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -614,12 +642,13 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />
+  <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets'))" />
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets'))" />
   </Target>
 </Project>
