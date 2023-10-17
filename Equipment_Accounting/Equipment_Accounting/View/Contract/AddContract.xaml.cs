@@ -74,8 +74,11 @@ namespace Equipment_Accounting.View
             Elv.ItemsSource = Equipments.ToList();
             TMClv.ItemsSource = TMCs.ToList();
             EClv.ItemsSource = EquipmentsC.ToList();
-            ClientT.Text = task.ClientContracts.Client.FullName;
-            ContractT.Text = task.ClientContracts.Contract;
+            if (task.ClientContracts != null)
+            {
+                ClientT.Text = task.ClientContracts.Client.FullName;
+                ContractT.Text = task.ClientContracts.Contract;
+            }
             if(task.MasterID != null)
                 MasterT.Text = task.Logins.FullName;
             PortT.Text = $"{task.Equipment.Name}|{task.Equipment.IP}";
@@ -131,8 +134,10 @@ namespace Equipment_Accounting.View
         }
         public void setTask()
         {
-            task.Contract = (int)ContractT.SelectedValue;
-            task.ClientContracts = (ClientContracts)ContractT.SelectedItem;
+            if(ContractT.SelectedValue != null)
+                task.Contract = (int)ContractT.SelectedValue;
+            if(ContractT.SelectedItem != null)
+                task.ClientContracts = (ClientContracts)ContractT.SelectedItem;
             task.DateEnt = DateEndT.SelectedDate;
             task.Note = ComentT.Text;
             task.Addres = AddresT.Text;
@@ -146,7 +151,7 @@ namespace Equipment_Accounting.View
         }
         private void CreateB_Click(object sender, RoutedEventArgs e)
         {
-            if (ClientT.Text != "" && ContractT.Text != "" && AddresT.Text != "" && PortT.Text != ""  && DateEndT.Text != "")
+            if (typeTask.ID != 1 && ClientT.Text != "" && ContractT.Text != "" && AddresT.Text != "" && PortT.Text != ""  && DateEndT.Text != "")
             {
                 setTask();
                 task.Creator = creator.FullName;
@@ -158,7 +163,18 @@ namespace Equipment_Accounting.View
                 db.SaveChanges();
                 DialogResult = true;
             }
-            
+            else if (AddresT.Text != "" && PortT.Text != "" && DateEndT.Text != "")
+            {
+                setTask();
+                task.Creator = creator.FullName;
+                task.IDofType = getID();
+                task.StatusTaskID = 3;
+                task.TypeTask = db.TypeTask.Where(x => x.ID == typeTask.ID).FirstOrDefault();
+                task.StatusTask = db.StatusTask.Where(x => x.ID == 3).FirstOrDefault();
+                db.Task.Add(task);
+                db.SaveChanges();
+                DialogResult = true;
+            }
             else MessageBox.Show("Заполни все поля");
         }
         public bool CheckTMC()

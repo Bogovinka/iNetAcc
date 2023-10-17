@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Equipment_Accounting.exe" size="751104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Equipment_Accounting.exe" size="751616">
       <assemblyIdentity name="Equipment_Accounting" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2mx4VPLkOLmYUR2pGfowvU6UhyNmI8/JWZ4W5/ZcVZQ=</dsig:DigestValue>
+        <dsig:DigestValue>i+kkLJQvLsMxr3rPj4uAX7mNC7HOwo9Xmx3/nK4aX7A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
