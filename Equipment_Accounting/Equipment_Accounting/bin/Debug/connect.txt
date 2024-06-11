@@ -1,1 +1,1 @@
-data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Resource\Database.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework
+Data Source=10.77.78.254;Initial Catalog=iNet;User Id=sa;Password=Mikrobill135#$%

@@ -18,6 +18,7 @@ namespace Equipment_Accounting.Resource.Model
         public Equipment()
         {
             this.Task = new HashSet<Task>();
+            this.Client = new HashSet<Client>();
         }
         public string getFullName()
         {
@@ -55,5 +56,7 @@ namespace Equipment_Accounting.Resource.Model
         public virtual Type_Device Type_Device { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Task> Task { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Client> Client { get; set; }
     }
 }

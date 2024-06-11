@@ -21,6 +21,7 @@
           <Property Name="Name" Type="nvarchar" MaxLength="250" />
           <Property Name="LastName" Type="nvarchar" MaxLength="250" />
           <Property Name="Phone" Type="nvarchar" MaxLength="250" />
+          <Property Name="EquipmentID" Type="int" />
         </EntityType>
         <EntityType Name="ClientContracts">
           <Key>
@@ -218,6 +219,18 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="250" />
         </EntityType>
+        <Association Name="FK__Client__Equipmen__14270015">
+          <End Role="Equipment" Type="Self.Equipment" Multiplicity="0..1" />
+          <End Role="Client" Type="Self.Client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Client">
+              <PropertyRef Name="EquipmentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__ClientCon__Clien__52593CB8">
           <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
           <End Role="ClientContracts" Type="Self.ClientContracts" Multiplicity="*" />
@@ -566,6 +579,10 @@
           <EntitySet Name="TypeTask" EntityType="Self.TypeTask" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Unit" EntityType="Self.Unit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Warehouse" EntityType="Self.Warehouse" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Client__Equipmen__14270015" Association="Self.FK__Client__Equipmen__14270015">
+            <End Role="Equipment" EntitySet="Equipment" />
+            <End Role="Client" EntitySet="Client" />
+          </AssociationSet>
           <AssociationSet Name="FK__ClientCon__Clien__52593CB8" Association="Self.FK__ClientCon__Clien__52593CB8">
             <End Role="Client" EntitySet="Client" />
             <End Role="ClientContracts" EntitySet="ClientContracts" />
@@ -698,6 +715,8 @@
           <Property Name="Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ClientContracts" Relationship="Self.FK__ClientCon__Clien__52593CB8" FromRole="Client" ToRole="ClientContracts" />
           <NavigationProperty Name="EquipmentWarehouseClient" Relationship="Self.FK__Equipment__Clien__5629CD9C" FromRole="Client" ToRole="EquipmentWarehouseClient" />
+          <Property Name="EquipmentID" Type="Int32" />
+          <NavigationProperty Name="Equipment" Relationship="DatabaseModel.FK__Client__Equipmen__14270015" FromRole="Client" ToRole="Equipment" />
         </EntityType>
         <EntityType Name="ClientContracts">
           <Key>
@@ -743,6 +762,7 @@
           <NavigationProperty Name="Model" Relationship="Self.FK__Equipment__Model__4316F928" FromRole="Equipment" ToRole="Model" />
           <NavigationProperty Name="Type_Device" Relationship="Self.FK__Equipment__Type___403A8C7D" FromRole="Equipment" ToRole="Type_Device" />
           <NavigationProperty Name="Task" Relationship="Self.FK__Task__PortID__6E01572D" FromRole="Equipment" ToRole="Task" />
+          <NavigationProperty Name="Client" Relationship="DatabaseModel.FK__Client__Equipmen__14270015" FromRole="Equipment" ToRole="Client" />
         </EntityType>
         <EntityType Name="EquipmentWarehouse">
           <Key>
@@ -1368,6 +1388,10 @@
             <End Role="Task" EntitySet="Task" />
             <End Role="TaskEquipmentC" EntitySet="TaskEquipmentC" />
           </AssociationSet>
+          <AssociationSet Name="FK__Client__Equipmen__14270015" Association="DatabaseModel.FK__Client__Equipmen__14270015">
+            <End Role="Equipment" EntitySet="Equipment" />
+            <End Role="Client" EntitySet="Client" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="TaskEquipmentC">
           <Key>
@@ -1403,6 +1427,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Client__Equipmen__14270015">
+          <End Type="DatabaseModel.Equipment" Role="Equipment" Multiplicity="0..1" />
+          <End Type="DatabaseModel.Client" Role="Client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Client">
+              <PropertyRef Name="EquipmentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1420,6 +1456,7 @@
           <EntitySetMapping Name="Client">
             <EntityTypeMapping TypeName="DatabaseModel.Client">
               <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Surname" ColumnName="Surname" />
                 <ScalarProperty Name="Name" ColumnName="Name" />

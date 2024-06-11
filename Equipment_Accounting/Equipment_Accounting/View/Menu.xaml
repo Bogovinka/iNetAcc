@@ -61,6 +61,15 @@
                 <DataGridTextColumn Header="Срок" Binding="{Binding DaysEnd}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <TextBox x:Name="SearchTB" Grid.Row="2" HorizontalAlignment="Left" Margin="5,0,5, 10" Width="150" MaxWidth="150" MaxHeight="40"></TextBox>
+            <Button x:Name="SearchButton" Click="SearchButton_Click">Найти</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2">
+            <ComboBox x:Name="StatusCB" Grid.Row="2" HorizontalAlignment="Left" Margin="5,0,5, 10" Width="150" MaxWidth="150" DisplayMemberPath="Name" SelectionChanged="StatusCB_SelectionChanged"></ComboBox>
+            <ComboBox x:Name="TypeCB" Grid.Row="2" HorizontalAlignment="Left" Margin="5,0,5, 10" Width="150" MaxWidth="150" DisplayMemberPath="Name" SelectionChanged="TypeCB_SelectionChanged"></ComboBox>
+            <Button x:Name="resetSort" Click="resetSort_Click">Сброс</Button>
+        </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
             <Button x:Name="addContract" Click="addContract_Click">Добавить</Button>
             <Button Margin="10,0,10,0" x:Name="editContract" Click="editContract_Click">Правка</Button>

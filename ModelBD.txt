@@ -28,6 +28,7 @@ public string SizeUnit => $"{Size} {Unit.Name}";
         {
             if (TypeID == 2) return $"ТТ-{IDofType}";
             else if (TypeID == 3) return $"ЗМС-{IDofType}";
+			else if (TypeID == 4) return $"Д-{IDofType}";
             else return $"А-{IDofType}";
         }
         public string FullID => getID();

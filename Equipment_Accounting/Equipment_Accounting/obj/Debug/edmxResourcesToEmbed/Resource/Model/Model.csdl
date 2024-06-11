@@ -19,6 +19,8 @@
     <Property Name="Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="ClientContracts" Relationship="Self.FK__ClientCon__Clien__52593CB8" FromRole="Client" ToRole="ClientContracts" />
     <NavigationProperty Name="EquipmentWarehouseClient" Relationship="Self.FK__Equipment__Clien__5629CD9C" FromRole="Client" ToRole="EquipmentWarehouseClient" />
+    <Property Name="EquipmentID" Type="Int32" />
+    <NavigationProperty Name="Equipment" Relationship="DatabaseModel.FK__Client__Equipmen__14270015" FromRole="Client" ToRole="Equipment" />
   </EntityType>
   <EntityType Name="ClientContracts">
     <Key>
@@ -64,6 +66,7 @@
     <NavigationProperty Name="Model" Relationship="Self.FK__Equipment__Model__4316F928" FromRole="Equipment" ToRole="Model" />
     <NavigationProperty Name="Type_Device" Relationship="Self.FK__Equipment__Type___403A8C7D" FromRole="Equipment" ToRole="Type_Device" />
     <NavigationProperty Name="Task" Relationship="Self.FK__Task__PortID__6E01572D" FromRole="Equipment" ToRole="Task" />
+    <NavigationProperty Name="Client" Relationship="DatabaseModel.FK__Client__Equipmen__14270015" FromRole="Equipment" ToRole="Client" />
   </EntityType>
   <EntityType Name="EquipmentWarehouse">
     <Key>
@@ -689,6 +692,10 @@
       <End Role="Task" EntitySet="Task" />
       <End Role="TaskEquipmentC" EntitySet="TaskEquipmentC" />
     </AssociationSet>
+    <AssociationSet Name="FK__Client__Equipmen__14270015" Association="DatabaseModel.FK__Client__Equipmen__14270015">
+      <End Role="Equipment" EntitySet="Equipment" />
+      <End Role="Client" EntitySet="Client" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="TaskEquipmentC">
     <Key>
@@ -721,6 +728,18 @@
       </Principal>
       <Dependent Role="TaskEquipmentC">
         <PropertyRef Name="TaskID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Client__Equipmen__14270015">
+    <End Type="DatabaseModel.Equipment" Role="Equipment" Multiplicity="0..1" />
+    <End Type="DatabaseModel.Client" Role="Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="EquipmentID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

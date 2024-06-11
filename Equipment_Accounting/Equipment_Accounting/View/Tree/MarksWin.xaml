@@ -21,6 +21,7 @@
             </ListView>
         </Border>
         <Button x:Name="AddNew" Margin="10,0,0,0" Grid.Row="1" HorizontalAlignment="Left" Click="AddNew_Click">Добавить</Button>
-        <Button x:Name="EditNew" Margin="0,0,10,0" Grid.Row="1" HorizontalAlignment="Right" Click="EditNew_Click">Изменить</Button>
+        <Button x:Name="EditNew" Margin="0,0,10,0" Grid.Row="1" HorizontalAlignment="Center" Click="EditNew_Click">Изменить</Button>
+        <Button x:Name="Delete" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Row="1" Click="Delete_Click" >Удалить</Button>
     </Grid>
 </Window>

@@ -16,6 +16,7 @@
     <Property Name="Name" Type="nvarchar" MaxLength="250" />
     <Property Name="LastName" Type="nvarchar" MaxLength="250" />
     <Property Name="Phone" Type="nvarchar" MaxLength="250" />
+    <Property Name="EquipmentID" Type="int" />
   </EntityType>
   <EntityType Name="ClientContracts">
     <Key>
@@ -213,6 +214,18 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="250" />
   </EntityType>
+  <Association Name="FK__Client__Equipmen__14270015">
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="0..1" />
+    <End Role="Client" Type="Self.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="EquipmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__ClientCon__Clien__52593CB8">
     <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
     <End Role="ClientContracts" Type="Self.ClientContracts" Multiplicity="*" />
@@ -561,6 +574,10 @@
     <EntitySet Name="TypeTask" EntityType="Self.TypeTask" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Unit" EntityType="Self.Unit" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Warehouse" EntityType="Self.Warehouse" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Client__Equipmen__14270015" Association="Self.FK__Client__Equipmen__14270015">
+      <End Role="Equipment" EntitySet="Equipment" />
+      <End Role="Client" EntitySet="Client" />
+    </AssociationSet>
     <AssociationSet Name="FK__ClientCon__Clien__52593CB8" Association="Self.FK__ClientCon__Clien__52593CB8">
       <End Role="Client" EntitySet="Client" />
       <End Role="ClientContracts" EntitySet="ClientContracts" />

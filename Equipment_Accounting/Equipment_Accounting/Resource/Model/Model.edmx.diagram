@@ -55,6 +55,8 @@
         <EntityTypeShape EntityType="DatabaseModel.TaskEquipmentC" Width="1.5" PointX="7.5" PointY="6.75" />
         <AssociationConnector Association="DatabaseModel.FK__TaskEquip__Equip__03F0984C" />
         <AssociationConnector Association="DatabaseModel.FK__TaskEquip__TaskI__02FC7413" />
+        <AssociationConnector Association="DatabaseModel.FK__Client__Equipmen__14270015" />
+        <AssociationConnector Association="DatabaseModel.FK__Client__Equipmen__14270015" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

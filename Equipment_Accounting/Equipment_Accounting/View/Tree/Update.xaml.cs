@@ -62,7 +62,7 @@ namespace Equipment_Accounting
             equipList.Remove(equipment);
             if (nameT.Text.Length > 0 && equipList.Where(x => x.IP == IPT.Text && x.IP != "").Count() == 0 && equipList.Where(x => x.Serial_num == SerT.Text && x.Serial_num != "").Count() == 0 && equipList.Where(x => x.MAC == MACT.Text && x.MAC != "").Count() == 0 && equipList.Where(x => x.Name == nameT.Text && x.Name != "").Count() == 0)
             {
-                if (Regex.IsMatch(IPT.Text, pattern) && (MACT.IsMaskFull | MACT.Text == "__:__:__:__:__:__"))
+                if ((Regex.IsMatch(IPT.Text, pattern) | IPT.Text == "") && (MACT.IsMaskFull | MACT.Text == "__:__:__:__:__:__"))
                     DialogResult = true;
                 else MessageBox.Show("Заполни IP и MAC до конца или оставь пустыми, проверь правильность заполнения");
             }

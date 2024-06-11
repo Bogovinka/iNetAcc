@@ -78,7 +78,8 @@ CREATE TABLE Client(
 	Surname nvarchar(250),
 	Name nvarchar(250),
 	LastName nvarchar(250),
-	Phone nvarchar(250));	
+	Phone nvarchar(250),
+	EquipmentID int FOREIGN KEY REFERENCES Equipment(ID));	
 	
 CREATE TABLE ClientContracts(
 	ID int primary key IDENTITY(1,1),
@@ -156,7 +157,7 @@ INSERT INTO Warehouse VALUES (N'Ишалино');
 INSERT INTO EquipmentWarehouseType VALUES (N'роутер');
 INSERT INTO EquipmentWarehouseStatus VALUES (N'аренда'), (N'продано'), (N'склад');
 INSERT INTO StatusTask VALUES (N'в работе'), (N'завершено'), (N'новая');
-INSERT INTO TypeTask VALUES (N'подключение'), (N'ремонт'), (N'ЗМС');
+INSERT INTO TypeTask VALUES (N'подключение'), (N'ремонт'), (N'ЗМС'), (N'демонтаж');
 INSERT INTO Unit VALUES (N'м'), (N'шт');
 /* INSERT QUERY NO: 1 */
 INSERT INTO Model

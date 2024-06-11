@@ -37,6 +37,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Номер телефона" Binding="{Binding Phone}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Оборудование" Binding="{Binding Equipment.FullName}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">

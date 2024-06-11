@@ -12,6 +12,7 @@
     <EntitySetMapping Name="Client">
       <EntityTypeMapping TypeName="DatabaseModel.Client">
         <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />
           <ScalarProperty Name="Name" ColumnName="Name" />

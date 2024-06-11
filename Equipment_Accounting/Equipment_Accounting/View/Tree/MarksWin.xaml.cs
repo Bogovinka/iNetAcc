@@ -57,5 +57,20 @@ namespace Equipment_Accounting.View.Tree
                 }
             }
         }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            if (lV.SelectedItem != null)
+            {
+                Brand b = lV.SelectedItem as Brand;
+                if (db.Equipment.Where(x => x.Brand_id == b.ID).Count() == 0)
+                {
+                    db.Brand.Remove(b);
+                    db.SaveChanges();
+                    lV.ItemsSource = db.Brand.ToList();
+                }
+                else MessageBox.Show("Сначала удалите ВСЁ оборудование с этой маркой");
+            }
+        }
     }
 }

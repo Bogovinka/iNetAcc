@@ -1,4 +1,5 @@
-﻿using Equipment_Accounting.Resource.Model;
+﻿using DocumentFormat.OpenXml.Office2021.DocumentTasks;
+using Equipment_Accounting.Resource.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,17 +21,25 @@ namespace Equipment_Accounting.View
     /// </summary>
     public partial class AddClient : Window
     {
-        public AddClient()
+        DatabaseEntities db;
+        public AddClient(DatabaseEntities db_)
         {
             InitializeComponent();
+            db = db_;
         }
-        public AddClient(Client c)
+        public AddClient(Client c, DatabaseEntities db_)
         {
             InitializeComponent();
+            db = db_;
             SurnameT.Text = c.Surname;
             NameT.Text = c.Name;
             LastNameT.Text = c.LastName;
             PhoneT.Text = c.Phone;
+            if (c.EquipmentID != null)
+            {
+                PortT.Text = $"{c.Equipment.Name}|{c.Equipment.IP}";
+                PortT.Tag = c.EquipmentID;
+            }
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
@@ -45,6 +54,19 @@ namespace Equipment_Accounting.View
                 DialogResult = true;
             }
             else MessageBox.Show("Заполни полностью номер телефона");
+        }
+
+        private void selectPort_Click(object sender, RoutedEventArgs e)
+        {
+            SelectPort sel = new SelectPort(db);
+            if (sel.ShowDialog() == true)
+            {
+                TreeViewItem item = (TreeViewItem)sel.treeView.SelectedItem;
+                int id = (int)item.Tag;
+                Equipment equip = db.Equipment.Where(x => x.ID == id).FirstOrDefault();
+                PortT.Text = $"{equip.Name}|{equip.IP}";
+                PortT.Tag = id;
+            }
         }
     }
 }

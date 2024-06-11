@@ -29,13 +29,20 @@ namespace Equipment_Accounting.View
         Logins log;
         DatabaseEntities db;
         Classes.ConnectBD con = new Classes.ConnectBD();
+        public void SearchList(string searchT, string searchStatus, string searchType)
+        {
+           contractsDG.ItemsSource = db.Task.Where(x => (x.ClientContracts.Client.Surname.ToString().Contains(searchT) || x.Addres.Contains(searchT)) && x.StatusTask.Name.Contains(searchStatus) && x.TypeTask.Name.Contains(searchType)).ToList();
+
+        }
         public Menu(Logins login)
         {
             InitializeComponent();
             log = login;
             loginName.Content = "логин: " + log.Login;
             db = con.getDB();
-            contractsDG.ItemsSource = db.Task.ToList();
+            SearchList("", "", "");
+            StatusCB.ItemsSource = db.StatusTask.ToList();
+            TypeCB.ItemsSource = db.TypeTask.ToList();
             if (log.Permission == 0)
             {
                 delContract.IsEnabled = false;
@@ -133,6 +140,32 @@ namespace Equipment_Accounting.View
         {
             WarehouseM w = new WarehouseM(log, db);
             w.Show();
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            SearchList(SearchTB.Text, StatusCB.Text, TypeCB.Text);
+        }
+
+
+
+        private void StatusCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(StatusCB.SelectedItem != null)
+                SearchList(SearchTB.Text, ((StatusTask)StatusCB.SelectedItem).Name, TypeCB.Text);
+        }
+
+        private void TypeCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(TypeCB.SelectedItem != null)
+            SearchList(SearchTB.Text, StatusCB.Text, ((TypeTask)TypeCB.SelectedItem).Name);
+        }
+
+        private void resetSort_Click(object sender, RoutedEventArgs e)
+        {
+            StatusCB.SelectedItem = null;
+            TypeCB.SelectedItem = null;
+            SearchList(SearchTB.Text, StatusCB.Text, TypeCB.Text);
         }
     }
 }

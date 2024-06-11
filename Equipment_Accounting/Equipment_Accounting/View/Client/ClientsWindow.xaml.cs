@@ -1,4 +1,5 @@
-﻿using Equipment_Accounting.Classes;
+﻿using DocumentFormat.OpenXml.Office2021.DocumentTasks;
+using Equipment_Accounting.Classes;
 using Equipment_Accounting.Resource.Model;
 using System;
 using System.Collections.Generic;
@@ -37,16 +38,32 @@ namespace Equipment_Accounting.View
 
         private void AddC_Click(object sender, RoutedEventArgs e)
         {
-            AddClient ac = new AddClient();
+            AddClient ac = new AddClient(db);
             if(ac.ShowDialog() == true)
             {
-                Client c = new Client()
+                Client c;
+                if (ac.PortT.Tag != null)
                 {
-                    Surname = ac.SurnameT.Text,
-                    Name = ac.NameT.Text,
-                    LastName = ac.LastNameT.Text,
-                    Phone = ac.PhoneT.Text
-                };
+                    c = new Client()
+                    {
+                        Surname = ac.SurnameT.Text,
+                        Name = ac.NameT.Text,
+                        LastName = ac.LastNameT.Text,
+                        Phone = ac.PhoneT.Text,
+                        EquipmentID = (int)ac.PortT.Tag,
+                        Equipment = db.Equipment.Where(x => x.ID == (int)ac.PortT.Tag).FirstOrDefault()
+                    };
+                }
+                else
+                {
+                    c = new Client()
+                    {
+                        Surname = ac.SurnameT.Text,
+                        Name = ac.NameT.Text,
+                        LastName = ac.LastNameT.Text,
+                        Phone = ac.PhoneT.Text,
+                    };
+                }
                 db.Client.Add(c);
                 db.SaveChanges();
                 Clientsdg.ItemsSource = db.Client.ToList();
@@ -58,13 +75,18 @@ namespace Equipment_Accounting.View
             if (Clientsdg.SelectedItem != null)
             {
                 Client client = Clientsdg.SelectedItem as Client;
-                AddClient ac = new AddClient(client);
+                AddClient ac = new AddClient(client, db);
                 if (ac.ShowDialog() == true)
                 {
                     client.Surname = ac.SurnameT.Text;
                     client.Name = ac.NameT.Text;
                     client.LastName = ac.LastNameT.Text;
                     client.Phone = ac.PhoneT.Text;
+                    if (ac.PortT.Tag != null)
+                    {
+                        client.EquipmentID = (int)ac.PortT.Tag;
+                        client.Equipment = db.Equipment.Where(x => x.ID == (int)ac.PortT.Tag).FirstOrDefault();
+                    }
                     db.SaveChanges();
                     Clientsdg.ItemsSource = db.Client.ToList();
                 }

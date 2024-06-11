@@ -20,9 +20,10 @@ namespace Equipment_Accounting.Resource.Model
         {
         }
         public DatabaseEntities(string con)
-        : base(con)
+    : base(con)
         {
         }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

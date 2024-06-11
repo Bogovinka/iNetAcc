@@ -382,7 +382,25 @@ namespace Equipment_Accounting.View
         }
         private void EditB_Click(object sender, RoutedEventArgs e)
         {
-            if (ClientT.Text != "" && ContractT.Text != "" && AddresT.Text != "" && PortT.Text != "" && MasterT.Text != "" && DateEndT.Text != "")
+            if (typeTask.ID == 1 && AddresT.Text != "" && PortT.Text != "" && MasterT.Text != "" && DateEndT.Text != "")
+            {
+                if (CheckTMC())
+                {
+                    if (CheckEquip())
+                    {
+                        setTask();
+                        task.StatusTaskID = 1;
+                        task.StatusTask = db.StatusTask.Where(x => x.ID == 1).FirstOrDefault();
+                        Clear();
+                        AddtoEdit();
+                        db.SaveChanges();
+                        DialogResult = true;
+                    }
+                    else MessageBox.Show("Не всё оборудование есть на складе");
+                }
+                else MessageBox.Show("Не всё указанное TMC есть на складе");
+            }
+            else if (ClientT.Text != "" && ContractT.Text != "" && AddresT.Text != "" && PortT.Text != "" && MasterT.Text != "" && DateEndT.Text != "")
             {
                 if (CheckTMC())
                 {
@@ -426,7 +444,7 @@ namespace Equipment_Accounting.View
 
         private void createClient_Click(object sender, RoutedEventArgs e)
         {
-            AddClient ac = new AddClient();
+            AddClient ac = new AddClient(db);
             if (ac.ShowDialog() == true)
             {
                 Client c = new Client()
@@ -575,6 +593,20 @@ namespace Equipment_Accounting.View
                 }
                 else MessageBox.Show("Этот объект уже есть в списке");
             }
+        }
+
+        private void ClientT_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ClientT.IsDropDownOpen = true;
+            // убрать selection, если dropdown только открылся
+            var tb = (TextBox)e.OriginalSource;
+            tb.Select(tb.SelectionStart + tb.SelectionLength, 0);
+            CollectionView cv = (CollectionView)CollectionViewSource.GetDefaultView(ClientT.ItemsSource);
+            cv.Filter = s =>
+                {
+                    Client client = (Client)s;
+                    return client.FullName.IndexOf(ClientT.Text, StringComparison.CurrentCultureIgnoreCase) >= 0;
+                };
         }
     }
 }

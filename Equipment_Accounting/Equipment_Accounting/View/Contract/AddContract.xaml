@@ -26,7 +26,8 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <StackPanel Margin="10,0,0,0" Grid.Row="1" HorizontalAlignment="Left">
                 <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                    <ComboBox x:Name="ClientT" SelectionChanged="ClientT_SelectionChanged" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" materialDesign:HintAssist.Hint="Клиент" FontSize="14" MinWidth="300" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayMemberPath="FullName" SelectedValuePath="ID"/>
+                    <ComboBox x:Name="ClientT" TextBoxBase.TextChanged="ClientT_TextChanged"
+          IsTextSearchEnabled="False" IsEditable="True" SelectionChanged="ClientT_SelectionChanged" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" materialDesign:HintAssist.Hint="Клиент" FontSize="14" MinWidth="300" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayMemberPath="FullName" SelectedValuePath="ID"/>
                     <Button Style="{StaticResource MaterialDesignPaperLightButton}" Margin="5,0,0,0" x:Name="createClient" Click="createClient_Click">Создать</Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
@@ -40,7 +41,7 @@
                 </StackPanel>
                 <ComboBox x:Name="MasterT" Margin="0,10,0,0" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignOutlinedComboBox}" MaxWidth="300" materialDesign:HintAssist.Hint="Мастер" FontSize="14" MinWidth="300" VerticalAlignment="Center" DisplayMemberPath="FullName" SelectedValuePath="ID"/>
                 <DatePicker x:Name="DateEndT" HorizontalAlignment="Left" Margin="0,10,0,0" MinWidth="300" MaxWidth="300" materialDesign:HintAssist.Hint="Срок до" Style="{StaticResource MaterialDesignOutlinedDatePicker}" />
-                <TextBox x:Name="ComentT" Height="100" Margin="0,10,0,0" Width="300" MaxWidth="300" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Коментарий" MaxLength="249" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" />
+                <TextBox x:Name="ComentT" AcceptsReturn="True" Height="100" Margin="0,10,0,0" Width="300" MaxWidth="300" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Коментарий" MaxLength="249" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" />
             </StackPanel>
             <StackPanel Visibility="Visible" x:Name="WareHouse" Margin="20,0,0,0" Background="WhiteSmoke">
                 <Label FontSize="16">Склад:</Label>

@@ -21,7 +21,6 @@ namespace Equipment_Accounting.Resource.Model
             this.TaskTMC = new HashSet<TaskTMC>();
             this.TaskEquipmentC = new HashSet<TaskEquipmentC>();
         }
-
         public int DaysReturn()
         {
             if (StatusTaskID == 2) return 0;
@@ -32,6 +31,7 @@ namespace Equipment_Accounting.Resource.Model
         {
             if (TypeID == 2) return $"ТТ-{IDofType}";
             else if (TypeID == 3) return $"ЗМС-{IDofType}";
+            else if (TypeID == 4) return $"Д-{IDofType}";
             else return $"А-{IDofType}";
         }
         public string FullID => getID();
